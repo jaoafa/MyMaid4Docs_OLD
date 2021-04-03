@@ -14,7 +14,7 @@ if (!file_exists("source/includes")) {
 $markdown = [];
 
 $commands = $docs["commands"];
-uasort($array, function($a, $b) {
+uasort($commands, function($a, $b) {
     if ($a["name"] == $b["name"]) {
         return 0;
     }
@@ -119,7 +119,7 @@ file_put_contents("source/includes/_commands.md", implode("\n", $markdown));
 
 $markdown = [];
 $events = $docs["events"];
-uasort($array, function ($a, $b) {
+uasort($events, function ($a, $b) {
     if ($a["class"] == $b["class"]) {
         return 0;
     }
