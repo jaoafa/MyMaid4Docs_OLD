@@ -1,3 +1,34 @@
+## logintext
+
+```plaintext
+/logintext
+/logintext <loginText>
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_LoginText](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_LoginText.java)
+
+ログイン時に表示されるテキストに任意のテキストを追加します。
+
+### ``
+
+ログイン時に表示されるテキストをリセットします。
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+### `<loginText>`
+
+ログイン時に表示されるテキストに任意のテキストを追加します。
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `loginText` | .StringArgument | はい | 説明なし |
+
 ## brb
 
 ```plaintext
@@ -24,25 +55,6 @@
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
 | `player` | .PlayerArgument | はい | 説明なし |
-
-## chat
-
-```plaintext
-/chat <player> <message>
-```
-
-> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Chat](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Chat.java)
-
-偽のプレイヤーに喋らせます。
-
-### `<player> <message>`
-
-偽のプレイヤーに喋らせます。
-
-| 引数名 | 種類 | 必須か | 説明 |
-| - | - | - | - |
-| `player` | .StringArgument | はい | 説明なし |
-| `message` | .StringArgument | はい | 説明なし |
 
 ## chatban
 
@@ -81,69 +93,6 @@ ChatBan一覧を表示します。
 | - | - | - | - |
 | `player` | .OfflinePlayerArgument | いいえ | 説明なし |
 
-## cmdb
-
-```plaintext
-/cmdb
-/cmdb <player>
-```
-
-> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Cmdb](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Cmdb.java)
-
-コマンドブロックを入手します。
-
-### ``
-
-コマンドブロックをコマンド実行者のメインハンドのアイテムと置き換えます。
-
-<aside class="notice">
-このコマンドはプレイヤーからの実行のみに制限されています。
-</aside>
-
-### `<player>`
-
-コマンドブロックを指定したプレイヤーのメインハンドのアイテムと置き換えます。
-
-| 引数名 | 種類 | 必須か | 説明 |
-| - | - | - | - |
-| `player` | .PlayerArgument | はい | 説明なし |
-
-## ded
-
-```plaintext
-/ded
-```
-
-> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Ded](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Ded.java)
-
-最後に死亡した場所にテレポートします。
-
-### ``
-
-最後に死亡した場所にテレポートします。
-
-<aside class="notice">
-このコマンドはプレイヤーからの実行のみに制限されています。
-</aside>
-
-## dedbull
-
-```plaintext
-/dedbull
-```
-
-> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Dedbull](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Dedbull.java)
-
-プレイヤーに暗視効果を付与します。すでに付与されている場合は削除します。
-
-### ``
-
-プレイヤーに暗視効果を付与します。すでに付与されている場合は削除します。
-
-<aside class="notice">
-このコマンドはプレイヤーからの実行のみに制限されています。
-</aside>
-
 ## delhome
 
 ```plaintext
@@ -176,28 +125,6 @@ ChatBan一覧を表示します。
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
 | `name` | .StringArgument | いいえ | 説明なし |
-
-## discordlink
-
-```plaintext
-/discordlink <authKey>
-```
-
-> ソースコード: [com.jaoafa.mymaid4.command.Cmd_DiscordLink](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_DiscordLink.java)
-
-DiscordアカウントとMinecraftアカウントを紐づけます。
-
-### `<authKey>`
-
-DiscordアカウントとMinecraftアカウントを紐づけます。
-
-<aside class="notice">
-このコマンドはプレイヤーからの実行のみに制限されています。
-</aside>
-
-| 引数名 | 種類 | 必須か | 説明 |
-| - | - | - | - |
-| `authKey` | .StringArgument | はい | 説明なし |
 
 ## dt
 
@@ -280,61 +207,6 @@ DynmapのMarkerを編集・テレポートします。
 | - | - | - | - |
 | `page` | .IntegerArgument | いいえ | 説明なし |
 
-## eban
-
-```plaintext
-/eban add <player> <reason>
-/eban remove <player>
-/eban status [player]
-```
-
-> ソースコード: [com.jaoafa.mymaid4.command.Cmd_EBan](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_EBan.java)
-
-EBanに関する処理を行います。
-
-### `add <player> <reason>`
-
-ターゲットをEBanします。
-
-| 引数名 | 種類 | 必須か | 説明 |
-| - | - | - | - |
-| `player` | .OfflinePlayerArgument | はい | 説明なし |
-| `reason` | .StringArgument | はい | 説明なし |
-
-### `remove <player>`
-
-ターゲットのEBanを解除します。
-
-| 引数名 | 種類 | 必須か | 説明 |
-| - | - | - | - |
-| `player` | .OfflinePlayerArgument | はい | 説明なし |
-
-### `status [player]`
-
-EBan一覧を表示します。
-
-| 引数名 | 種類 | 必須か | 説明 |
-| - | - | - | - |
-| `player` | .OfflinePlayerArgument | いいえ | 説明なし |
-
-## elytra
-
-```plaintext
-/elytra
-```
-
-> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Elytra](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Elytra.java)
-
-プレイヤーにエリトラと花火を付与します。
-
-### ``
-
-プレイヤーにエリトラと花火を付与します。
-
-<aside class="notice">
-このコマンドはプレイヤーからの実行のみに制限されています。
-</aside>
-
 ## g
 
 ```plaintext
@@ -376,104 +248,67 @@ EBan一覧を表示します。
 | `gamemode` | .StringArgument | はい | 説明なし |
 | `player` | .PlayerArgument | はい | 説明なし |
 
-## getlookloc
+## elytra
 
 ```plaintext
-/getlookloc
+/elytra
 ```
 
-> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Getlookloc](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Getlookloc.java)
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Elytra](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Elytra.java)
 
-見ているブロックの座標を提案します。
+プレイヤーにエリトラと花火を付与します。
 
 ### ``
 
-見ているブロックの座標を提案します。
+プレイヤーにエリトラと花火を付与します。
 
 <aside class="notice">
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
 
-## getuserkey
+## tempmute
 
 ```plaintext
-/getuserkey
+/tempmute [changeTo]
 ```
 
-> ソースコード: [com.jaoafa.mymaid4.command.Cmd_GetUserKey](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_GetUserKey.java)
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_TempMute](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_TempMute.java)
 
-ユーザーを認証するためのキー(ユーザーキー)に関する操作を行います。
+一時的なミュートを実施します。運営のみ使用できます。
 
-### ``
+### `[changeTo]`
 
-ユーザーキーを生成し、表示します。
+TempMuteをオン・オフします。指定しない場合、トグルで変更します。
 
 <aside class="notice">
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
-
-## glookup
-
-```plaintext
-/glookup <player>
-```
-
-> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Glookup](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Glookup.java)
-
-他人のゲームモードを確認します。
-
-### `<player>`
-
-他人のゲームモードを確認します。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `player` | .PlayerArgument | はい | 説明なし |
+| `changeTo` | .BooleanArgument | いいえ | 説明なし |
 
-## head
+## discordlink
 
 ```plaintext
-/head
-/head <player>
+/discordlink <authKey>
 ```
 
-> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Head](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Head.java)
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_DiscordLink](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_DiscordLink.java)
 
-頭ブロックを入手します。
+DiscordアカウントとMinecraftアカウントを紐づけます。
 
-### ``
+### `<authKey>`
 
-自分の頭ブロックを入手します。
+DiscordアカウントとMinecraftアカウントを紐づけます。
 
 <aside class="notice">
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
-
-### `<player>`
-
-指定したプレイヤーの頭ブロックを入手します。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `player` | .StringArgument | はい | 説明なし |
-
-## hide
-
-```plaintext
-/hide
-```
-
-> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Hide](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Hide.java)
-
-他のプレイヤーから姿を隠します。
-
-### ``
-
-他のプレイヤーから姿を隠します。
-
-<aside class="notice">
-このコマンドはプレイヤーからの実行のみに制限されています。
-</aside>
+| `authKey` | .StringArgument | はい | 説明なし |
 
 ## history
 
@@ -513,62 +348,32 @@ jaoHistoryに関する操作を行います。
 | - | - | - | - |
 | `target` | .OfflinePlayerArgument | はい | 説明なし |
 
-## home
+## cmdb
 
 ```plaintext
-/home
-/home [name]
-/home list [Page]
-/home view [name]
+/cmdb
+/cmdb <player>
 ```
 
-> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Home](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Home.java)
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Cmdb](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Cmdb.java)
 
-ホームにテレポートします。
+コマンドブロックを入手します。
 
 ### ``
 
-デフォルトホームにテレポートします。
+コマンドブロックをコマンド実行者のメインハンドのアイテムと置き換えます。
 
 <aside class="notice">
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
 
-### `[name]`
+### `<player>`
 
-指定された名前のホームにテレポートします。
-
-<aside class="notice">
-このコマンドはプレイヤーからの実行のみに制限されています。
-</aside>
+コマンドブロックを指定したプレイヤーのメインハンドのアイテムと置き換えます。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `name` | .StringArgument | いいえ | 説明なし |
-
-### `list [Page]`
-
-ホーム一覧を表示します。
-
-<aside class="notice">
-このコマンドはプレイヤーからの実行のみに制限されています。
-</aside>
-
-| 引数名 | 種類 | 必須か | 説明 |
-| - | - | - | - |
-| `Page` | .IntegerArgument | いいえ | 説明なし |
-
-### `view [name]`
-
-指定したホームに関する情報を表示します。
-
-<aside class="notice">
-このコマンドはプレイヤーからの実行のみに制限されています。
-</aside>
-
-| 引数名 | 種類 | 必須か | 説明 |
-| - | - | - | - |
-| `name` | .StringArgument | いいえ | 説明なし |
+| `player` | .PlayerArgument | はい | 説明なし |
 
 ## jail
 
@@ -620,54 +425,41 @@ Jail一覧を表示します。
 | - | - | - | - |
 | `message` | .StringArgument | はい | 説明なし |
 
-## link
+## dedbull
 
 ```plaintext
-/link
+/dedbull
 ```
 
-> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Link](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Link.java)
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Dedbull](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Dedbull.java)
 
-linkコマンドはjMS Gamers Clubで実行するのだ。
+プレイヤーに暗視効果を付与します。すでに付与されている場合は削除します。
 
 ### ``
 
-linkコマンドはjMS Gamers Clubで実行するのだ。
+プレイヤーに暗視効果を付与します。すでに付与されている場合は削除します。
 
 <aside class="notice">
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
 
-## logintext
+## getuserkey
 
 ```plaintext
-/logintext
-/logintext <loginText>
+/getuserkey
 ```
 
-> ソースコード: [com.jaoafa.mymaid4.command.Cmd_LoginText](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_LoginText.java)
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_GetUserKey](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_GetUserKey.java)
 
-ログイン時に表示されるテキストに任意のテキストを追加します。
+ユーザーを認証するためのキー(ユーザーキー)に関する操作を行います。
 
 ### ``
 
-ログイン時に表示されるテキストをリセットします。
+ユーザーキーを生成し、表示します。
 
 <aside class="notice">
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
-
-### `<loginText>`
-
-ログイン時に表示されるテキストに任意のテキストを追加します。
-
-<aside class="notice">
-このコマンドはプレイヤーからの実行のみに制限されています。
-</aside>
-
-| 引数名 | 種類 | 必須か | 説明 |
-| - | - | - | - |
-| `loginText` | .StringArgument | はい | 説明なし |
 
 ## pigeon
 
@@ -735,81 +527,38 @@ linkコマンドはjMS Gamers Clubで実行するのだ。
 | - | - | - | - |
 | `messageId` | .IntegerArgument | いいえ | 説明なし |
 
-## player
+## chat
 
 ```plaintext
-/player
-/player <player>
+/chat <player> <message>
 ```
 
-> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Player](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Player.java)
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Chat](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Chat.java)
 
-プレイヤーの権限グループを取得します。
+偽のプレイヤーに喋らせます。
 
-- エイリアスがあります: `group`
+### `<player> <message>`
 
-### ``
-
-あなたの権限グループを表示します。
-
-<aside class="notice">
-このコマンドはプレイヤーからの実行のみに制限されています。
-</aside>
-
-### `<player>`
-
-指定されたプレイヤーの権限グループを表示します。
+偽のプレイヤーに喋らせます。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
 | `player` | .StringArgument | はい | 説明なし |
+| `message` | .StringArgument | はい | 説明なし |
 
-## sethome
+## link
 
 ```plaintext
-/sethome
-/sethome [name]
+/link
 ```
 
-> ソースコード: [com.jaoafa.mymaid4.command.Cmd_SetHome](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_SetHome.java)
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Link](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Link.java)
 
-ホームを設定します。
-
-- エイリアスがあります: `addhome`
+linkコマンドはjMS Gamers Clubで実行するのだ。
 
 ### ``
 
-デフォルトホームを設定します。
-
-<aside class="notice">
-このコマンドはプレイヤーからの実行のみに制限されています。
-</aside>
-
-### `[name]`
-
-指定された名前のホームを設定します。
-
-<aside class="notice">
-このコマンドはプレイヤーからの実行のみに制限されています。
-</aside>
-
-| 引数名 | 種類 | 必須か | 説明 |
-| - | - | - | - |
-| `name` | .StringArgument | いいえ | 説明なし |
-
-## show
-
-```plaintext
-/show
-```
-
-> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Show](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Show.java)
-
-Hide状態を解除します。
-
-### ``
-
-Hide状態を解除します。
+linkコマンドはjMS Gamers Clubで実行するのだ。
 
 <aside class="notice">
 このコマンドはプレイヤーからの実行のみに制限されています。
@@ -846,27 +595,68 @@ Hide状態を解除します。
 | - | - | - | - |
 | `color` | .StringArgument | はい | 説明なし |
 
-## tempmute
+## show
 
 ```plaintext
-/tempmute [changeTo]
+/show
 ```
 
-> ソースコード: [com.jaoafa.mymaid4.command.Cmd_TempMute](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_TempMute.java)
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Show](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Show.java)
 
-一時的なミュートを実施します。運営のみ使用できます。
+Hide状態を解除します。
 
-### `[changeTo]`
+### ``
 
-TempMuteをオン・オフします。指定しない場合、トグルで変更します。
+Hide状態を解除します。
 
 <aside class="notice">
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
 
+## head
+
+```plaintext
+/head
+/head <player>
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Head](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Head.java)
+
+頭ブロックを入手します。
+
+### ``
+
+自分の頭ブロックを入手します。
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+### `<player>`
+
+指定したプレイヤーの頭ブロックを入手します。
+
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `changeTo` | .BooleanArgument | いいえ | 説明なし |
+| `player` | .StringArgument | はい | 説明なし |
+
+## glookup
+
+```plaintext
+/glookup <player>
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Glookup](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Glookup.java)
+
+他人のゲームモードを確認します。
+
+### `<player>`
+
+他人のゲームモードを確認します。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `player` | .PlayerArgument | はい | 説明なし |
 
 ## test
 
@@ -886,6 +676,89 @@ MyMaidテストコマンド
 ### `database`
 
 MyMaidテストコマンド
+
+## ded
+
+```plaintext
+/ded
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Ded](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Ded.java)
+
+最後に死亡した場所にテレポートします。
+
+### ``
+
+最後に死亡した場所にテレポートします。
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+## hide
+
+```plaintext
+/hide
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Hide](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Hide.java)
+
+他のプレイヤーから姿を隠します。
+
+### ``
+
+他のプレイヤーから姿を隠します。
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+## player
+
+```plaintext
+/player
+/player <player>
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Player](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Player.java)
+
+プレイヤーの権限グループを取得します。
+
+- エイリアスがあります: `group`
+
+### ``
+
+あなたの権限グループを表示します。
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+### `<player>`
+
+指定されたプレイヤーの権限グループを表示します。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `player` | .StringArgument | はい | 説明なし |
+
+## getlookloc
+
+```plaintext
+/getlookloc
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Getlookloc](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Getlookloc.java)
+
+見ているブロックの座標を提案します。
+
+### ``
+
+見ているブロックの座標を提案します。
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
 
 ## wt
 
@@ -918,3 +791,130 @@ MyMaidテストコマンド
 | - | - | - | - |
 | `worldName` | .StringArgument | はい | 説明なし |
 | `player` | .PlayerArgument | はい | 説明なし |
+
+## sethome
+
+```plaintext
+/sethome
+/sethome [name]
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_SetHome](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_SetHome.java)
+
+ホームを設定します。
+
+- エイリアスがあります: `addhome`
+
+### ``
+
+デフォルトホームを設定します。
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+### `[name]`
+
+指定された名前のホームを設定します。
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `name` | .StringArgument | いいえ | 説明なし |
+
+## eban
+
+```plaintext
+/eban add <player> <reason>
+/eban remove <player>
+/eban status [player]
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_EBan](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_EBan.java)
+
+EBanに関する処理を行います。
+
+### `add <player> <reason>`
+
+ターゲットをEBanします。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `player` | .OfflinePlayerArgument | はい | 説明なし |
+| `reason` | .StringArgument | はい | 説明なし |
+
+### `remove <player>`
+
+ターゲットのEBanを解除します。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `player` | .OfflinePlayerArgument | はい | 説明なし |
+
+### `status [player]`
+
+EBan一覧を表示します。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `player` | .OfflinePlayerArgument | いいえ | 説明なし |
+
+## home
+
+```plaintext
+/home
+/home [name]
+/home list [Page]
+/home view [name]
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Home](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Home.java)
+
+ホームにテレポートします。
+
+### ``
+
+デフォルトホームにテレポートします。
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+### `[name]`
+
+指定された名前のホームにテレポートします。
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `name` | .StringArgument | いいえ | 説明なし |
+
+### `list [Page]`
+
+ホーム一覧を表示します。
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `Page` | .IntegerArgument | いいえ | 説明なし |
+
+### `view [name]`
+
+指定したホームに関する情報を表示します。
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `name` | .StringArgument | いいえ | 説明なし |
