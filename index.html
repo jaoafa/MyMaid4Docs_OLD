@@ -521,13 +521,13 @@
 </blockquote>
 
 <p>ログイン時に表示されるテキストに任意のテキストを追加します。</p>
-<h3 id='commands-logintext-'>``</h3>
+<h3 id='commands-logintext-logintext'><code>/logintext</code></h3>
 <p>ログイン時に表示されるテキストをリセットします。</p>
 
 <aside class="notice">
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
-<h3 id='commands-logintext-lt-logintext-gt'><code>&lt;loginText&gt;</code></h3>
+<h3 id='commands-logintext-logintext-lt-logintext-gt'><code>/logintext &lt;loginText&gt;</code></h3>
 <p>ログイン時に表示されるテキストに任意のテキストを追加します。</p>
 
 <aside class="notice">
@@ -544,7 +544,7 @@
 </thead><tbody>
 <tr>
 <td><code>loginText</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
@@ -557,13 +557,13 @@
 </blockquote>
 
 <p>バリアブロックを入手します。</p>
-<h3 id='commands-brb-'>``</h3>
+<h3 id='commands-brb-brb'><code>/brb</code></h3>
 <p>バリアブロックをコマンド実行者のメインハンドのアイテムと置き換えます。</p>
 
 <aside class="notice">
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
-<h3 id='commands-brb-lt-player-gt'><code>&lt;player&gt;</code></h3>
+<h3 id='commands-brb-brb-lt-player-gt'><code>/brb &lt;player&gt;</code></h3>
 <p>バリアブロックを指定したプレイヤーのメインハンドのアイテムと置き換えます。</p>
 
 <table><thead>
@@ -576,7 +576,7 @@
 </thead><tbody>
 <tr>
 <td><code>player</code></td>
-<td>.PlayerArgument</td>
+<td>PlayerArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
@@ -590,7 +590,7 @@
 </blockquote>
 
 <p>ChatBanに関する処理を行います。</p>
-<h3 id='commands-chatban-add-lt-player-gt-lt-reason-gt'><code>add &lt;player&gt; &lt;reason&gt;</code></h3>
+<h3 id='commands-chatban-chatban-add-lt-player-gt-lt-reason-gt'><code>/chatban add &lt;player&gt; &lt;reason&gt;</code></h3>
 <p>ターゲットをChatBanします。</p>
 
 <table><thead>
@@ -603,18 +603,18 @@
 </thead><tbody>
 <tr>
 <td><code>player</code></td>
-<td>.OfflinePlayerArgument</td>
+<td>OfflinePlayerArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
 <tr>
 <td><code>reason</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
 </tbody></table>
-<h3 id='commands-chatban-remove-lt-player-gt'><code>remove &lt;player&gt;</code></h3>
+<h3 id='commands-chatban-chatban-remove-lt-player-gt'><code>/chatban remove &lt;player&gt;</code></h3>
 <p>ターゲットのChatBanを解除します。</p>
 
 <table><thead>
@@ -627,12 +627,12 @@
 </thead><tbody>
 <tr>
 <td><code>player</code></td>
-<td>.OfflinePlayerArgument</td>
+<td>OfflinePlayerArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
 </tbody></table>
-<h3 id='commands-chatban-status-player'><code>status [player]</code></h3>
+<h3 id='commands-chatban-chatban-status-player'><code>/chatban status [player]</code></h3>
 <p>ChatBan一覧を表示します。</p>
 
 <table><thead>
@@ -645,7 +645,7 @@
 </thead><tbody>
 <tr>
 <td><code>player</code></td>
-<td>.OfflinePlayerArgument</td>
+<td>OfflinePlayerArgument</td>
 <td>いいえ</td>
 <td>説明なし</td>
 </tr>
@@ -662,13 +662,13 @@
 <ul>
 <li>エイリアスがあります: <code>removehome,remhome</code></li>
 </ul>
-<h3 id='commands-delhome-'>``</h3>
+<h3 id='commands-delhome-delhome'><code>/delhome</code></h3>
 <p>デフォルトホームを削除します。</p>
 
 <aside class="notice">
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
-<h3 id='commands-delhome-name'><code>[name]</code></h3>
+<h3 id='commands-delhome-delhome-name'><code>/delhome [name]</code></h3>
 <p>指定された名前のホームを削除します。</p>
 
 <aside class="notice">
@@ -685,7 +685,7 @@
 </thead><tbody>
 <tr>
 <td><code>name</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>いいえ</td>
 <td>説明なし</td>
 </tr>
@@ -702,7 +702,7 @@
 </blockquote>
 
 <p>DynmapのMarkerを編集・テレポートします。</p>
-<h3 id='commands-dt-lt-markername-gt'><code>&lt;markerName&gt;</code></h3>
+<h3 id='commands-dt-dt-lt-markername-gt'><code>/dt &lt;markerName&gt;</code></h3>
 <p>マーカーにテレポートさせます。</p>
 
 <aside class="notice">
@@ -719,12 +719,12 @@
 </thead><tbody>
 <tr>
 <td><code>markerName</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
 </tbody></table>
-<h3 id='commands-dt-add-lt-markername-gt-lt-markertype-gt-markericon'><code>add &lt;markerName&gt; &lt;markerType&gt; [markerIcon]</code></h3>
+<h3 id='commands-dt-dt-add-lt-markername-gt-lt-markertype-gt-markericon'><code>/dt add &lt;markerName&gt; &lt;markerType&gt; [markerIcon]</code></h3>
 <p>マーカーを追加します。</p>
 
 <aside class="notice">
@@ -741,24 +741,24 @@
 </thead><tbody>
 <tr>
 <td><code>markerName</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
 <tr>
 <td><code>markerType</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
 <tr>
 <td><code>markerIcon</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>いいえ</td>
 <td>説明なし</td>
 </tr>
 </tbody></table>
-<h3 id='commands-dt-del-lt-markername-gt'><code>del &lt;markerName&gt;</code></h3>
+<h3 id='commands-dt-dt-del-lt-markername-gt'><code>/dt del &lt;markerName&gt;</code></h3>
 <p>マーカーを削除します。</p>
 
 <aside class="notice">
@@ -775,24 +775,24 @@
 </thead><tbody>
 <tr>
 <td><code>markerName</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
 </tbody></table>
-<h3 id='commands-dt-random'><code>random</code></h3>
+<h3 id='commands-dt-dt-random'><code>/dt random</code></h3>
 <p>ランダムに選ばれたマーカーにテレポートします。</p>
 
 <aside class="notice">
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
-<h3 id='commands-dt-near'><code>near</code></h3>
+<h3 id='commands-dt-dt-near'><code>/dt near</code></h3>
 <p>近くのマーカーを表示します。</p>
 
 <aside class="notice">
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
-<h3 id='commands-dt-list-page'><code>list [page]</code></h3>
+<h3 id='commands-dt-dt-list-page'><code>/dt list [page]</code></h3>
 <p>マーカーの一覧を表示します。</p>
 
 <aside class="notice">
@@ -809,7 +809,7 @@
 </thead><tbody>
 <tr>
 <td><code>page</code></td>
-<td>.IntegerArgument</td>
+<td>IntegerArgument</td>
 <td>いいえ</td>
 <td>説明なし</td>
 </tr>
@@ -823,13 +823,13 @@
 </blockquote>
 
 <p>ゲームモードを変更します。</p>
-<h3 id='commands-g-'>``</h3>
+<h3 id='commands-g-g'><code>/g</code></h3>
 <p>ゲームモードを切り替えます。</p>
 
 <aside class="notice">
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
-<h3 id='commands-g-lt-gamemode-gt'><code>&lt;gamemode&gt;</code></h3>
+<h3 id='commands-g-g-lt-gamemode-gt'><code>/g &lt;gamemode&gt;</code></h3>
 <p>指定されたゲームモードに切り替えます。</p>
 
 <aside class="notice">
@@ -846,12 +846,12 @@
 </thead><tbody>
 <tr>
 <td><code>gamemode</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
 </tbody></table>
-<h3 id='commands-g-lt-gamemode-gt-lt-player-gt'><code>&lt;gamemode&gt; &lt;player&gt;</code></h3>
+<h3 id='commands-g-g-lt-gamemode-gt-lt-player-gt'><code>/g &lt;gamemode&gt; &lt;player&gt;</code></h3>
 <p>指定されたプレイヤーのゲームモードを切り替えます。</p>
 
 <table><thead>
@@ -864,13 +864,13 @@
 </thead><tbody>
 <tr>
 <td><code>gamemode</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
 <tr>
 <td><code>player</code></td>
-<td>.PlayerArgument</td>
+<td>PlayerArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
@@ -882,7 +882,7 @@
 </blockquote>
 
 <p>プレイヤーにエリトラと花火を付与します。</p>
-<h3 id='commands-elytra-'>``</h3>
+<h3 id='commands-elytra-elytra'><code>/elytra</code></h3>
 <p>プレイヤーにエリトラと花火を付与します。</p>
 
 <aside class="notice">
@@ -895,7 +895,7 @@
 </blockquote>
 
 <p>一時的なミュートを実施します。運営のみ使用できます。</p>
-<h3 id='commands-tempmute-changeto'><code>[changeTo]</code></h3>
+<h3 id='commands-tempmute-tempmute-changeto'><code>/tempmute [changeTo]</code></h3>
 <p>TempMuteをオン・オフします。指定しない場合、トグルで変更します。</p>
 
 <aside class="notice">
@@ -912,7 +912,7 @@
 </thead><tbody>
 <tr>
 <td><code>changeTo</code></td>
-<td>.BooleanArgument</td>
+<td>BooleanArgument</td>
 <td>いいえ</td>
 <td>説明なし</td>
 </tr>
@@ -924,7 +924,7 @@
 </blockquote>
 
 <p>DiscordアカウントとMinecraftアカウントを紐づけます。</p>
-<h3 id='commands-discordlink-lt-authkey-gt'><code>&lt;authKey&gt;</code></h3>
+<h3 id='commands-discordlink-discordlink-lt-authkey-gt'><code>/discordlink &lt;authKey&gt;</code></h3>
 <p>DiscordアカウントとMinecraftアカウントを紐づけます。</p>
 
 <aside class="notice">
@@ -941,7 +941,7 @@
 </thead><tbody>
 <tr>
 <td><code>authKey</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
@@ -955,7 +955,7 @@
 </blockquote>
 
 <p>jaoHistoryに関する操作を行います。</p>
-<h3 id='commands-history-add-lt-target-gt-lt-message-gt'><code>add &lt;target&gt; &lt;message&gt;</code></h3>
+<h3 id='commands-history-history-add-lt-target-gt-lt-message-gt'><code>/history add &lt;target&gt; &lt;message&gt;</code></h3>
 <p>指定したプレイヤーのjaoHistoryにデータを追加します。</p>
 
 <table><thead>
@@ -968,18 +968,18 @@
 </thead><tbody>
 <tr>
 <td><code>target</code></td>
-<td>.OfflinePlayerArgument</td>
+<td>OfflinePlayerArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
 <tr>
 <td><code>message</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
 </tbody></table>
-<h3 id='commands-history-disable-lt-target-gt-lt-item-gt'><code>disable &lt;target&gt; &lt;item&gt;</code></h3>
+<h3 id='commands-history-history-disable-lt-target-gt-lt-item-gt'><code>/history disable &lt;target&gt; &lt;item&gt;</code></h3>
 <p>指定したプレイヤーのjaoHistory項目を無効化します。</p>
 
 <table><thead>
@@ -992,18 +992,18 @@
 </thead><tbody>
 <tr>
 <td><code>target</code></td>
-<td>.OfflinePlayerArgument</td>
+<td>OfflinePlayerArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
 <tr>
 <td><code>item</code></td>
-<td>.IntegerArgument</td>
+<td>IntegerArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
 </tbody></table>
-<h3 id='commands-history-status-lt-target-gt'><code>status &lt;target&gt;</code></h3>
+<h3 id='commands-history-history-status-lt-target-gt'><code>/history status &lt;target&gt;</code></h3>
 <p>指定したプレイヤーのjaoHistory情報を表示します。</p>
 
 <table><thead>
@@ -1016,7 +1016,7 @@
 </thead><tbody>
 <tr>
 <td><code>target</code></td>
-<td>.OfflinePlayerArgument</td>
+<td>OfflinePlayerArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
@@ -1029,13 +1029,13 @@
 </blockquote>
 
 <p>コマンドブロックを入手します。</p>
-<h3 id='commands-cmdb-'>``</h3>
+<h3 id='commands-cmdb-cmdb'><code>/cmdb</code></h3>
 <p>コマンドブロックをコマンド実行者のメインハンドのアイテムと置き換えます。</p>
 
 <aside class="notice">
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
-<h3 id='commands-cmdb-lt-player-gt'><code>&lt;player&gt;</code></h3>
+<h3 id='commands-cmdb-cmdb-lt-player-gt'><code>/cmdb &lt;player&gt;</code></h3>
 <p>コマンドブロックを指定したプレイヤーのメインハンドのアイテムと置き換えます。</p>
 
 <table><thead>
@@ -1048,7 +1048,7 @@
 </thead><tbody>
 <tr>
 <td><code>player</code></td>
-<td>.PlayerArgument</td>
+<td>PlayerArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
@@ -1063,7 +1063,7 @@
 </blockquote>
 
 <p>Jailに関する処理を行います。</p>
-<h3 id='commands-jail-add-lt-player-gt-lt-reason-gt'><code>add &lt;player&gt; &lt;reason&gt;</code></h3>
+<h3 id='commands-jail-jail-add-lt-player-gt-lt-reason-gt'><code>/jail add &lt;player&gt; &lt;reason&gt;</code></h3>
 <p>ターゲットをJailします。</p>
 
 <table><thead>
@@ -1076,18 +1076,18 @@
 </thead><tbody>
 <tr>
 <td><code>player</code></td>
-<td>.OfflinePlayerArgument</td>
+<td>OfflinePlayerArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
 <tr>
 <td><code>reason</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
 </tbody></table>
-<h3 id='commands-jail-remove-lt-player-gt'><code>remove &lt;player&gt;</code></h3>
+<h3 id='commands-jail-jail-remove-lt-player-gt'><code>/jail remove &lt;player&gt;</code></h3>
 <p>ターゲットのJailを解除します。</p>
 
 <table><thead>
@@ -1100,12 +1100,12 @@
 </thead><tbody>
 <tr>
 <td><code>player</code></td>
-<td>.OfflinePlayerArgument</td>
+<td>OfflinePlayerArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
 </tbody></table>
-<h3 id='commands-jail-status-player'><code>status [player]</code></h3>
+<h3 id='commands-jail-jail-status-player'><code>/jail status [player]</code></h3>
 <p>Jail一覧を表示します。</p>
 
 <table><thead>
@@ -1118,12 +1118,12 @@
 </thead><tbody>
 <tr>
 <td><code>player</code></td>
-<td>.OfflinePlayerArgument</td>
+<td>OfflinePlayerArgument</td>
 <td>いいえ</td>
 <td>説明なし</td>
 </tr>
 </tbody></table>
-<h3 id='commands-jail-testment-lt-message-gt'><code>testment &lt;message&gt;</code></h3>
+<h3 id='commands-jail-jail-testment-lt-message-gt'><code>/jail testment &lt;message&gt;</code></h3>
 <p>遺言を記録します。</p>
 
 <aside class="notice">
@@ -1140,7 +1140,7 @@
 </thead><tbody>
 <tr>
 <td><code>message</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
@@ -1152,7 +1152,7 @@
 </blockquote>
 
 <p>プレイヤーに暗視効果を付与します。すでに付与されている場合は削除します。</p>
-<h3 id='commands-dedbull-'>``</h3>
+<h3 id='commands-dedbull-dedbull'><code>/dedbull</code></h3>
 <p>プレイヤーに暗視効果を付与します。すでに付与されている場合は削除します。</p>
 
 <aside class="notice">
@@ -1165,7 +1165,7 @@
 </blockquote>
 
 <p>ユーザーを認証するためのキー(ユーザーキー)に関する操作を行います。</p>
-<h3 id='commands-getuserkey-'>``</h3>
+<h3 id='commands-getuserkey-getuserkey'><code>/getuserkey</code></h3>
 <p>ユーザーキーを生成し、表示します。</p>
 
 <aside class="notice">
@@ -1188,7 +1188,7 @@
 <ul>
 <li>エイリアスがあります: <code>messenger</code></li>
 </ul>
-<h3 id='commands-pigeon-speaker-add-lt-speaker-gt'><code>speaker add &lt;speaker&gt;</code></h3>
+<h3 id='commands-pigeon-pigeon-speaker-add-lt-speaker-gt'><code>/pigeon speaker add &lt;speaker&gt;</code></h3>
 <p>伝書鳩ちゃんにスピーカーを追加してもらいます。</p>
 
 <table><thead>
@@ -1201,12 +1201,12 @@
 </thead><tbody>
 <tr>
 <td><code>speaker</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
 </tbody></table>
-<h3 id='commands-pigeon-messages-add-lt-message-gt'><code>messages add &lt;message&gt;</code></h3>
+<h3 id='commands-pigeon-pigeon-messages-add-lt-message-gt'><code>/pigeon messages add &lt;message&gt;</code></h3>
 <p>伝書鳩ちゃんにメッセージを追加してもらいます。</p>
 
 <table><thead>
@@ -1219,12 +1219,12 @@
 </thead><tbody>
 <tr>
 <td><code>message</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
 </tbody></table>
-<h3 id='commands-pigeon-speaker-remove-speaker'><code>speaker remove [speaker]</code></h3>
+<h3 id='commands-pigeon-pigeon-speaker-remove-speaker'><code>/pigeon speaker remove [speaker]</code></h3>
 <p>伝書鳩ちゃんにスピーカーを削除してもらいます。</p>
 
 <table><thead>
@@ -1237,12 +1237,12 @@
 </thead><tbody>
 <tr>
 <td><code>speaker</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>いいえ</td>
 <td>説明なし</td>
 </tr>
 </tbody></table>
-<h3 id='commands-pigeon-messages-remove-message'><code>messages remove [message]</code></h3>
+<h3 id='commands-pigeon-pigeon-messages-remove-message'><code>/pigeon messages remove [message]</code></h3>
 <p>伝書鳩ちゃんにメッセージを削除してもらいます。</p>
 
 <table><thead>
@@ -1255,16 +1255,16 @@
 </thead><tbody>
 <tr>
 <td><code>message</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>いいえ</td>
 <td>説明なし</td>
 </tr>
 </tbody></table>
-<h3 id='commands-pigeon-speaker-list'><code>speaker list</code></h3>
+<h3 id='commands-pigeon-pigeon-speaker-list'><code>/pigeon speaker list</code></h3>
 <p>伝書鳩ちゃんにスピーカーが誰がいるか聞きます。</p>
-<h3 id='commands-pigeon-messages-list'><code>messages list</code></h3>
+<h3 id='commands-pigeon-pigeon-messages-list'><code>/pigeon messages list</code></h3>
 <p>伝書鳩ちゃんにメッセージが何があるか聞きます。</p>
-<h3 id='commands-pigeon-broadcast-messageid'><code>broadcast [messageId]</code></h3>
+<h3 id='commands-pigeon-pigeon-broadcast-messageid'><code>/pigeon broadcast [messageId]</code></h3>
 <p>伝書鳩ちゃんにメッセージを配信してもらいます。</p>
 
 <table><thead>
@@ -1277,7 +1277,7 @@
 </thead><tbody>
 <tr>
 <td><code>messageId</code></td>
-<td>.IntegerArgument</td>
+<td>IntegerArgument</td>
 <td>いいえ</td>
 <td>説明なし</td>
 </tr>
@@ -1289,7 +1289,7 @@
 </blockquote>
 
 <p>偽のプレイヤーに喋らせます。</p>
-<h3 id='commands-chat-lt-player-gt-lt-message-gt'><code>&lt;player&gt; &lt;message&gt;</code></h3>
+<h3 id='commands-chat-chat-lt-player-gt-lt-message-gt'><code>/chat &lt;player&gt; &lt;message&gt;</code></h3>
 <p>偽のプレイヤーに喋らせます。</p>
 
 <table><thead>
@@ -1302,13 +1302,13 @@
 </thead><tbody>
 <tr>
 <td><code>player</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
 <tr>
 <td><code>message</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
@@ -1320,7 +1320,7 @@
 </blockquote>
 
 <p>linkコマンドはjMS Gamers Clubで実行するのだ。</p>
-<h3 id='commands-link-'>``</h3>
+<h3 id='commands-link-link'><code>/link</code></h3>
 <p>linkコマンドはjMS Gamers Clubで実行するのだ。</p>
 
 <aside class="notice">
@@ -1334,13 +1334,13 @@
 </blockquote>
 
 <p>チャット欄に表示される四角の色を変更します。</p>
-<h3 id='commands-skkcolor-'>``</h3>
+<h3 id='commands-skkcolor-skkcolor'><code>/skkcolor</code></h3>
 <p>チャット欄に表示される四角の色をリセットします。</p>
 
 <aside class="notice">
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
-<h3 id='commands-skkcolor-lt-color-gt'><code>&lt;color&gt;</code></h3>
+<h3 id='commands-skkcolor-skkcolor-lt-color-gt'><code>/skkcolor &lt;color&gt;</code></h3>
 <p>チャット欄に表示される四角の色を変更します。</p>
 
 <aside class="notice">
@@ -1357,7 +1357,7 @@
 </thead><tbody>
 <tr>
 <td><code>color</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
@@ -1369,7 +1369,7 @@
 </blockquote>
 
 <p>Hide状態を解除します。</p>
-<h3 id='commands-show-'>``</h3>
+<h3 id='commands-show-show'><code>/show</code></h3>
 <p>Hide状態を解除します。</p>
 
 <aside class="notice">
@@ -1383,13 +1383,13 @@
 </blockquote>
 
 <p>頭ブロックを入手します。</p>
-<h3 id='commands-head-'>``</h3>
+<h3 id='commands-head-head'><code>/head</code></h3>
 <p>自分の頭ブロックを入手します。</p>
 
 <aside class="notice">
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
-<h3 id='commands-head-lt-player-gt'><code>&lt;player&gt;</code></h3>
+<h3 id='commands-head-head-lt-player-gt'><code>/head &lt;player&gt;</code></h3>
 <p>指定したプレイヤーの頭ブロックを入手します。</p>
 
 <table><thead>
@@ -1402,7 +1402,7 @@
 </thead><tbody>
 <tr>
 <td><code>player</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
@@ -1414,7 +1414,7 @@
 </blockquote>
 
 <p>他人のゲームモードを確認します。</p>
-<h3 id='commands-glookup-lt-player-gt'><code>&lt;player&gt;</code></h3>
+<h3 id='commands-glookup-glookup-lt-player-gt'><code>/glookup &lt;player&gt;</code></h3>
 <p>他人のゲームモードを確認します。</p>
 
 <table><thead>
@@ -1427,7 +1427,7 @@
 </thead><tbody>
 <tr>
 <td><code>player</code></td>
-<td>.PlayerArgument</td>
+<td>PlayerArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
@@ -1440,9 +1440,9 @@
 </blockquote>
 
 <p>MyMaidテストコマンド</p>
-<h3 id='commands-test-version'><code>version</code></h3>
+<h3 id='commands-test-test-version'><code>/test version</code></h3>
 <p>MyMaidテストコマンド</p>
-<h3 id='commands-test-database'><code>database</code></h3>
+<h3 id='commands-test-test-database'><code>/test database</code></h3>
 <p>MyMaidテストコマンド</p>
 <h2 id='commands-ded'>ded</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/ded
 </code></pre></div>
@@ -1451,7 +1451,7 @@
 </blockquote>
 
 <p>最後に死亡した場所にテレポートします。</p>
-<h3 id='commands-ded-'>``</h3>
+<h3 id='commands-ded-ded'><code>/ded</code></h3>
 <p>最後に死亡した場所にテレポートします。</p>
 
 <aside class="notice">
@@ -1464,7 +1464,7 @@
 </blockquote>
 
 <p>他のプレイヤーから姿を隠します。</p>
-<h3 id='commands-hide-'>``</h3>
+<h3 id='commands-hide-hide'><code>/hide</code></h3>
 <p>他のプレイヤーから姿を隠します。</p>
 
 <aside class="notice">
@@ -1482,13 +1482,13 @@
 <ul>
 <li>エイリアスがあります: <code>group</code></li>
 </ul>
-<h3 id='commands-player-'>``</h3>
+<h3 id='commands-player-player'><code>/player</code></h3>
 <p>あなたの権限グループを表示します。</p>
 
 <aside class="notice">
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
-<h3 id='commands-player-lt-player-gt'><code>&lt;player&gt;</code></h3>
+<h3 id='commands-player-player-lt-player-gt'><code>/player &lt;player&gt;</code></h3>
 <p>指定されたプレイヤーの権限グループを表示します。</p>
 
 <table><thead>
@@ -1501,7 +1501,7 @@
 </thead><tbody>
 <tr>
 <td><code>player</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
@@ -1513,7 +1513,7 @@
 </blockquote>
 
 <p>見ているブロックの座標を提案します。</p>
-<h3 id='commands-getlookloc-'>``</h3>
+<h3 id='commands-getlookloc-getlookloc'><code>/getlookloc</code></h3>
 <p>見ているブロックの座標を提案します。</p>
 
 <aside class="notice">
@@ -1527,7 +1527,7 @@
 </blockquote>
 
 <p>他ワールドにテレポートします。</p>
-<h3 id='commands-wt-lt-worldname-gt'><code>&lt;worldName&gt;</code></h3>
+<h3 id='commands-wt-wt-lt-worldname-gt'><code>/wt &lt;worldName&gt;</code></h3>
 <p>指定したワールドにテレポートします。</p>
 
 <aside class="notice">
@@ -1544,12 +1544,12 @@
 </thead><tbody>
 <tr>
 <td><code>worldName</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
 </tbody></table>
-<h3 id='commands-wt-lt-worldname-gt-lt-player-gt'><code>&lt;worldName&gt; &lt;player&gt;</code></h3>
+<h3 id='commands-wt-wt-lt-worldname-gt-lt-player-gt'><code>/wt &lt;worldName&gt; &lt;player&gt;</code></h3>
 <p>指定したプレイヤーを指定したワールドにテレポートさせます。</p>
 
 <table><thead>
@@ -1562,13 +1562,13 @@
 </thead><tbody>
 <tr>
 <td><code>worldName</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
 <tr>
 <td><code>player</code></td>
-<td>.PlayerArgument</td>
+<td>PlayerArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
@@ -1585,13 +1585,13 @@
 <ul>
 <li>エイリアスがあります: <code>addhome</code></li>
 </ul>
-<h3 id='commands-sethome-'>``</h3>
+<h3 id='commands-sethome-sethome'><code>/sethome</code></h3>
 <p>デフォルトホームを設定します。</p>
 
 <aside class="notice">
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
-<h3 id='commands-sethome-name'><code>[name]</code></h3>
+<h3 id='commands-sethome-sethome-name'><code>/sethome [name]</code></h3>
 <p>指定された名前のホームを設定します。</p>
 
 <aside class="notice">
@@ -1608,7 +1608,7 @@
 </thead><tbody>
 <tr>
 <td><code>name</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>いいえ</td>
 <td>説明なし</td>
 </tr>
@@ -1622,7 +1622,7 @@
 </blockquote>
 
 <p>EBanに関する処理を行います。</p>
-<h3 id='commands-eban-add-lt-player-gt-lt-reason-gt'><code>add &lt;player&gt; &lt;reason&gt;</code></h3>
+<h3 id='commands-eban-eban-add-lt-player-gt-lt-reason-gt'><code>/eban add &lt;player&gt; &lt;reason&gt;</code></h3>
 <p>ターゲットをEBanします。</p>
 
 <table><thead>
@@ -1635,18 +1635,18 @@
 </thead><tbody>
 <tr>
 <td><code>player</code></td>
-<td>.OfflinePlayerArgument</td>
+<td>OfflinePlayerArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
 <tr>
 <td><code>reason</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
 </tbody></table>
-<h3 id='commands-eban-remove-lt-player-gt'><code>remove &lt;player&gt;</code></h3>
+<h3 id='commands-eban-eban-remove-lt-player-gt'><code>/eban remove &lt;player&gt;</code></h3>
 <p>ターゲットのEBanを解除します。</p>
 
 <table><thead>
@@ -1659,12 +1659,12 @@
 </thead><tbody>
 <tr>
 <td><code>player</code></td>
-<td>.OfflinePlayerArgument</td>
+<td>OfflinePlayerArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
 </tbody></table>
-<h3 id='commands-eban-status-player'><code>status [player]</code></h3>
+<h3 id='commands-eban-eban-status-player'><code>/eban status [player]</code></h3>
 <p>EBan一覧を表示します。</p>
 
 <table><thead>
@@ -1677,7 +1677,7 @@
 </thead><tbody>
 <tr>
 <td><code>player</code></td>
-<td>.OfflinePlayerArgument</td>
+<td>OfflinePlayerArgument</td>
 <td>いいえ</td>
 <td>説明なし</td>
 </tr>
@@ -1692,13 +1692,13 @@
 </blockquote>
 
 <p>ホームにテレポートします。</p>
-<h3 id='commands-home-'>``</h3>
+<h3 id='commands-home-home'><code>/home</code></h3>
 <p>デフォルトホームにテレポートします。</p>
 
 <aside class="notice">
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
-<h3 id='commands-home-name'><code>[name]</code></h3>
+<h3 id='commands-home-home-name'><code>/home [name]</code></h3>
 <p>指定された名前のホームにテレポートします。</p>
 
 <aside class="notice">
@@ -1715,12 +1715,12 @@
 </thead><tbody>
 <tr>
 <td><code>name</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>いいえ</td>
 <td>説明なし</td>
 </tr>
 </tbody></table>
-<h3 id='commands-home-list-page'><code>list [Page]</code></h3>
+<h3 id='commands-home-home-list-page'><code>/home list [Page]</code></h3>
 <p>ホーム一覧を表示します。</p>
 
 <aside class="notice">
@@ -1737,12 +1737,12 @@
 </thead><tbody>
 <tr>
 <td><code>Page</code></td>
-<td>.IntegerArgument</td>
+<td>IntegerArgument</td>
 <td>いいえ</td>
 <td>説明なし</td>
 </tr>
 </tbody></table>
-<h3 id='commands-home-view-name'><code>view [name]</code></h3>
+<h3 id='commands-home-home-view-name'><code>/home view [name]</code></h3>
 <p>指定したホームに関する情報を表示します。</p>
 
 <aside class="notice">
@@ -1759,7 +1759,7 @@
 </thead><tbody>
 <tr>
 <td><code>name</code></td>
-<td>.StringArgument</td>
+<td>StringArgument</td>
 <td>いいえ</td>
 <td>説明なし</td>
 </tr>
