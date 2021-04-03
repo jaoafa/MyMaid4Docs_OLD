@@ -13,7 +13,15 @@ if (!file_exists("source/includes")) {
 
 $markdown = [];
 
-foreach ($docs["commands"] as $command) {
+$commands = $docs["commands"];
+uasort($array, function($a, $b) {
+    if ($a["name"] == $b["name"]) {
+        return 0;
+    }
+    return ($a["name"] < $b["name"]) ? -1 : 1;
+});
+
+foreach ($commands as $command) {
     $markdown[] = "## " . $command["name"];
     $markdown[] = "";
 
@@ -110,7 +118,14 @@ foreach ($docs["commands"] as $command) {
 file_put_contents("source/includes/_commands.md", implode("\n", $markdown));
 
 $markdown = [];
-foreach($docs["events"] as $event){
+$events = $docs["events"];
+uasort($array, function ($a, $b) {
+    if ($a["class"] == $b["class"]) {
+        return 0;
+    }
+    return ($a["class"] < $b["class"]) ? -1 : 1;
+});
+foreach($events as $event){
   $markdown[] = "### " . substr($event["class"], strrpos($event["class"], "Event_"));
   $markdown[] = "";
   $markdown[] = $event["description"];
