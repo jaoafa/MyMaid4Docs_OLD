@@ -51,7 +51,7 @@ foreach ($docs["commands"] as $command) {
 
     foreach ($command["subcommands"] as $subcommand) {
         $args = [];
-        foreach (array_slice($subcommand["arguments"], 1) as $argument) {
+        foreach ($subcommand["arguments"] as $argument) {
             if ($argument["class"] == "cloud.commandframework.arguments.StaticArgument") {
                 $before = "";
                 $after = "";
