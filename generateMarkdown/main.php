@@ -45,7 +45,7 @@ foreach ($docs["commands"] as $command) {
     $markdown[] = "";
 
     if (count($command["alias"]) != 0) {
-        $markdown[] = "- エイリアスがあります: `" . implode(",", $command["alias"]) . "`";
+        $markdown[] = "- エイリアスがあります: `" . implode(", ", $command["alias"]) . "`";
         $markdown[] = "";
     }
 
