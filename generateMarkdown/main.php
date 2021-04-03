@@ -4,17 +4,25 @@
 $docs = file_get_contents("http://localhost:31001/docs");
 $docs = json_decode($docs, true);
 
+foreach ($http_response_header as $header) {
+    if (substr($header, 0, strlen("Server: MyMaid Server (")) == "Server: MyMaid Server (") {
+        $version = substr($header, strlen("Server: MyMaid Server ("), strlen($header) - 1);
+    }
+}
+
 if (!file_exists("source/includes")) {
     echo "カレントディレクトリが適切ではありません。\n";
     exit(1);
 }
+
+file_put_contents("source/includes/_version.md", "- Version: $version");
 
 // Commands ---------------------------------- //
 
 $markdown = [];
 
 $commands = $docs["commands"];
-uasort($commands, function($a, $b) {
+uasort($commands, function ($a, $b) {
     if ($a["name"] == $b["name"]) {
         return 0;
     }
@@ -125,12 +133,12 @@ uasort($events, function ($a, $b) {
     }
     return ($a["class"] < $b["class"]) ? -1 : 1;
 });
-foreach($events as $event){
-  $markdown[] = "### " . substr($event["class"], strrpos($event["class"], "Event_"));
-  $markdown[] = "";
-  $markdown[] = $event["description"];
-  $markdown[] = "";
-  $markdown[] = "> ソースコード: [" . $command["class"] . "](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/" . str_replace(".", "/", $command["class"]) . ".java)";
-  $markdown[] = "";
+foreach ($events as $event) {
+    $markdown[] = "### " . substr($event["class"], strrpos($event["class"], "Event_"));
+    $markdown[] = "";
+    $markdown[] = $event["description"];
+    $markdown[] = "";
+    $markdown[] = "> ソースコード: [" . $command["class"] . "](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/" . str_replace(".", "/", $command["class"]) . ".java)";
+    $markdown[] = "";
 }
 file_put_contents("source/includes/_events.md", implode("\n", $markdown));
