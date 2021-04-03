@@ -1,0 +1,3 @@
+[submodule "generateMarkdown/python-markdown-generator"]
+	path = generateMarkdown/python-markdown-generator
+	url = https://github.com/Nicceboy/python-markdown-generator

@@ -1,0 +1,121 @@
+<?php
+
+//$docs = file_get_contents(__DIR__ . "/docs.json");
+$docs = file_get_contents("http://localhost:31001/docs");
+$docs = json_decode($docs, true);
+
+if (!file_exists("source/includes")) {
+    echo "カレントディレクトリが適切ではありません。\n";
+    exit(1);
+}
+
+// Commands ---------------------------------- //
+
+$markdown = [];
+
+foreach ($docs["commands"] as $command) {
+    $markdown[] = "## " . $command["name"];
+    $markdown[] = "";
+
+    $markdown[] = "```plaintext";
+    foreach ($command["subcommands"] as $subcommand) {
+        $args = [];
+        foreach ($subcommand["arguments"] as $argument) {
+            if ($argument["class"] == "cloud.commandframework.arguments.StaticArgument") {
+                $before = "";
+                $after = "";
+            } elseif ($argument["isRequired"]) {
+                $before = "<";
+                $after = ">";
+            } else {
+                $before = "[";
+                $after = "]";
+            }
+            $args[] = $before . $argument["name"] . $after;
+        }
+        $markdown[] = "/" .  implode(" ", $args);
+    }
+    $markdown[] = "```";
+    $markdown[] = "";
+
+    $markdown[] = "> ソースコード: [" . $command["class"] . "](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/" . str_replace(".", "/", $command["class"]) . ".java)";
+    $markdown[] = "";
+
+    $markdown[] = $command["description"];
+    $markdown[] = "";
+
+    if (count($command["alias"]) != 0) {
+        $markdown[] = "- エイリアスがあります: `" . implode(",", $command["alias"]) . "`";
+        $markdown[] = "";
+    }
+
+    foreach ($command["subcommands"] as $subcommand) {
+        $args = [];
+        foreach (array_slice($subcommand["arguments"], 1) as $argument) {
+            if ($argument["class"] == "cloud.commandframework.arguments.StaticArgument") {
+                $before = "";
+                $after = "";
+            } elseif ($argument["isRequired"]) {
+                $before = "<";
+                $after = ">";
+            } else {
+                $before = "[";
+                $after = "]";
+            }
+            $args[] = $before . $argument["name"] . $after;
+        }
+        $markdown[] = "### `" . implode(" ", $args) . "`";
+        $markdown[] = "";
+
+
+        if (isset($subcommand["meta"]["description"])) {
+            $markdown[] = $subcommand["meta"]["description"];
+            $markdown[] = "";
+        }
+
+        if (isset($subcommand["senderType"])) {
+            if ($subcommand["senderType"] == "org.bukkit.entity.Player") {
+                $markdown[] = "<aside class=\"notice\">";
+                $markdown[] = "このコマンドはプレイヤーからの実行のみに制限されています。";
+                $markdown[] = "</aside>";
+                $markdown[] = "";
+            }
+        }
+
+        $argsTable = [];
+        foreach (array_slice($subcommand["arguments"], 1) as $argument) {
+            $argTable = ["`" . $argument["name"] . "`"];
+            $argTable[] = substr($argument["class"], strrpos($argument["class"], "."));
+
+            if ($argument["class"] == "cloud.commandframework.arguments.StaticArgument") {
+                continue;
+            } elseif ($argument["isRequired"]) {
+                $argTable[] = "はい";
+            } else {
+                $argTable[] = "いいえ";
+            }
+            $argTable[] = isset($argument["description"]) ? $argument["description"] : "説明なし";
+
+            $argsTable[] = "| " . implode(" | ", $argTable) . " |";
+        }
+
+        if (count($argsTable) != 0) {
+            $markdown[] = "| 引数名 | 種類 | 必須か | 説明 |";
+            $markdown[] = "| - | - | - | - |";
+            $markdown[] = implode("\n", $argsTable);
+            $markdown[] = "";
+        }
+    }
+}
+file_put_contents("source/includes/_commands.md", implode("\n", $markdown));
+
+$markdown = [];
+foreach($docs["events"] as $event){
+  $markdown[] = "### " . substr($event["class"], strrpos($event["class"], "Event_"));
+  $markdown[] = "";
+  $markdown[] = $event["description"];
+  $markdown[] = "";
+  $markdown[] = "> ソースコード: [" . $command["class"] . "](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/" . str_replace(".", "/", $command["class"]) . ".java)";
+  $markdown[] = "";
+}
+file_put_contents("source/includes/_events.md", implode("\n", $markdown));

@@ -1,0 +1,2002 @@
+{
+    "commands": [
+        {
+            "name": "brb",
+            "description": "バリアブロックを入手します。",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_Brb",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "バリアブロックをコマンド実行者のメインハンドのアイテムと置き換えます。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "brb",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "brb",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "バリアブロックを指定したプレイヤーのメインハンドのアイテムと置き換えます。"
+                    },
+                    "toString": "brb player",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "brb",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "player",
+                            "class": "cloud.commandframework.bukkit.parsers.PlayerArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "brb"
+        },
+        {
+            "name": "chat",
+            "description": "偽のプレイヤーに喋らせます。",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_Chat",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "偽のプレイヤーに喋らせます。"
+                    },
+                    "toString": "chat player message",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "chat",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "player",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "message",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "chat"
+        },
+        {
+            "name": "chatban",
+            "description": "ChatBanに関する処理を行います。",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_ChatBan",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "ターゲットをChatBanします。"
+                    },
+                    "toString": "chatban add player reason",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "chatban",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "add",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "player",
+                            "class": "cloud.commandframework.bukkit.parsers.OfflinePlayerArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "reason",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "ターゲットのChatBanを解除します。"
+                    },
+                    "toString": "chatban remove player",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "chatban",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "remove",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "player",
+                            "class": "cloud.commandframework.bukkit.parsers.OfflinePlayerArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "ChatBan一覧を表示します。"
+                    },
+                    "toString": "chatban status player",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "chatban",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "status",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": false,
+                            "defaultValue": "",
+                            "name": "player",
+                            "class": "cloud.commandframework.bukkit.parsers.OfflinePlayerArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "chatban"
+        },
+        {
+            "name": "cmdb",
+            "description": "コマンドブロックを入手します。",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_Cmdb",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "コマンドブロックをコマンド実行者のメインハンドのアイテムと置き換えます。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "cmdb",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "cmdb",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "コマンドブロックを指定したプレイヤーのメインハンドのアイテムと置き換えます。"
+                    },
+                    "toString": "cmdb player",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "cmdb",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "player",
+                            "class": "cloud.commandframework.bukkit.parsers.PlayerArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "cmdb"
+        },
+        {
+            "name": "ded",
+            "description": "最後に死亡した場所にテレポートします。",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_Ded",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "最後に死亡した場所にテレポートします。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "ded",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "ded",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "ded"
+        },
+        {
+            "name": "dedbull",
+            "description": "プレイヤーに暗視効果を付与します。すでに付与されている場合は削除します。",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_Dedbull",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "プレイヤーに暗視効果を付与します。すでに付与されている場合は削除します。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "dedbull",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "dedbull",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "dedbull"
+        },
+        {
+            "name": "delhome",
+            "description": "ホームを削除します。",
+            "alias": [
+                "removehome",
+                "remhome"
+            ],
+            "class": "com.jaoafa.mymaid4.command.Cmd_DelHome",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "デフォルトホームを削除します。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "delhome",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "delhome",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "指定された名前のホームを削除します。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "delhome name",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "delhome",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": false,
+                            "defaultValue": "default",
+                            "name": "name",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "delhome"
+        },
+        {
+            "name": "discordlink",
+            "description": "DiscordアカウントとMinecraftアカウントを紐づけます。",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_DiscordLink",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "DiscordアカウントとMinecraftアカウントを紐づけます。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "discordlink authKey",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "discordlink",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "authKey",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "discordlink"
+        },
+        {
+            "name": "dt",
+            "description": "DynmapのMarkerを編集・テレポートします。",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_DT",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "マーカーにテレポートさせます。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "dt markerName",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "dt",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "markerName",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "マーカーを追加します。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "dt add markerName markerType markerIcon",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "dt",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "add",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "markerName",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "markerType",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": false,
+                            "defaultValue": "",
+                            "name": "markerIcon",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "マーカーを削除します。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "dt del markerName",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "dt",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "del",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "markerName",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "ランダムに選ばれたマーカーにテレポートします。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "dt random",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "dt",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "random",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "近くのマーカーを表示します。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "dt near",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "dt",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "near",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "マーカーの一覧を表示します。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "dt list page",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "dt",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "list",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": false,
+                            "defaultValue": "1",
+                            "name": "page",
+                            "class": "cloud.commandframework.arguments.standard.IntegerArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "dt"
+        },
+        {
+            "name": "eban",
+            "description": "EBanに関する処理を行います。",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_EBan",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "ターゲットをEBanします。"
+                    },
+                    "toString": "eban add player reason",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "eban",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "add",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "player",
+                            "class": "cloud.commandframework.bukkit.parsers.OfflinePlayerArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "reason",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "ターゲットのEBanを解除します。"
+                    },
+                    "toString": "eban remove player",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "eban",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "remove",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "player",
+                            "class": "cloud.commandframework.bukkit.parsers.OfflinePlayerArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "EBan一覧を表示します。"
+                    },
+                    "toString": "eban status player",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "eban",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "status",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": false,
+                            "defaultValue": "",
+                            "name": "player",
+                            "class": "cloud.commandframework.bukkit.parsers.OfflinePlayerArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "eban"
+        },
+        {
+            "name": "elytra",
+            "description": "プレイヤーにエリトラと花火を付与します。",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_Elytra",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "プレイヤーにエリトラと花火を付与します。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "elytra",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "elytra",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "elytra"
+        },
+        {
+            "name": "g",
+            "description": "ゲームモードを変更します。",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_G",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "ゲームモードを切り替えます。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "g",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "g",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "指定されたゲームモードに切り替えます。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "g gamemode",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "g",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "gamemode",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "指定されたプレイヤーのゲームモードを切り替えます。"
+                    },
+                    "toString": "g gamemode player",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "g",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "gamemode",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "player",
+                            "class": "cloud.commandframework.bukkit.parsers.PlayerArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "g"
+        },
+        {
+            "name": "getlookloc",
+            "description": "見ているブロックの座標を提案します。",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_Getlookloc",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "見ているブロックの座標を提案します。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "getlookloc",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "getlookloc",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "getlookloc"
+        },
+        {
+            "name": "getuserkey",
+            "description": "ユーザーを認証するためのキー(ユーザーキー)に関する操作を行います。",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_GetUserKey",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "ユーザーキーを生成し、表示します。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "getuserkey",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "getuserkey",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "getuserkey"
+        },
+        {
+            "name": "glookup",
+            "description": "他人のゲームモードを確認します。",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_Glookup",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "他人のゲームモードを確認します。"
+                    },
+                    "toString": "glookup player",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "glookup",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "player",
+                            "class": "cloud.commandframework.bukkit.parsers.PlayerArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "glookup"
+        },
+        {
+            "name": "head",
+            "description": "頭ブロックを入手します。",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_Head",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "自分の頭ブロックを入手します。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "head",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "head",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "指定したプレイヤーの頭ブロックを入手します。"
+                    },
+                    "toString": "head player",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "head",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "player",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "head"
+        },
+        {
+            "name": "hide",
+            "description": "他のプレイヤーから姿を隠します。",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_Hide",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "他のプレイヤーから姿を隠します。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "hide",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "hide",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "hide"
+        },
+        {
+            "name": "history",
+            "description": "jaoHistoryに関する操作を行います。",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_History",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "指定したプレイヤーのjaoHistoryにデータを追加します。"
+                    },
+                    "toString": "history add target message",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "history",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "add",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "target",
+                            "class": "cloud.commandframework.bukkit.parsers.OfflinePlayerArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "message",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "指定したプレイヤーのjaoHistory項目を無効化します。"
+                    },
+                    "toString": "history disable target item",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "history",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "disable",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "target",
+                            "class": "cloud.commandframework.bukkit.parsers.OfflinePlayerArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "item",
+                            "class": "cloud.commandframework.arguments.standard.IntegerArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "指定したプレイヤーのjaoHistory情報を表示します。"
+                    },
+                    "toString": "history status target",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "history",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "status",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "target",
+                            "class": "cloud.commandframework.bukkit.parsers.OfflinePlayerArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "history"
+        },
+        {
+            "name": "home",
+            "description": "ホームにテレポートします。",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_Home",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "デフォルトホームにテレポートします。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "home",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "home",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "指定された名前のホームにテレポートします。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "home name",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "home",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": false,
+                            "defaultValue": "default",
+                            "name": "name",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "ホーム一覧を表示します。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "home list Page",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "home",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "list",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": false,
+                            "defaultValue": "1",
+                            "name": "Page",
+                            "class": "cloud.commandframework.arguments.standard.IntegerArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "指定したホームに関する情報を表示します。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "home view name",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "home",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "view",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": false,
+                            "defaultValue": "default",
+                            "name": "name",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "home"
+        },
+        {
+            "name": "jail",
+            "description": "Jailに関する処理を行います。",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_Jail",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "ターゲットをJailします。"
+                    },
+                    "toString": "jail add player reason",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "jail",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "add",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "player",
+                            "class": "cloud.commandframework.bukkit.parsers.OfflinePlayerArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "reason",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "ターゲットのJailを解除します。"
+                    },
+                    "toString": "jail remove player",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "jail",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "remove",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "player",
+                            "class": "cloud.commandframework.bukkit.parsers.OfflinePlayerArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "Jail一覧を表示します。"
+                    },
+                    "toString": "jail status player",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "jail",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "status",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": false,
+                            "defaultValue": "",
+                            "name": "player",
+                            "class": "cloud.commandframework.bukkit.parsers.OfflinePlayerArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "遺言を記録します。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "jail testment message",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "jail",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "testment",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "message",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "jail"
+        },
+        {
+            "name": "link",
+            "description": "linkコマンドはjMS Gamers Clubで実行するのだ。",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_Link",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "linkコマンドはjMS Gamers Clubで実行するのだ。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "link",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "link",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "link"
+        },
+        {
+            "name": "logintext",
+            "description": "ログイン時に表示されるテキストに任意のテキストを追加します。",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_LoginText",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "ログイン時に表示されるテキストをリセットします。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "logintext",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "logintext",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "ログイン時に表示されるテキストに任意のテキストを追加します。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "logintext loginText",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "logintext",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "loginText",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "logintext"
+        },
+        {
+            "name": "pigeon",
+            "description": "伝書鳩ちゃんにお願いを伝えます。",
+            "alias": [
+                "messenger"
+            ],
+            "class": "com.jaoafa.mymaid4.command.Cmd_Pigeon",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "伝書鳩ちゃんにスピーカーを追加してもらいます。"
+                    },
+                    "toString": "pigeon speaker add speaker",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "pigeon",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "speaker",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "add",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "speaker",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "伝書鳩ちゃんにメッセージを追加してもらいます。"
+                    },
+                    "toString": "pigeon messages add message",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "pigeon",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "messages",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "add",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "message",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "伝書鳩ちゃんにスピーカーを削除してもらいます。"
+                    },
+                    "toString": "pigeon speaker remove speaker",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "pigeon",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "speaker",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "remove",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": false,
+                            "defaultValue": "",
+                            "name": "speaker",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "伝書鳩ちゃんにメッセージを削除してもらいます。"
+                    },
+                    "toString": "pigeon messages remove message",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "pigeon",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "messages",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "remove",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": false,
+                            "defaultValue": "",
+                            "name": "message",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "伝書鳩ちゃんにスピーカーが誰がいるか聞きます。"
+                    },
+                    "toString": "pigeon speaker list",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "pigeon",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "speaker",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "list",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "伝書鳩ちゃんにメッセージが何があるか聞きます。"
+                    },
+                    "toString": "pigeon messages list",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "pigeon",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "messages",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "list",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "伝書鳩ちゃんにメッセージを配信してもらいます。"
+                    },
+                    "toString": "pigeon broadcast messageId",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "pigeon",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "broadcast",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": false,
+                            "defaultValue": "",
+                            "name": "messageId",
+                            "class": "cloud.commandframework.arguments.standard.IntegerArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "pigeon"
+        },
+        {
+            "name": "player",
+            "description": "プレイヤーの権限グループを取得します。",
+            "alias": [
+                "group"
+            ],
+            "class": "com.jaoafa.mymaid4.command.Cmd_Player",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "あなたの権限グループを表示します。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "player",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "player",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "指定されたプレイヤーの権限グループを表示します。"
+                    },
+                    "toString": "player player",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "player",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "player",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "player"
+        },
+        {
+            "name": "sethome",
+            "description": "ホームを設定します。",
+            "alias": [
+                "addhome"
+            ],
+            "class": "com.jaoafa.mymaid4.command.Cmd_SetHome",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "デフォルトホームを設定します。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "sethome",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "sethome",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "指定された名前のホームを設定します。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "sethome name",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "sethome",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": false,
+                            "defaultValue": "default",
+                            "name": "name",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "sethome"
+        },
+        {
+            "name": "show",
+            "description": "Hide状態を解除します。",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_Show",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "Hide状態を解除します。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "show",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "show",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "show"
+        },
+        {
+            "name": "skkcolor",
+            "description": "チャット欄に表示される四角の色を変更します。",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_SKKColor",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "チャット欄に表示される四角の色をリセットします。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "skkcolor",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "skkcolor",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "チャット欄に表示される四角の色を変更します。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "skkcolor color",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "skkcolor",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "color",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "skkcolor"
+        },
+        {
+            "name": "tempmute",
+            "description": "一時的なミュートを実施します。運営のみ使用できます。",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_TempMute",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "TempMuteをオン・オフします。指定しない場合、トグルで変更します。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "tempmute changeTo",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "tempmute",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": false,
+                            "defaultValue": "",
+                            "name": "changeTo",
+                            "class": "cloud.commandframework.arguments.standard.BooleanArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "tempmute"
+        },
+        {
+            "name": "test",
+            "description": "MyMaidテストコマンド",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_Test",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "MyMaidテストコマンド"
+                    },
+                    "toString": "test version",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "test",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "version",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "MyMaidテストコマンド"
+                    },
+                    "toString": "test database",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "test",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "database",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "test"
+        },
+        {
+            "name": "wt",
+            "description": "他ワールドにテレポートします。",
+            "alias": [],
+            "class": "com.jaoafa.mymaid4.command.Cmd_Wt",
+            "subcommands": [
+                {
+                    "meta": {
+                        "description": "指定したワールドにテレポートします。"
+                    },
+                    "senderType": "org.bukkit.entity.Player",
+                    "toString": "wt worldName",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "wt",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "worldName",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                },
+                {
+                    "meta": {
+                        "description": "指定したプレイヤーを指定したワールドにテレポートさせます。"
+                    },
+                    "toString": "wt worldName player",
+                    "arguments": [
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "wt",
+                            "class": "cloud.commandframework.arguments.StaticArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "worldName",
+                            "class": "cloud.commandframework.arguments.standard.StringArgument",
+                            "defaultDescription": ""
+                        },
+                        {
+                            "isRequired": true,
+                            "defaultValue": "",
+                            "name": "player",
+                            "class": "cloud.commandframework.bukkit.parsers.PlayerArgument",
+                            "defaultDescription": ""
+                        }
+                    ]
+                }
+            ],
+            "command": "wt"
+        }
+    ],
+    "events": [
+        {
+            "description": "jaoium制限に関する処理を行います。",
+            "class": "com.jaoafa.mymaid4.event.Event_Antijaoium"
+        },
+        {
+            "description": "ログインコマンドの使用制限を行います。",
+            "class": "com.jaoafa.mymaid4.event.Event_AntiLoginCmd"
+        },
+        {
+            "description": "迷惑コマンドの制限を行います。",
+            "class": "com.jaoafa.mymaid4.event.Event_AntiProblemCommand"
+        },
+        {
+            "description": "極端に遠い場所へのテレポートを禁止します。",
+            "class": "com.jaoafa.mymaid4.event.Event_AntiProblemTeleport"
+        },
+        {
+            "description": "全てのエンティティをターゲットとするコマンドの使用を禁止します。",
+            "class": "com.jaoafa.mymaid4.event.Event_AntiTargetAllEntityCmd"
+        },
+        {
+            "description": "ウィザーの出現制限を行います。",
+            "class": "com.jaoafa.mymaid4.event.Event_AntiWither"
+        },
+        {
+            "description": "ChatBanに関する各種処理を行います。",
+            "class": "com.jaoafa.mymaid4.event.Event_ChatBan"
+        },
+        {
+            "description": "Default権限グループのプレイヤーによる100文字を超えるコマンドの実行を制限します。",
+            "class": "com.jaoafa.mymaid4.event.Event_CmdLengthLimiter"
+        },
+        {
+            "description": "実行されたコマンドをAdminとModeratorに通知します。",
+            "class": "com.jaoafa.mymaid4.event.Event_CommandSendAM"
+        },
+        {
+            "description": "独自のログインメッセージを表示するように制御します。",
+            "class": "com.jaoafa.mymaid4.event.Event_CustomJoinMessage"
+        },
+        {
+            "description": "dedコマンドに関する処理を行います。",
+            "class": "com.jaoafa.mymaid4.event.Event_Ded"
+        },
+        {
+            "description": "コンクリートパウダーの変化を無効化します。",
+            "class": "com.jaoafa.mymaid4.event.Event_DisableConcreteTransition"
+        },
+        {
+            "description": "DefaultとVerified権限グループのプレイヤーによるスペクテイター変更を禁止します。",
+            "class": "com.jaoafa.mymaid4.event.Event_DVNotSpectator"
+        },
+        {
+            "description": "EBanに関する各種処理を行います。",
+            "class": "com.jaoafa.mymaid4.event.Event_EBan"
+        },
+        {
+            "description": "TNTなどの爆発時に額縁や絵画などが壊れないようにします。",
+            "class": "com.jaoafa.mymaid4.event.Event_Explosion"
+        },
+        {
+            "description": "初めてログインしたプレイヤーを通知します。",
+            "class": "com.jaoafa.mymaid4.event.Event_FirstLogin"
+        },
+        {
+            "description": "hideコマンドに関する処理を行います。",
+            "class": "com.jaoafa.mymaid4.event.Event_Hide"
+        },
+        {
+            "description": "historyコマンドに関する処理を行います。",
+            "class": "com.jaoafa.mymaid4.event.Event_History"
+        },
+        {
+            "description": "Jailに関する各種処理を行います。",
+            "class": "com.jaoafa.mymaid4.event.Event_Jail"
+        },
+        {
+            "description": "ログインに成功したことをデータベースに書き込みます。",
+            "class": "com.jaoafa.mymaid4.event.Event_LoginSuccessful"
+        },
+        {
+            "description": "新規プレイヤーがログアウトした際にブロック編集情報を通知します。",
+            "class": "com.jaoafa.mymaid4.event.Event_NewPlayerAutoBlMap"
+        },
+        {
+            "description": "プレイヤーログイン前に各種チェック等を行います。",
+            "class": "com.jaoafa.mymaid4.event.Event_PlayerCheckPreLogin"
+        },
+        {
+            "description": "SandBoxをRegular権限グループ未満のプレイヤーが編集できないように制限します。",
+            "class": "com.jaoafa.mymaid4.event.Event_ProtectionSandBox"
+        },
+        {
+            "description": "チャット欄に表示される四角色に関する処理を行います。",
+            "class": "com.jaoafa.mymaid4.event.Event_SKKColor"
+        },
+        {
+            "description": "tempmuteコマンドに関する処理を行います。",
+            "class": "com.jaoafa.mymaid4.event.Event_TempMute"
+        },
+        {
+            "description": "各サーバリストサイトからの投票通知を受け取り、処理します。",
+            "class": "com.jaoafa.mymaid4.event.Event_Vote"
+        }
+    ]
+}
