@@ -64,7 +64,7 @@ foreach ($docs["commands"] as $command) {
             }
             $args[] = $before . $argument["name"] . $after;
         }
-        $markdown[] = "### `" . implode(" ", $args) . "`";
+        $markdown[] = "### `/" . implode(" ", $args) . "`";
         $markdown[] = "";
 
 
@@ -85,7 +85,7 @@ foreach ($docs["commands"] as $command) {
         $argsTable = [];
         foreach (array_slice($subcommand["arguments"], 1) as $argument) {
             $argTable = ["`" . $argument["name"] . "`"];
-            $argTable[] = substr($argument["class"], strrpos($argument["class"], "."));
+            $argTable[] = substr($argument["class"], strrpos($argument["class"], ".") + 1);
 
             if ($argument["class"] == "cloud.commandframework.arguments.StaticArgument") {
                 continue;
