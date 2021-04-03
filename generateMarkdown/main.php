@@ -6,7 +6,7 @@ $docs = json_decode($docs, true);
 
 foreach ($http_response_header as $header) {
     if (substr($header, 0, strlen("Server: MyMaid Server (")) == "Server: MyMaid Server (") {
-        $version = substr($header, strlen("Server: MyMaid Server ("), strlen($header) - 1);
+        $version = substr($header, strlen("Server: MyMaid Server ("), strlen($header) - 2);
     }
 }
 
