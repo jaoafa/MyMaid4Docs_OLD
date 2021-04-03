@@ -104,7 +104,7 @@ ChatBan一覧を表示します。
 
 ホームを削除します。
 
-- エイリアスがあります: `removehome,remhome`
+- エイリアスがあります: `removehome, remhome`
 
 ### `/delhome`
 
