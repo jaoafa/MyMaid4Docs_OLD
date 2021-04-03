@@ -12,7 +12,6 @@ toc_footers:
 includes:
   - commandsheader
   - commands
-  - eventsheader
   - events
 
 search: true
