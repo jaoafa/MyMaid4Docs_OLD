@@ -9,7 +9,7 @@
 
 ログイン時に表示されるテキストに任意のテキストを追加します。
 
-### ``
+### `/logintext`
 
 ログイン時に表示されるテキストをリセットします。
 
@@ -17,7 +17,7 @@
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
 
-### `<loginText>`
+### `/logintext <loginText>`
 
 ログイン時に表示されるテキストに任意のテキストを追加します。
 
@@ -27,7 +27,7 @@
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `loginText` | .StringArgument | はい | 説明なし |
+| `loginText` | StringArgument | はい | 説明なし |
 
 ## brb
 
@@ -40,7 +40,7 @@
 
 バリアブロックを入手します。
 
-### ``
+### `/brb`
 
 バリアブロックをコマンド実行者のメインハンドのアイテムと置き換えます。
 
@@ -48,13 +48,13 @@
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
 
-### `<player>`
+### `/brb <player>`
 
 バリアブロックを指定したプレイヤーのメインハンドのアイテムと置き換えます。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `player` | .PlayerArgument | はい | 説明なし |
+| `player` | PlayerArgument | はい | 説明なし |
 
 ## chatban
 
@@ -68,30 +68,30 @@
 
 ChatBanに関する処理を行います。
 
-### `add <player> <reason>`
+### `/chatban add <player> <reason>`
 
 ターゲットをChatBanします。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `player` | .OfflinePlayerArgument | はい | 説明なし |
-| `reason` | .StringArgument | はい | 説明なし |
+| `player` | OfflinePlayerArgument | はい | 説明なし |
+| `reason` | StringArgument | はい | 説明なし |
 
-### `remove <player>`
+### `/chatban remove <player>`
 
 ターゲットのChatBanを解除します。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `player` | .OfflinePlayerArgument | はい | 説明なし |
+| `player` | OfflinePlayerArgument | はい | 説明なし |
 
-### `status [player]`
+### `/chatban status [player]`
 
 ChatBan一覧を表示します。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `player` | .OfflinePlayerArgument | いいえ | 説明なし |
+| `player` | OfflinePlayerArgument | いいえ | 説明なし |
 
 ## delhome
 
@@ -106,7 +106,7 @@ ChatBan一覧を表示します。
 
 - エイリアスがあります: `removehome,remhome`
 
-### ``
+### `/delhome`
 
 デフォルトホームを削除します。
 
@@ -114,7 +114,7 @@ ChatBan一覧を表示します。
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
 
-### `[name]`
+### `/delhome [name]`
 
 指定された名前のホームを削除します。
 
@@ -124,7 +124,7 @@ ChatBan一覧を表示します。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `name` | .StringArgument | いいえ | 説明なし |
+| `name` | StringArgument | いいえ | 説明なし |
 
 ## dt
 
@@ -141,7 +141,7 @@ ChatBan一覧を表示します。
 
 DynmapのMarkerを編集・テレポートします。
 
-### `<markerName>`
+### `/dt <markerName>`
 
 マーカーにテレポートさせます。
 
@@ -151,9 +151,9 @@ DynmapのMarkerを編集・テレポートします。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `markerName` | .StringArgument | はい | 説明なし |
+| `markerName` | StringArgument | はい | 説明なし |
 
-### `add <markerName> <markerType> [markerIcon]`
+### `/dt add <markerName> <markerType> [markerIcon]`
 
 マーカーを追加します。
 
@@ -163,11 +163,11 @@ DynmapのMarkerを編集・テレポートします。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `markerName` | .StringArgument | はい | 説明なし |
-| `markerType` | .StringArgument | はい | 説明なし |
-| `markerIcon` | .StringArgument | いいえ | 説明なし |
+| `markerName` | StringArgument | はい | 説明なし |
+| `markerType` | StringArgument | はい | 説明なし |
+| `markerIcon` | StringArgument | いいえ | 説明なし |
 
-### `del <markerName>`
+### `/dt del <markerName>`
 
 マーカーを削除します。
 
@@ -177,9 +177,9 @@ DynmapのMarkerを編集・テレポートします。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `markerName` | .StringArgument | はい | 説明なし |
+| `markerName` | StringArgument | はい | 説明なし |
 
-### `random`
+### `/dt random`
 
 ランダムに選ばれたマーカーにテレポートします。
 
@@ -187,7 +187,7 @@ DynmapのMarkerを編集・テレポートします。
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
 
-### `near`
+### `/dt near`
 
 近くのマーカーを表示します。
 
@@ -195,7 +195,7 @@ DynmapのMarkerを編集・テレポートします。
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
 
-### `list [page]`
+### `/dt list [page]`
 
 マーカーの一覧を表示します。
 
@@ -205,7 +205,7 @@ DynmapのMarkerを編集・テレポートします。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `page` | .IntegerArgument | いいえ | 説明なし |
+| `page` | IntegerArgument | いいえ | 説明なし |
 
 ## g
 
@@ -219,7 +219,7 @@ DynmapのMarkerを編集・テレポートします。
 
 ゲームモードを変更します。
 
-### ``
+### `/g`
 
 ゲームモードを切り替えます。
 
@@ -227,7 +227,7 @@ DynmapのMarkerを編集・テレポートします。
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
 
-### `<gamemode>`
+### `/g <gamemode>`
 
 指定されたゲームモードに切り替えます。
 
@@ -237,16 +237,16 @@ DynmapのMarkerを編集・テレポートします。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `gamemode` | .StringArgument | はい | 説明なし |
+| `gamemode` | StringArgument | はい | 説明なし |
 
-### `<gamemode> <player>`
+### `/g <gamemode> <player>`
 
 指定されたプレイヤーのゲームモードを切り替えます。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `gamemode` | .StringArgument | はい | 説明なし |
-| `player` | .PlayerArgument | はい | 説明なし |
+| `gamemode` | StringArgument | はい | 説明なし |
+| `player` | PlayerArgument | はい | 説明なし |
 
 ## elytra
 
@@ -258,7 +258,7 @@ DynmapのMarkerを編集・テレポートします。
 
 プレイヤーにエリトラと花火を付与します。
 
-### ``
+### `/elytra`
 
 プレイヤーにエリトラと花火を付与します。
 
@@ -276,7 +276,7 @@ DynmapのMarkerを編集・テレポートします。
 
 一時的なミュートを実施します。運営のみ使用できます。
 
-### `[changeTo]`
+### `/tempmute [changeTo]`
 
 TempMuteをオン・オフします。指定しない場合、トグルで変更します。
 
@@ -286,7 +286,7 @@ TempMuteをオン・オフします。指定しない場合、トグルで変更
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `changeTo` | .BooleanArgument | いいえ | 説明なし |
+| `changeTo` | BooleanArgument | いいえ | 説明なし |
 
 ## discordlink
 
@@ -298,7 +298,7 @@ TempMuteをオン・オフします。指定しない場合、トグルで変更
 
 DiscordアカウントとMinecraftアカウントを紐づけます。
 
-### `<authKey>`
+### `/discordlink <authKey>`
 
 DiscordアカウントとMinecraftアカウントを紐づけます。
 
@@ -308,7 +308,7 @@ DiscordアカウントとMinecraftアカウントを紐づけます。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `authKey` | .StringArgument | はい | 説明なし |
+| `authKey` | StringArgument | はい | 説明なし |
 
 ## history
 
@@ -322,31 +322,31 @@ DiscordアカウントとMinecraftアカウントを紐づけます。
 
 jaoHistoryに関する操作を行います。
 
-### `add <target> <message>`
+### `/history add <target> <message>`
 
 指定したプレイヤーのjaoHistoryにデータを追加します。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `target` | .OfflinePlayerArgument | はい | 説明なし |
-| `message` | .StringArgument | はい | 説明なし |
+| `target` | OfflinePlayerArgument | はい | 説明なし |
+| `message` | StringArgument | はい | 説明なし |
 
-### `disable <target> <item>`
+### `/history disable <target> <item>`
 
 指定したプレイヤーのjaoHistory項目を無効化します。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `target` | .OfflinePlayerArgument | はい | 説明なし |
-| `item` | .IntegerArgument | はい | 説明なし |
+| `target` | OfflinePlayerArgument | はい | 説明なし |
+| `item` | IntegerArgument | はい | 説明なし |
 
-### `status <target>`
+### `/history status <target>`
 
 指定したプレイヤーのjaoHistory情報を表示します。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `target` | .OfflinePlayerArgument | はい | 説明なし |
+| `target` | OfflinePlayerArgument | はい | 説明なし |
 
 ## cmdb
 
@@ -359,7 +359,7 @@ jaoHistoryに関する操作を行います。
 
 コマンドブロックを入手します。
 
-### ``
+### `/cmdb`
 
 コマンドブロックをコマンド実行者のメインハンドのアイテムと置き換えます。
 
@@ -367,13 +367,13 @@ jaoHistoryに関する操作を行います。
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
 
-### `<player>`
+### `/cmdb <player>`
 
 コマンドブロックを指定したプレイヤーのメインハンドのアイテムと置き換えます。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `player` | .PlayerArgument | はい | 説明なし |
+| `player` | PlayerArgument | はい | 説明なし |
 
 ## jail
 
@@ -388,32 +388,32 @@ jaoHistoryに関する操作を行います。
 
 Jailに関する処理を行います。
 
-### `add <player> <reason>`
+### `/jail add <player> <reason>`
 
 ターゲットをJailします。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `player` | .OfflinePlayerArgument | はい | 説明なし |
-| `reason` | .StringArgument | はい | 説明なし |
+| `player` | OfflinePlayerArgument | はい | 説明なし |
+| `reason` | StringArgument | はい | 説明なし |
 
-### `remove <player>`
+### `/jail remove <player>`
 
 ターゲットのJailを解除します。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `player` | .OfflinePlayerArgument | はい | 説明なし |
+| `player` | OfflinePlayerArgument | はい | 説明なし |
 
-### `status [player]`
+### `/jail status [player]`
 
 Jail一覧を表示します。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `player` | .OfflinePlayerArgument | いいえ | 説明なし |
+| `player` | OfflinePlayerArgument | いいえ | 説明なし |
 
-### `testment <message>`
+### `/jail testment <message>`
 
 遺言を記録します。
 
@@ -423,7 +423,7 @@ Jail一覧を表示します。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `message` | .StringArgument | はい | 説明なし |
+| `message` | StringArgument | はい | 説明なし |
 
 ## dedbull
 
@@ -435,7 +435,7 @@ Jail一覧を表示します。
 
 プレイヤーに暗視効果を付与します。すでに付与されている場合は削除します。
 
-### ``
+### `/dedbull`
 
 プレイヤーに暗視効果を付与します。すでに付与されている場合は削除します。
 
@@ -453,7 +453,7 @@ Jail一覧を表示します。
 
 ユーザーを認証するためのキー(ユーザーキー)に関する操作を行います。
 
-### ``
+### `/getuserkey`
 
 ユーザーキーを生成し、表示します。
 
@@ -479,53 +479,53 @@ Jail一覧を表示します。
 
 - エイリアスがあります: `messenger`
 
-### `speaker add <speaker>`
+### `/pigeon speaker add <speaker>`
 
 伝書鳩ちゃんにスピーカーを追加してもらいます。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `speaker` | .StringArgument | はい | 説明なし |
+| `speaker` | StringArgument | はい | 説明なし |
 
-### `messages add <message>`
+### `/pigeon messages add <message>`
 
 伝書鳩ちゃんにメッセージを追加してもらいます。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `message` | .StringArgument | はい | 説明なし |
+| `message` | StringArgument | はい | 説明なし |
 
-### `speaker remove [speaker]`
+### `/pigeon speaker remove [speaker]`
 
 伝書鳩ちゃんにスピーカーを削除してもらいます。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `speaker` | .StringArgument | いいえ | 説明なし |
+| `speaker` | StringArgument | いいえ | 説明なし |
 
-### `messages remove [message]`
+### `/pigeon messages remove [message]`
 
 伝書鳩ちゃんにメッセージを削除してもらいます。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `message` | .StringArgument | いいえ | 説明なし |
+| `message` | StringArgument | いいえ | 説明なし |
 
-### `speaker list`
+### `/pigeon speaker list`
 
 伝書鳩ちゃんにスピーカーが誰がいるか聞きます。
 
-### `messages list`
+### `/pigeon messages list`
 
 伝書鳩ちゃんにメッセージが何があるか聞きます。
 
-### `broadcast [messageId]`
+### `/pigeon broadcast [messageId]`
 
 伝書鳩ちゃんにメッセージを配信してもらいます。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `messageId` | .IntegerArgument | いいえ | 説明なし |
+| `messageId` | IntegerArgument | いいえ | 説明なし |
 
 ## chat
 
@@ -537,14 +537,14 @@ Jail一覧を表示します。
 
 偽のプレイヤーに喋らせます。
 
-### `<player> <message>`
+### `/chat <player> <message>`
 
 偽のプレイヤーに喋らせます。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `player` | .StringArgument | はい | 説明なし |
-| `message` | .StringArgument | はい | 説明なし |
+| `player` | StringArgument | はい | 説明なし |
+| `message` | StringArgument | はい | 説明なし |
 
 ## link
 
@@ -556,7 +556,7 @@ Jail一覧を表示します。
 
 linkコマンドはjMS Gamers Clubで実行するのだ。
 
-### ``
+### `/link`
 
 linkコマンドはjMS Gamers Clubで実行するのだ。
 
@@ -575,7 +575,7 @@ linkコマンドはjMS Gamers Clubで実行するのだ。
 
 チャット欄に表示される四角の色を変更します。
 
-### ``
+### `/skkcolor`
 
 チャット欄に表示される四角の色をリセットします。
 
@@ -583,7 +583,7 @@ linkコマンドはjMS Gamers Clubで実行するのだ。
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
 
-### `<color>`
+### `/skkcolor <color>`
 
 チャット欄に表示される四角の色を変更します。
 
@@ -593,7 +593,7 @@ linkコマンドはjMS Gamers Clubで実行するのだ。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `color` | .StringArgument | はい | 説明なし |
+| `color` | StringArgument | はい | 説明なし |
 
 ## show
 
@@ -605,7 +605,7 @@ linkコマンドはjMS Gamers Clubで実行するのだ。
 
 Hide状態を解除します。
 
-### ``
+### `/show`
 
 Hide状態を解除します。
 
@@ -624,7 +624,7 @@ Hide状態を解除します。
 
 頭ブロックを入手します。
 
-### ``
+### `/head`
 
 自分の頭ブロックを入手します。
 
@@ -632,13 +632,13 @@ Hide状態を解除します。
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
 
-### `<player>`
+### `/head <player>`
 
 指定したプレイヤーの頭ブロックを入手します。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `player` | .StringArgument | はい | 説明なし |
+| `player` | StringArgument | はい | 説明なし |
 
 ## glookup
 
@@ -650,13 +650,13 @@ Hide状態を解除します。
 
 他人のゲームモードを確認します。
 
-### `<player>`
+### `/glookup <player>`
 
 他人のゲームモードを確認します。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `player` | .PlayerArgument | はい | 説明なし |
+| `player` | PlayerArgument | はい | 説明なし |
 
 ## test
 
@@ -669,11 +669,11 @@ Hide状態を解除します。
 
 MyMaidテストコマンド
 
-### `version`
+### `/test version`
 
 MyMaidテストコマンド
 
-### `database`
+### `/test database`
 
 MyMaidテストコマンド
 
@@ -687,7 +687,7 @@ MyMaidテストコマンド
 
 最後に死亡した場所にテレポートします。
 
-### ``
+### `/ded`
 
 最後に死亡した場所にテレポートします。
 
@@ -705,7 +705,7 @@ MyMaidテストコマンド
 
 他のプレイヤーから姿を隠します。
 
-### ``
+### `/hide`
 
 他のプレイヤーから姿を隠します。
 
@@ -726,7 +726,7 @@ MyMaidテストコマンド
 
 - エイリアスがあります: `group`
 
-### ``
+### `/player`
 
 あなたの権限グループを表示します。
 
@@ -734,13 +734,13 @@ MyMaidテストコマンド
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
 
-### `<player>`
+### `/player <player>`
 
 指定されたプレイヤーの権限グループを表示します。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `player` | .StringArgument | はい | 説明なし |
+| `player` | StringArgument | はい | 説明なし |
 
 ## getlookloc
 
@@ -752,7 +752,7 @@ MyMaidテストコマンド
 
 見ているブロックの座標を提案します。
 
-### ``
+### `/getlookloc`
 
 見ているブロックの座標を提案します。
 
@@ -771,7 +771,7 @@ MyMaidテストコマンド
 
 他ワールドにテレポートします。
 
-### `<worldName>`
+### `/wt <worldName>`
 
 指定したワールドにテレポートします。
 
@@ -781,16 +781,16 @@ MyMaidテストコマンド
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `worldName` | .StringArgument | はい | 説明なし |
+| `worldName` | StringArgument | はい | 説明なし |
 
-### `<worldName> <player>`
+### `/wt <worldName> <player>`
 
 指定したプレイヤーを指定したワールドにテレポートさせます。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `worldName` | .StringArgument | はい | 説明なし |
-| `player` | .PlayerArgument | はい | 説明なし |
+| `worldName` | StringArgument | はい | 説明なし |
+| `player` | PlayerArgument | はい | 説明なし |
 
 ## sethome
 
@@ -805,7 +805,7 @@ MyMaidテストコマンド
 
 - エイリアスがあります: `addhome`
 
-### ``
+### `/sethome`
 
 デフォルトホームを設定します。
 
@@ -813,7 +813,7 @@ MyMaidテストコマンド
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
 
-### `[name]`
+### `/sethome [name]`
 
 指定された名前のホームを設定します。
 
@@ -823,7 +823,7 @@ MyMaidテストコマンド
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `name` | .StringArgument | いいえ | 説明なし |
+| `name` | StringArgument | いいえ | 説明なし |
 
 ## eban
 
@@ -837,30 +837,30 @@ MyMaidテストコマンド
 
 EBanに関する処理を行います。
 
-### `add <player> <reason>`
+### `/eban add <player> <reason>`
 
 ターゲットをEBanします。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `player` | .OfflinePlayerArgument | はい | 説明なし |
-| `reason` | .StringArgument | はい | 説明なし |
+| `player` | OfflinePlayerArgument | はい | 説明なし |
+| `reason` | StringArgument | はい | 説明なし |
 
-### `remove <player>`
+### `/eban remove <player>`
 
 ターゲットのEBanを解除します。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `player` | .OfflinePlayerArgument | はい | 説明なし |
+| `player` | OfflinePlayerArgument | はい | 説明なし |
 
-### `status [player]`
+### `/eban status [player]`
 
 EBan一覧を表示します。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `player` | .OfflinePlayerArgument | いいえ | 説明なし |
+| `player` | OfflinePlayerArgument | いいえ | 説明なし |
 
 ## home
 
@@ -875,7 +875,7 @@ EBan一覧を表示します。
 
 ホームにテレポートします。
 
-### ``
+### `/home`
 
 デフォルトホームにテレポートします。
 
@@ -883,7 +883,7 @@ EBan一覧を表示します。
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
 
-### `[name]`
+### `/home [name]`
 
 指定された名前のホームにテレポートします。
 
@@ -893,9 +893,9 @@ EBan一覧を表示します。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `name` | .StringArgument | いいえ | 説明なし |
+| `name` | StringArgument | いいえ | 説明なし |
 
-### `list [Page]`
+### `/home list [Page]`
 
 ホーム一覧を表示します。
 
@@ -905,9 +905,9 @@ EBan一覧を表示します。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `Page` | .IntegerArgument | いいえ | 説明なし |
+| `Page` | IntegerArgument | いいえ | 説明なし |
 
-### `view [name]`
+### `/home view [name]`
 
 指定したホームに関する情報を表示します。
 
@@ -917,4 +917,4 @@ EBan一覧を表示します。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `name` | .StringArgument | いいえ | 説明なし |
+| `name` | StringArgument | いいえ | 説明なし |
