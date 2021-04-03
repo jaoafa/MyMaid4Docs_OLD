@@ -10,6 +10,7 @@ toc_footers:
   - <a href='https://github.com/tomacheese/MyMaid4Docs'>MyMaid4Docs GitHub Repository</a>
 
 includes:
+  - commandsheader
   - commands
   - eventsheader
   - events
