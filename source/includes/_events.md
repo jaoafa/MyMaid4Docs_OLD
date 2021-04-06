@@ -22,6 +22,18 @@
 
 > ソースコード: [com.jaoafa.mymaid4.command.Cmd_Wt](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Wt.java)
 
+### Event_AntiTeleportToNewPlayers
+
+新規プレイヤーへのテレポートを規制します。
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Wt](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Wt.java)
+
+### Event_AntiTeleportToSpectator
+
+スペクテイタープレイヤーへのテレポートを禁止します。
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Wt](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Wt.java)
+
 ### Event_AntiWither
 
 ウィザーの出現制限を行います。
@@ -37,6 +49,12 @@ jaoium制限に関する処理を行います。
 ### Event_ChatBan
 
 ChatBanに関する各種処理を行います。
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Wt](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Wt.java)
+
+### Event_ClearSelection
+
+走りながら空気をクリックして/selを実行します。
 
 > ソースコード: [com.jaoafa.mymaid4.command.Cmd_Wt](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Wt.java)
 
@@ -73,6 +91,18 @@ dedコマンドに関する処理を行います。
 ### Event_DisableConcreteTransition
 
 コンクリートパウダーの変化を無効化します。
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Wt](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Wt.java)
+
+### Event_DisableCoralTransition
+
+サンゴの変化を無効化します。
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Wt](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Wt.java)
+
+### Event_DisableRespawnAnchor
+
+リスポーンアンカーの爆発を無効化します。
 
 > ソースコード: [com.jaoafa.mymaid4.command.Cmd_Wt](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Wt.java)
 
@@ -118,6 +148,18 @@ Jailに関する各種処理を行います。
 
 > ソースコード: [com.jaoafa.mymaid4.command.Cmd_Wt](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Wt.java)
 
+### Event_Looking
+
+lookingコマンドに関する処理を行います。
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Wt](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Wt.java)
+
+### Event_MCBansLoginCheck
+
+ログイン時、MCBansのキャッシュデータベースを確認しGBanされていたりReputationが足りなくないかを確認します。
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Wt](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Wt.java)
+
 ### Event_NewPlayerAutoBlMap
 
 新規プレイヤーがログアウトした際にブロック編集情報を通知します。
@@ -139,6 +181,12 @@ SandBoxをRegular権限グループ未満のプレイヤーが編集できない
 ### Event_SKKColor
 
 チャット欄に表示される四角色に関する処理を行います。
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Wt](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Wt.java)
+
+### Event_TeleportCmd
+
+tpコマンドを受けてTeleportCommandEventを動作させます。
 
 > ソースコード: [com.jaoafa.mymaid4.command.Cmd_Wt](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Wt.java)
 

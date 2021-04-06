@@ -430,6 +430,20 @@ EBan一覧を表示します。
 | - | - | - | - |
 | `player` | PlayerArgument | はい | 説明なし |
 
+## hat
+
+```plaintext
+/hat
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Hat](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Hat.java)
+
+手に持っているアイテムを頭に載せます。
+
+### `/hat`
+
+手に持っているアイテムを頭に載せます。
+
 ## head
 
 ```plaintext
@@ -669,6 +683,48 @@ linkコマンドはjMS Gamers Clubで実行するのだ。
 | - | - | - | - |
 | `loginText` | StringArgument | はい | 説明なし |
 
+## looking
+
+```plaintext
+/looking
+/looking on <target>
+/looking off
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Looking](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Looking.java)
+
+プレイヤーを見続けます。
+
+- エイリアスがあります: `eye, see, look`
+
+### `/looking`
+
+今見ているプレイヤーを見続けはじめます。
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+### `/looking on <target>`
+
+プレイヤーを見続けはじめます。
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `target` | PlayerArgument | はい | 説明なし |
+
+### `/looking off`
+
+プレイヤーを見続けるのをやめます。
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
 ## pigeon
 
 ```plaintext
@@ -764,6 +820,24 @@ linkコマンドはjMS Gamers Clubで実行するのだ。
 | - | - | - | - |
 | `player` | StringArgument | はい | 説明なし |
 
+## selclick
+
+```plaintext
+/selclick
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Selclick](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Selclick.java)
+
+SelClickの有効/無効を切り替えます。
+
+### `/selclick`
+
+SelClickの有効/無効を切り替えます。
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
 ## sethome
 
 ```plaintext
@@ -846,6 +920,33 @@ Hide状態を解除します。
 | - | - | - | - |
 | `color` | StringArgument | はい | 説明なし |
 
+## spawn
+
+```plaintext
+/spawn
+/spawn true
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Spawn](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Spawn.java)
+
+スポーン地点にテレポートします。
+
+### `/spawn`
+
+ワールドのスポーン地点にテレポートします。
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+### `/spawn true`
+
+あなたのスポーン地点にテレポートします。
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
 ## tempmute
 
 ```plaintext
@@ -886,6 +987,28 @@ MyMaidテストコマンド
 ### `/test database`
 
 MyMaidテストコマンド
+
+## testment
+
+```plaintext
+/testment <message>
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Testment](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Testment.java)
+
+Jailの遺言を残します。jail testmentのエイリアスです。
+
+### `/testment <message>`
+
+遺言を記録します。
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `message` | StringArgument | はい | 説明なし |
 
 ## wt
 
