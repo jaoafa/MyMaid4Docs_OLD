@@ -138,7 +138,7 @@ foreach ($events as $event) {
     $markdown[] = "";
     $markdown[] = $event["description"];
     $markdown[] = "";
-    $markdown[] = "> ソースコード: [" . $command["class"] . "](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/" . str_replace(".", "/", $command["class"]) . ".java)";
+    $markdown[] = "> ソースコード: [" . $event["class"] . "](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/" . str_replace(".", "/", $event["class"]) . ".java)";
     $markdown[] = "";
 }
 file_put_contents("source/includes/_events.md", implode("\n", $markdown));
