@@ -83,12 +83,6 @@ foreach ($commands as $command) {
         $markdown[] = "### `/" . implode(" ", $args) . "`";
         $markdown[] = "";
 
-
-        if (isset($subcommand["meta"]["description"])) {
-            $markdown[] = $subcommand["meta"]["description"];
-            $markdown[] = "";
-        }
-
         if (isset($subcommand["senderType"])) {
             if ($subcommand["senderType"] == "org.bukkit.entity.Player") {
                 $markdown[] = "<aside class=\"notice\">";
@@ -96,6 +90,16 @@ foreach ($commands as $command) {
                 $markdown[] = "</aside>";
                 $markdown[] = "";
             }
+        }
+
+        if (isset($subcommand["meta"]["description"])) {
+            $markdown[] = $subcommand["meta"]["description"];
+            $markdown[] = "";
+        }
+
+        if (count($subcommand["alias"]) != 0) {
+            $markdown[] = "- エイリアスがあります: `" . implode(", ", $subcommand["alias"]) . "`";
+            $markdown[] = "";
         }
 
         $argsTable = [];
@@ -138,6 +142,13 @@ foreach ($events as $event) {
     $markdown[] = "";
     $markdown[] = $event["description"];
     $markdown[] = "";
+    if (isset($event["methods"]) && count($event["methods"]) != 0) {
+        $markdown[] = "| メソッド名 | イベント |";
+        $markdown[] = "| - | - |";
+        foreach ($event["methods"] as $method) {
+            $markdown[] = "| " . $method["name"] . " | " . substr($method["event"], strrpos($method["event"], ".") + 1) . "|";
+        }
+    }
     $markdown[] = "> ソースコード: [" . $event["class"] . "](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/" . str_replace(".", "/", $event["class"]) . ".java)";
     $markdown[] = "";
 }

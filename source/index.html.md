@@ -7,7 +7,7 @@ language_tabs:
 toc_footers:
   - <a href='https://jaoafa.com'>jao Minecraft Server</a>
   - <a href='https://github.com/jaoafa/MyMaid4'>MyMaid4 GitHub Repository</a>
-  - <a href='https://github.com/tomacheese/MyMaid4Docs'>MyMaid4Docs GitHub Repository</a>
+  - <a href='https://github.com/jaoafa/MyMaid4Docs'>MyMaid4Docs GitHub Repository</a>
 
 includes:
   - version
