@@ -547,7 +547,7 @@
 
 <p>新しいコマンド・機能の要望、不具合の報告などは <a href="https://forms.gle/EZGVhKdbryfW5fCm8">開発部リクエストボックス</a> か <a href="https://github.com/jaoafa/MyMaid4/issues">MyMaid4 の Issue</a> へお願いします。</p>
 <ul>
-<li>Version: 2021.04.07_00.44_006983f</li>
+<li>Version: 2021.04.07_18.29_1fa7e96</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -1932,11 +1932,35 @@
 <h3 id='events-wt-event_antilogincmd'>Event_AntiLoginCmd</h3>
 <p>ログインコマンドの使用制限を行います。</p>
 
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onOPCommand</td>
+<td>PlayerCommandPreprocessEvent</td>
+</tr>
+</tbody></table>
+
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_AntiLoginCmd.java">com.jaoafa.mymaid4.event.Event_AntiLoginCmd</a></p>
 </blockquote>
 <h3 id='events-wt-event_antiproblemcommand'>Event_AntiProblemCommand</h3>
 <p>迷惑コマンドの制限を行います。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onCommand</td>
+<td>PlayerCommandPreprocessEvent</td>
+</tr>
+</tbody></table>
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_AntiProblemCommand.java">com.jaoafa.mymaid4.event.Event_AntiProblemCommand</a></p>
@@ -1944,11 +1968,35 @@
 <h3 id='events-wt-event_antiproblemteleport'>Event_AntiProblemTeleport</h3>
 <p>極端に遠い場所へのテレポートを禁止します。</p>
 
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onPlayerTeleportEvent</td>
+<td>PlayerTeleportEvent</td>
+</tr>
+</tbody></table>
+
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_AntiProblemTeleport.java">com.jaoafa.mymaid4.event.Event_AntiProblemTeleport</a></p>
 </blockquote>
 <h3 id='events-wt-event_antitargetallentitycmd'>Event_AntiTargetAllEntityCmd</h3>
 <p>全てのエンティティをターゲットとするコマンドの使用を禁止します。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onCommand</td>
+<td>PlayerCommandPreprocessEvent</td>
+</tr>
+</tbody></table>
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_AntiTargetAllEntityCmd.java">com.jaoafa.mymaid4.event.Event_AntiTargetAllEntityCmd</a></p>
@@ -1956,11 +2004,35 @@
 <h3 id='events-wt-event_antiteleporttonewplayers'>Event_AntiTeleportToNewPlayers</h3>
 <p>新規プレイヤーへのテレポートを規制します。</p>
 
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onTeleportCommand</td>
+<td>TeleportCommandEvent</td>
+</tr>
+</tbody></table>
+
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_AntiTeleportToNewPlayers.java">com.jaoafa.mymaid4.event.Event_AntiTeleportToNewPlayers</a></p>
 </blockquote>
 <h3 id='events-wt-event_antiteleporttospectator'>Event_AntiTeleportToSpectator</h3>
 <p>スペクテイタープレイヤーへのテレポートを禁止します。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onTeleportCommand</td>
+<td>TeleportCommandEvent</td>
+</tr>
+</tbody></table>
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_AntiTeleportToSpectator.java">com.jaoafa.mymaid4.event.Event_AntiTeleportToSpectator</a></p>
@@ -1968,11 +2040,59 @@
 <h3 id='events-wt-event_antiwither'>Event_AntiWither</h3>
 <p>ウィザーの出現制限を行います。</p>
 
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>CreatureSpawn</td>
+<td>CreatureSpawnEvent</td>
+</tr>
+</tbody></table>
+
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_AntiWither.java">com.jaoafa.mymaid4.event.Event_AntiWither</a></p>
 </blockquote>
 <h3 id='events-wt-event_antijaoium'>Event_Antijaoium</h3>
 <p>jaoium制限に関する処理を行います。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onPlayerItemHeldEvent</td>
+<td>PlayerItemHeldEvent</td>
+</tr>
+<tr>
+<td>onPlayerInteractEvent</td>
+<td>PlayerInteractEvent</td>
+</tr>
+<tr>
+<td>OnBlockDispenseEvent</td>
+<td>BlockDispenseEvent</td>
+</tr>
+<tr>
+<td>OnPickup</td>
+<td>EntityPickupItemEvent</td>
+</tr>
+<tr>
+<td>InvClick</td>
+<td>InventoryClickEvent</td>
+</tr>
+<tr>
+<td>onProjectileLaunchEvent</td>
+<td>ProjectileLaunchEvent</td>
+</tr>
+<tr>
+<td>onPotionSplashEvent</td>
+<td>PotionSplashEvent</td>
+</tr>
+</tbody></table>
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Antijaoium.java">com.jaoafa.mymaid4.event.Event_Antijaoium</a></p>
@@ -1980,11 +2100,51 @@
 <h3 id='events-wt-event_chatban'>Event_ChatBan</h3>
 <p>ChatBanに関する各種処理を行います。</p>
 
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onJoinClearCache</td>
+<td>PlayerJoinEvent</td>
+</tr>
+<tr>
+<td>OnEvent_LoginChatBanCheck</td>
+<td>PlayerJoinEvent</td>
+</tr>
+<tr>
+<td>onQuitClearCache</td>
+<td>PlayerQuitEvent</td>
+</tr>
+<tr>
+<td>onChat</td>
+<td>AsyncChatEvent</td>
+</tr>
+<tr>
+<td>onPlayerCommandPreprocessEvent</td>
+<td>PlayerCommandPreprocessEvent</td>
+</tr>
+</tbody></table>
+
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_ChatBan.java">com.jaoafa.mymaid4.event.Event_ChatBan</a></p>
 </blockquote>
 <h3 id='events-wt-event_clearselection'>Event_ClearSelection</h3>
 <p>走りながら空気をクリックして/selを実行します。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onAirClick</td>
+<td>PlayerInteractEvent</td>
+</tr>
+</tbody></table>
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_ClearSelection.java">com.jaoafa.mymaid4.event.Event_ClearSelection</a></p>
@@ -1992,11 +2152,35 @@
 <h3 id='events-wt-event_cmdlengthlimiter'>Event_CmdLengthLimiter</h3>
 <p>Default権限グループのプレイヤーによる100文字を超えるコマンドの実行を制限します。</p>
 
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onCommand</td>
+<td>PlayerCommandPreprocessEvent</td>
+</tr>
+</tbody></table>
+
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_CmdLengthLimiter.java">com.jaoafa.mymaid4.event.Event_CmdLengthLimiter</a></p>
 </blockquote>
 <h3 id='events-wt-event_commandsendam'>Event_CommandSendAM</h3>
 <p>実行されたコマンドをAdminとModeratorに通知します。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onCommand</td>
+<td>PlayerCommandPreprocessEvent</td>
+</tr>
+</tbody></table>
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_CommandSendAM.java">com.jaoafa.mymaid4.event.Event_CommandSendAM</a></p>
@@ -2004,11 +2188,35 @@
 <h3 id='events-wt-event_customjoinmessage'>Event_CustomJoinMessage</h3>
 <p>独自のログインメッセージを表示するように制御します。</p>
 
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onEvent_JoinChangeMessage</td>
+<td>PlayerJoinEvent</td>
+</tr>
+</tbody></table>
+
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_CustomJoinMessage.java">com.jaoafa.mymaid4.event.Event_CustomJoinMessage</a></p>
 </blockquote>
 <h3 id='events-wt-event_dvnotspectator'>Event_DVNotSpectator</h3>
 <p>DefaultとVerified権限グループのプレイヤーによるスペクテイター変更を禁止します。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onChangeGameMode</td>
+<td>PlayerGameModeChangeEvent</td>
+</tr>
+</tbody></table>
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_DVNotSpectator.java">com.jaoafa.mymaid4.event.Event_DVNotSpectator</a></p>
@@ -2016,11 +2224,35 @@
 <h3 id='events-wt-event_ded'>Event_Ded</h3>
 <p>dedコマンドに関する処理を行います。</p>
 
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onPlayerDeathEvent</td>
+<td>PlayerDeathEvent</td>
+</tr>
+</tbody></table>
+
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Ded.java">com.jaoafa.mymaid4.event.Event_Ded</a></p>
 </blockquote>
 <h3 id='events-wt-event_disableconcretetransition'>Event_DisableConcreteTransition</h3>
 <p>コンクリートパウダーの変化を無効化します。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onBlockFormEvent</td>
+<td>BlockFormEvent</td>
+</tr>
+</tbody></table>
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_DisableConcreteTransition.java">com.jaoafa.mymaid4.event.Event_DisableConcreteTransition</a></p>
@@ -2028,11 +2260,35 @@
 <h3 id='events-wt-event_disablecoraltransition'>Event_DisableCoralTransition</h3>
 <p>サンゴの変化を無効化します。</p>
 
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onBlockFadeEvent</td>
+<td>BlockFadeEvent</td>
+</tr>
+</tbody></table>
+
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_DisableCoralTransition.java">com.jaoafa.mymaid4.event.Event_DisableCoralTransition</a></p>
 </blockquote>
 <h3 id='events-wt-event_disablerespawnanchor'>Event_DisableRespawnAnchor</h3>
 <p>リスポーンアンカーの爆発を無効化します。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onInteract</td>
+<td>PlayerInteractEvent</td>
+</tr>
+</tbody></table>
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_DisableRespawnAnchor.java">com.jaoafa.mymaid4.event.Event_DisableRespawnAnchor</a></p>
@@ -2040,11 +2296,91 @@
 <h3 id='events-wt-event_eban'>Event_EBan</h3>
 <p>EBanに関する各種処理を行います。</p>
 
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onPlayerRespawnEvent</td>
+<td>PlayerRespawnEvent</td>
+</tr>
+<tr>
+<td>onJoinClearCache</td>
+<td>PlayerJoinEvent</td>
+</tr>
+<tr>
+<td>onPlayerCommandPreprocessEvent</td>
+<td>PlayerCommandPreprocessEvent</td>
+</tr>
+<tr>
+<td>OnEvent_LoginEBanCheck</td>
+<td>PlayerJoinEvent</td>
+</tr>
+<tr>
+<td>onEvent_ChatLiquidBounce</td>
+<td>AsyncChatEvent</td>
+</tr>
+<tr>
+<td>onBlockPlaceEvent</td>
+<td>BlockPlaceEvent</td>
+</tr>
+<tr>
+<td>onBlockBreakEvent</td>
+<td>BlockBreakEvent</td>
+</tr>
+<tr>
+<td>onBlockIgniteEvent</td>
+<td>BlockIgniteEvent</td>
+</tr>
+<tr>
+<td>onPlayerBucketEmptyEvent</td>
+<td>PlayerBucketEmptyEvent</td>
+</tr>
+<tr>
+<td>onPlayerBucketFillEvent</td>
+<td>PlayerBucketFillEvent</td>
+</tr>
+<tr>
+<td>onPlayerPickupItemEvent</td>
+<td>EntityPickupItemEvent</td>
+</tr>
+<tr>
+<td>onPlayerDropItemEvent</td>
+<td>PlayerDropItemEvent</td>
+</tr>
+<tr>
+<td>onProjectileLaunchEvent</td>
+<td>ProjectileLaunchEvent</td>
+</tr>
+<tr>
+<td>onPlayerMoveEvent</td>
+<td>PlayerMoveEvent</td>
+</tr>
+<tr>
+<td>onPotionSplashEvent</td>
+<td>PotionSplashEvent</td>
+</tr>
+</tbody></table>
+
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_EBan.java">com.jaoafa.mymaid4.event.Event_EBan</a></p>
 </blockquote>
 <h3 id='events-wt-event_explosion'>Event_Explosion</h3>
 <p>TNTなどの爆発時に額縁や絵画などが壊れないようにします。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onHangingDamageByTNT</td>
+<td>HangingBreakEvent</td>
+</tr>
+</tbody></table>
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Explosion.java">com.jaoafa.mymaid4.event.Event_Explosion</a></p>
@@ -2052,11 +2388,35 @@
 <h3 id='events-wt-event_firstlogin'>Event_FirstLogin</h3>
 <p>初めてログインしたプレイヤーを通知します。</p>
 
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OnEvent_FirstLogin</td>
+<td>PlayerJoinEvent</td>
+</tr>
+</tbody></table>
+
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_FirstLogin.java">com.jaoafa.mymaid4.event.Event_FirstLogin</a></p>
 </blockquote>
 <h3 id='events-wt-event_gamemodecmd'>Event_GameModeCmd</h3>
 <p>hideコマンドに関する処理を行います。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onGameModeCommand</td>
+<td>PlayerCommandPreprocessEvent</td>
+</tr>
+</tbody></table>
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_GameModeCmd.java">com.jaoafa.mymaid4.event.Event_GameModeCmd</a></p>
@@ -2064,11 +2424,43 @@
 <h3 id='events-wt-event_hide'>Event_Hide</h3>
 <p>hideコマンドに関する処理を行います。</p>
 
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onAsyncPlayerChatEvent</td>
+<td>AsyncChatEvent</td>
+</tr>
+<tr>
+<td>onPlayerJoinEvent</td>
+<td>PlayerJoinEvent</td>
+</tr>
+<tr>
+<td>onCommand</td>
+<td>PlayerCommandPreprocessEvent</td>
+</tr>
+</tbody></table>
+
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Hide.java">com.jaoafa.mymaid4.event.Event_Hide</a></p>
 </blockquote>
 <h3 id='events-wt-event_history'>Event_History</h3>
 <p>historyコマンドに関する処理を行います。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OnEvent_JoinHistory</td>
+<td>PlayerJoinEvent</td>
+</tr>
+</tbody></table>
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_History.java">com.jaoafa.mymaid4.event.Event_History</a></p>
@@ -2076,11 +2468,87 @@
 <h3 id='events-wt-event_jail'>Event_Jail</h3>
 <p>Jailに関する各種処理を行います。</p>
 
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onPlayerRespawnEvent</td>
+<td>PlayerRespawnEvent</td>
+</tr>
+<tr>
+<td>OnEvent_LoginJailCheck</td>
+<td>PlayerJoinEvent</td>
+</tr>
+<tr>
+<td>onJoinClearCache</td>
+<td>PlayerJoinEvent</td>
+</tr>
+<tr>
+<td>onPlayerCommandPreprocessEvent</td>
+<td>PlayerCommandPreprocessEvent</td>
+</tr>
+<tr>
+<td>onBlockPlaceEvent</td>
+<td>BlockPlaceEvent</td>
+</tr>
+<tr>
+<td>onBlockBreakEvent</td>
+<td>BlockBreakEvent</td>
+</tr>
+<tr>
+<td>onBlockIgniteEvent</td>
+<td>BlockIgniteEvent</td>
+</tr>
+<tr>
+<td>onPlayerBucketEmptyEvent</td>
+<td>PlayerBucketEmptyEvent</td>
+</tr>
+<tr>
+<td>onPlayerBucketFillEvent</td>
+<td>PlayerBucketFillEvent</td>
+</tr>
+<tr>
+<td>onPlayerPickupItemEvent</td>
+<td>EntityPickupItemEvent</td>
+</tr>
+<tr>
+<td>onPlayerDropItemEvent</td>
+<td>PlayerDropItemEvent</td>
+</tr>
+<tr>
+<td>onProjectileLaunchEvent</td>
+<td>ProjectileLaunchEvent</td>
+</tr>
+<tr>
+<td>onPlayerMoveEvent</td>
+<td>PlayerMoveEvent</td>
+</tr>
+<tr>
+<td>onPotionSplashEvent</td>
+<td>PotionSplashEvent</td>
+</tr>
+</tbody></table>
+
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Jail.java">com.jaoafa.mymaid4.event.Event_Jail</a></p>
 </blockquote>
 <h3 id='events-wt-event_loginsuccessful'>Event_LoginSuccessful</h3>
 <p>ログインに成功したことをデータベースに書き込みます。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OnJoin</td>
+<td>PlayerJoinEvent</td>
+</tr>
+</tbody></table>
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_LoginSuccessful.java">com.jaoafa.mymaid4.event.Event_LoginSuccessful</a></p>
@@ -2088,11 +2556,39 @@
 <h3 id='events-wt-event_looking'>Event_Looking</h3>
 <p>lookingコマンドに関する処理を行います。</p>
 
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onMove</td>
+<td>PlayerMoveEvent</td>
+</tr>
+</tbody></table>
+
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Looking.java">com.jaoafa.mymaid4.event.Event_Looking</a></p>
 </blockquote>
 <h3 id='events-wt-event_mcbanslogincheck'>Event_MCBansLoginCheck</h3>
 <p>ログイン時、MCBansのキャッシュデータベースを確認しGBanされていたりReputationが足りなくないかを確認します。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OnLoginAfterCheck</td>
+<td>PlayerJoinEvent</td>
+</tr>
+<tr>
+<td>OnLoginCheck</td>
+<td>AsyncPlayerPreLoginEvent</td>
+</tr>
+</tbody></table>
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_MCBansLoginCheck.java">com.jaoafa.mymaid4.event.Event_MCBansLoginCheck</a></p>
@@ -2100,11 +2596,39 @@
 <h3 id='events-wt-event_newplayerautoblmap'>Event_NewPlayerAutoBlMap</h3>
 <p>新規プレイヤーがログアウトした際にブロック編集情報を通知します。</p>
 
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OnEvent_Quit</td>
+<td>PlayerQuitEvent</td>
+</tr>
+<tr>
+<td>OnEvent_FirstLogin</td>
+<td>PlayerJoinEvent</td>
+</tr>
+</tbody></table>
+
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_NewPlayerAutoBlMap.java">com.jaoafa.mymaid4.event.Event_NewPlayerAutoBlMap</a></p>
 </blockquote>
 <h3 id='events-wt-event_playercheckprelogin'>Event_PlayerCheckPreLogin</h3>
 <p>プレイヤーログイン前に各種チェック等を行います。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OnEvent_PlayerCheckPreLogin</td>
+<td>AsyncPlayerPreLoginEvent</td>
+</tr>
+</tbody></table>
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_PlayerCheckPreLogin.java">com.jaoafa.mymaid4.event.Event_PlayerCheckPreLogin</a></p>
@@ -2112,11 +2636,75 @@
 <h3 id='events-wt-event_protectionsandbox'>Event_ProtectionSandBox</h3>
 <p>SandBoxをRegular権限グループ未満のプレイヤーが編集できないように制限します。</p>
 
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>ontoSandBox</td>
+<td>PlayerChangedWorldEvent</td>
+</tr>
+<tr>
+<td>onSandBoxPlace</td>
+<td>BlockPlaceEvent</td>
+</tr>
+<tr>
+<td>onSandBoxBreak</td>
+<td>BlockBreakEvent</td>
+</tr>
+<tr>
+<td>onSandBoxIgniteEvent</td>
+<td>BlockIgniteEvent</td>
+</tr>
+<tr>
+<td>onSandBoxBucketEmptyEvent</td>
+<td>PlayerBucketEmptyEvent</td>
+</tr>
+<tr>
+<td>onInteractRight</td>
+<td>PlayerInteractEvent</td>
+</tr>
+<tr>
+<td>onInteractLeft</td>
+<td>PlayerInteractEvent</td>
+</tr>
+<tr>
+<td>onDamageArmorStand</td>
+<td>EntityDamageByEntityEvent</td>
+</tr>
+<tr>
+<td>onSandBoxBucketFillEvent</td>
+<td>PlayerBucketFillEvent</td>
+</tr>
+<tr>
+<td>onProjectileLaunchEvent</td>
+<td>ProjectileLaunchEvent</td>
+</tr>
+</tbody></table>
+
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_ProtectionSandBox.java">com.jaoafa.mymaid4.event.Event_ProtectionSandBox</a></p>
 </blockquote>
 <h3 id='events-wt-event_skkcolor'>Event_SKKColor</h3>
 <p>チャット欄に表示される四角色に関する処理を行います。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onEvent_ChatSKK</td>
+<td>AsyncPlayerChatEvent</td>
+</tr>
+<tr>
+<td>onEvent_JoinTabReload</td>
+<td>PlayerJoinEvent</td>
+</tr>
+</tbody></table>
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_SKKColor.java">com.jaoafa.mymaid4.event.Event_SKKColor</a></p>
@@ -2124,17 +2712,57 @@
 <h3 id='events-wt-event_teleportcmd'>Event_TeleportCmd</h3>
 <p>tpコマンドを受けてTeleportCommandEventを動作させます。</p>
 
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onTeleportCommandFromPlayer</td>
+<td>PlayerCommandPreprocessEvent</td>
+</tr>
+<tr>
+<td>onTeleportCommandFromNonPlayer</td>
+<td>ServerCommandEvent</td>
+</tr>
+</tbody></table>
+
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_TeleportCmd.java">com.jaoafa.mymaid4.event.Event_TeleportCmd</a></p>
 </blockquote>
 <h3 id='events-wt-event_tempmute'>Event_TempMute</h3>
 <p>tempmuteコマンドに関する処理を行います。</p>
 
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onChat</td>
+<td>AsyncChatEvent</td>
+</tr>
+</tbody></table>
+
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_TempMute.java">com.jaoafa.mymaid4.event.Event_TempMute</a></p>
 </blockquote>
 <h3 id='events-wt-event_vote'>Event_Vote</h3>
 <p>各サーバリストサイトからの投票通知を受け取り、処理します。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onVotifierEvent</td>
+<td>VotifierEvent</td>
+</tr>
+</tbody></table>
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Vote.java">com.jaoafa.mymaid4.event.Event_Vote</a></p>
