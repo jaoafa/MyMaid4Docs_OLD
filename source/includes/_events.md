@@ -124,6 +124,12 @@ TNTなどの爆発時に額縁や絵画などが壊れないようにします�
 
 > ソースコード: [com.jaoafa.mymaid4.command.Cmd_Wt](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Wt.java)
 
+### Event_GameModeCmd
+
+hideコマンドに関する処理を行います。
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Wt](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Wt.java)
+
 ### Event_Hide
 
 hideコマンドに関する処理を行います。
