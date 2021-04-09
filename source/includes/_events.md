@@ -69,8 +69,8 @@ jaoium制限に関する処理を行います。
 | - | - |
 | onPotionSplashEvent | PotionSplashEvent|
 | onProjectileLaunchEvent | ProjectileLaunchEvent|
-| InvClick | InventoryClickEvent|
 | OnPickup | EntityPickupItemEvent|
+| InvClick | InventoryClickEvent|
 | onPlayerItemHeldEvent | PlayerItemHeldEvent|
 | onPlayerInteractEvent | PlayerInteractEvent|
 | OnBlockDispenseEvent | BlockDispenseEvent|
@@ -82,10 +82,10 @@ ChatBanに関する各種処理を行います。
 
 | メソッド名 | イベント |
 | - | - |
+| onJoinClearCache | PlayerJoinEvent|
 | onQuitClearCache | PlayerQuitEvent|
 | onChat | AsyncChatEvent|
 | onPlayerCommandPreprocessEvent | PlayerCommandPreprocessEvent|
-| onJoinClearCache | PlayerJoinEvent|
 | OnEvent_LoginChatBanCheck | PlayerJoinEvent|
 > ソースコード: [com.jaoafa.mymaid4.event.Event_ChatBan](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_ChatBan.java)
 
@@ -176,20 +176,20 @@ EBanに関する各種処理を行います。
 
 | メソッド名 | イベント |
 | - | - |
+| onPlayerMoveEvent | PlayerMoveEvent|
 | onPlayerRespawnEvent | PlayerRespawnEvent|
-| onPlayerCommandPreprocessEvent | PlayerCommandPreprocessEvent|
+| onPotionSplashEvent | PotionSplashEvent|
 | onJoinClearCache | PlayerJoinEvent|
+| onPlayerCommandPreprocessEvent | PlayerCommandPreprocessEvent|
+| onEvent_ChatLiquidBounce | AsyncChatEvent|
 | onBlockPlaceEvent | BlockPlaceEvent|
 | onBlockBreakEvent | BlockBreakEvent|
-| onPlayerMoveEvent | PlayerMoveEvent|
-| onPotionSplashEvent | PotionSplashEvent|
 | onBlockIgniteEvent | BlockIgniteEvent|
 | onPlayerBucketEmptyEvent | PlayerBucketEmptyEvent|
 | onPlayerBucketFillEvent | PlayerBucketFillEvent|
 | onPlayerPickupItemEvent | EntityPickupItemEvent|
 | onPlayerDropItemEvent | PlayerDropItemEvent|
 | onProjectileLaunchEvent | ProjectileLaunchEvent|
-| onEvent_ChatLiquidBounce | AsyncChatEvent|
 | OnEvent_LoginEBanCheck | PlayerJoinEvent|
 > ソースコード: [com.jaoafa.mymaid4.event.Event_EBan](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_EBan.java)
 
@@ -246,13 +246,13 @@ Jailに関する各種処理を行います。
 
 | メソッド名 | イベント |
 | - | - |
+| onPlayerMoveEvent | PlayerMoveEvent|
 | onPlayerRespawnEvent | PlayerRespawnEvent|
-| onPlayerCommandPreprocessEvent | PlayerCommandPreprocessEvent|
+| onPotionSplashEvent | PotionSplashEvent|
 | onJoinClearCache | PlayerJoinEvent|
+| onPlayerCommandPreprocessEvent | PlayerCommandPreprocessEvent|
 | onBlockPlaceEvent | BlockPlaceEvent|
 | onBlockBreakEvent | BlockBreakEvent|
-| onPlayerMoveEvent | PlayerMoveEvent|
-| onPotionSplashEvent | PotionSplashEvent|
 | onBlockIgniteEvent | BlockIgniteEvent|
 | onPlayerBucketEmptyEvent | PlayerBucketEmptyEvent|
 | onPlayerBucketFillEvent | PlayerBucketFillEvent|
@@ -286,8 +286,8 @@ lookingコマンドに関する処理を行います。
 
 | メソッド名 | イベント |
 | - | - |
-| OnLoginAfterCheck | PlayerJoinEvent|
 | OnLoginCheck | AsyncPlayerPreLoginEvent|
+| OnLoginAfterCheck | PlayerJoinEvent|
 > ソースコード: [com.jaoafa.mymaid4.event.Event_MCBansLoginCheck](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_MCBansLoginCheck.java)
 
 ### Event_NewPlayerAutoBlMap
@@ -316,12 +316,12 @@ SandBoxをRegular権限グループ未満のプレイヤーが編集できない
 | メソッド名 | イベント |
 | - | - |
 | onProjectileLaunchEvent | ProjectileLaunchEvent|
+| onSandBoxBucketFillEvent | PlayerBucketFillEvent|
 | ontoSandBox | PlayerChangedWorldEvent|
 | onSandBoxPlace | BlockPlaceEvent|
 | onSandBoxBreak | BlockBreakEvent|
 | onSandBoxIgniteEvent | BlockIgniteEvent|
 | onSandBoxBucketEmptyEvent | PlayerBucketEmptyEvent|
-| onSandBoxBucketFillEvent | PlayerBucketFillEvent|
 | onInteractRight | PlayerInteractEvent|
 | onInteractLeft | PlayerInteractEvent|
 | onDamageArmorStand | EntityDamageByEntityEvent|
@@ -333,8 +333,8 @@ SandBoxをRegular権限グループ未満のプレイヤーが編集できない
 
 | メソッド名 | イベント |
 | - | - |
-| onEvent_JoinTabReload | PlayerJoinEvent|
 | onEvent_ChatSKK | AsyncPlayerChatEvent|
+| onEvent_JoinTabReload | PlayerJoinEvent|
 > ソースコード: [com.jaoafa.mymaid4.event.Event_SKKColor](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_SKKColor.java)
 
 ### Event_TeleportCmd
