@@ -328,6 +328,9 @@
                     <a href="#commands-cmdb" class="toc-h2 toc-link" data-title="cmdb">cmdb</a>
                   </li>
                   <li>
+                    <a href="#commands-debstick" class="toc-h2 toc-link" data-title="debstick">debstick</a>
+                  </li>
+                  <li>
                     <a href="#commands-ded" class="toc-h2 toc-link" data-title="ded">ded</a>
                   </li>
                   <li>
@@ -416,6 +419,9 @@
                   </li>
                   <li>
                     <a href="#commands-testment" class="toc-h2 toc-link" data-title="testment">testment</a>
+                  </li>
+                  <li>
+                    <a href="#commands-tpdeny" class="toc-h2 toc-link" data-title="tpdeny">tpdeny</a>
                   </li>
                   <li>
                     <a href="#commands-wt" class="toc-h2 toc-link" data-title="wt">wt</a>
@@ -510,6 +516,9 @@
                     <a href="#events-wt-event_mcbanslogincheck" class="toc-h2 toc-link" data-title="Event_MCBansLoginCheck">Event_MCBansLoginCheck</a>
                   </li>
                   <li>
+                    <a href="#events-wt-event_managecpperms" class="toc-h2 toc-link" data-title="Event_ManageCPPerms">Event_ManageCPPerms</a>
+                  </li>
+                  <li>
                     <a href="#events-wt-event_newplayerautoblmap" class="toc-h2 toc-link" data-title="Event_NewPlayerAutoBlMap">Event_NewPlayerAutoBlMap</a>
                   </li>
                   <li>
@@ -526,6 +535,9 @@
                   </li>
                   <li>
                     <a href="#events-wt-event_tempmute" class="toc-h2 toc-link" data-title="Event_TempMute">Event_TempMute</a>
+                  </li>
+                  <li>
+                    <a href="#events-wt-event_tpdeny" class="toc-h2 toc-link" data-title="Event_TpDeny">Event_TpDeny</a>
                   </li>
                   <li>
                     <a href="#events-wt-event_vote" class="toc-h2 toc-link" data-title="Event_Vote">Event_Vote</a>
@@ -547,7 +559,7 @@
 
 <p>新しいコマンド・機能の要望、不具合の報告などは <a href="https://forms.gle/EZGVhKdbryfW5fCm8">開発部リクエストボックス</a> か <a href="https://github.com/jaoafa/MyMaid4/issues">MyMaid4 の Issue</a> へお願いします。</p>
 <ul>
-<li>Version: 2021.04.09_09.38_61b6c65</li>
+<li>Version: 2021.04.10_21.33_e7e7f55</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -706,6 +718,38 @@
 <p>コマンドブロックをコマンド実行者のメインハンドのアイテムと置き換えます。</p>
 <h3 id='commands-cmdb-cmdb-lt-player-gt'><code>/cmdb &lt;player&gt;</code></h3>
 <p>コマンドブロックを指定したプレイヤーのメインハンドのアイテムと置き換えます。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>player</code></td>
+<td>PlayerArgument</td>
+<td>はい</td>
+<td>説明なし</td>
+</tr>
+</tbody></table>
+<h2 id='commands-debstick'>debstick</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/debstick
+/debstick &lt;player&gt;
+</code></pre></div>
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Debstick.java">com.jaoafa.mymaid4.command.Cmd_Debstick</a></p>
+</blockquote>
+
+<p>デバッグステイックを入手します。</p>
+<h3 id='commands-debstick-debstick'><code>/debstick</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>デバッグステイックをコマンド実行者のメインハンドのアイテムと置き換えます。</p>
+<h3 id='commands-debstick-debstick-lt-player-gt'><code>/debstick &lt;player&gt;</code></h3>
+<p>デバッグステイックを指定したプレイヤーのメインハンドのアイテムと置き換えます。</p>
 
 <table><thead>
 <tr>
@@ -1873,6 +1917,94 @@
 <td>説明なし</td>
 </tr>
 </tbody></table>
+<h2 id='commands-tpdeny'>tpdeny</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/tpdeny add &lt;target&gt;
+/tpdeny remove &lt;target&gt;
+/tpdeny notify &lt;target&gt; &lt;changeTo&gt;
+/tpdeny list
+</code></pre></div>
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_TpDeny.java">com.jaoafa.mymaid4.command.Cmd_TpDeny</a></p>
+</blockquote>
+
+<p>TpDeny(特定ユーザーからのテレポート拒否)の設定をします。</p>
+<h3 id='commands-tpdeny-tpdeny-add-lt-target-gt'><code>/tpdeny add &lt;target&gt;</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>TpDenyにプレイヤーを追加し、以降のテレポートを拒否します。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>target</code></td>
+<td>OfflinePlayerArgument</td>
+<td>はい</td>
+<td>説明なし</td>
+</tr>
+</tbody></table>
+<h3 id='commands-tpdeny-tpdeny-remove-lt-target-gt'><code>/tpdeny remove &lt;target&gt;</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>TpDenyからプレイヤーを解除し、以降のテレポートを許可します。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>target</code></td>
+<td>OfflinePlayerArgument</td>
+<td>はい</td>
+<td>説明なし</td>
+</tr>
+</tbody></table>
+<h3 id='commands-tpdeny-tpdeny-notify-lt-target-gt-lt-changeto-gt'><code>/tpdeny notify &lt;target&gt; &lt;changeTo&gt;</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>テレポートを拒否した場合に通知するかどうかを設定します。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>target</code></td>
+<td>OfflinePlayerArgument</td>
+<td>はい</td>
+<td>通知をするか</td>
+</tr>
+<tr>
+<td><code>changeTo</code></td>
+<td>EnumArgument</td>
+<td>はい</td>
+<td>説明なし</td>
+</tr>
+</tbody></table>
+<h3 id='commands-tpdeny-tpdeny-list'><code>/tpdeny list</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>現在TpDenyに追加されている(テレポートを拒否されている)プレイヤーの一覧を表示します。</p>
 <h2 id='commands-wt'>wt</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/wt &lt;worldName&gt;
 /wt &lt;worldName&gt; &lt;player&gt;
 </code></pre></div>
@@ -2065,14 +2197,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onProjectileLaunchEvent</td>
-<td>ProjectileLaunchEvent</td>
-</tr>
-<tr>
-<td>onPotionSplashEvent</td>
-<td>PotionSplashEvent</td>
-</tr>
-<tr>
 <td>OnPickup</td>
 <td>EntityPickupItemEvent</td>
 </tr>
@@ -2091,6 +2215,14 @@
 <tr>
 <td>OnBlockDispenseEvent</td>
 <td>BlockDispenseEvent</td>
+</tr>
+<tr>
+<td>onProjectileLaunchEvent</td>
+<td>ProjectileLaunchEvent</td>
+</tr>
+<tr>
+<td>onPotionSplashEvent</td>
+<td>PotionSplashEvent</td>
 </tr>
 </tbody></table>
 
@@ -2111,6 +2243,10 @@
 <td>PlayerJoinEvent</td>
 </tr>
 <tr>
+<td>onJoinClearCache</td>
+<td>PlayerJoinEvent</td>
+</tr>
+<tr>
 <td>onQuitClearCache</td>
 <td>PlayerQuitEvent</td>
 </tr>
@@ -2121,10 +2257,6 @@
 <tr>
 <td>onPlayerCommandPreprocessEvent</td>
 <td>PlayerCommandPreprocessEvent</td>
-</tr>
-<tr>
-<td>onJoinClearCache</td>
-<td>PlayerJoinEvent</td>
 </tr>
 </tbody></table>
 
@@ -2303,12 +2435,16 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onPlayerCommandPreprocessEvent</td>
-<td>PlayerCommandPreprocessEvent</td>
+<td>onPlayerRespawnEvent</td>
+<td>PlayerRespawnEvent</td>
 </tr>
 <tr>
-<td>OnEvent_LoginEBanCheck</td>
+<td>onJoinClearCache</td>
 <td>PlayerJoinEvent</td>
+</tr>
+<tr>
+<td>onPlayerCommandPreprocessEvent</td>
+<td>PlayerCommandPreprocessEvent</td>
 </tr>
 <tr>
 <td>onEvent_ChatLiquidBounce</td>
@@ -2347,20 +2483,16 @@
 <td>ProjectileLaunchEvent</td>
 </tr>
 <tr>
+<td>OnEvent_LoginEBanCheck</td>
+<td>PlayerJoinEvent</td>
+</tr>
+<tr>
 <td>onPlayerMoveEvent</td>
 <td>PlayerMoveEvent</td>
 </tr>
 <tr>
-<td>onPlayerRespawnEvent</td>
-<td>PlayerRespawnEvent</td>
-</tr>
-<tr>
 <td>onPotionSplashEvent</td>
 <td>PotionSplashEvent</td>
-</tr>
-<tr>
-<td>onJoinClearCache</td>
-<td>PlayerJoinEvent</td>
 </tr>
 </tbody></table>
 
@@ -2475,6 +2607,14 @@
 </tr>
 </thead><tbody>
 <tr>
+<td>onPlayerRespawnEvent</td>
+<td>PlayerRespawnEvent</td>
+</tr>
+<tr>
+<td>onJoinClearCache</td>
+<td>PlayerJoinEvent</td>
+</tr>
+<tr>
 <td>onPlayerCommandPreprocessEvent</td>
 <td>PlayerCommandPreprocessEvent</td>
 </tr>
@@ -2519,16 +2659,8 @@
 <td>PlayerMoveEvent</td>
 </tr>
 <tr>
-<td>onPlayerRespawnEvent</td>
-<td>PlayerRespawnEvent</td>
-</tr>
-<tr>
 <td>onPotionSplashEvent</td>
 <td>PotionSplashEvent</td>
-</tr>
-<tr>
-<td>onJoinClearCache</td>
-<td>PlayerJoinEvent</td>
 </tr>
 </tbody></table>
 
@@ -2593,6 +2725,24 @@
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_MCBansLoginCheck.java">com.jaoafa.mymaid4.event.Event_MCBansLoginCheck</a></p>
 </blockquote>
+<h3 id='events-wt-event_managecpperms'>Event_ManageCPPerms</h3>
+<p>CoreProtectのパーミッションノードを管理します。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onCommand</td>
+<td>PlayerCommandPreprocessEvent</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_ManageCPPerms.java">com.jaoafa.mymaid4.event.Event_ManageCPPerms</a></p>
+</blockquote>
 <h3 id='events-wt-event_newplayerautoblmap'>Event_NewPlayerAutoBlMap</h3>
 <p>新規プレイヤーがログアウトした際にブロック編集情報を通知します。</p>
 
@@ -2643,8 +2793,8 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onProjectileLaunchEvent</td>
-<td>ProjectileLaunchEvent</td>
+<td>onSandBoxBucketFillEvent</td>
+<td>PlayerBucketFillEvent</td>
 </tr>
 <tr>
 <td>ontoSandBox</td>
@@ -2667,10 +2817,6 @@
 <td>PlayerBucketEmptyEvent</td>
 </tr>
 <tr>
-<td>onSandBoxBucketFillEvent</td>
-<td>PlayerBucketFillEvent</td>
-</tr>
-<tr>
 <td>onInteractRight</td>
 <td>PlayerInteractEvent</td>
 </tr>
@@ -2681,6 +2827,10 @@
 <tr>
 <td>onDamageArmorStand</td>
 <td>EntityDamageByEntityEvent</td>
+</tr>
+<tr>
+<td>onProjectileLaunchEvent</td>
+<td>ProjectileLaunchEvent</td>
 </tr>
 </tbody></table>
 
@@ -2748,6 +2898,24 @@
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_TempMute.java">com.jaoafa.mymaid4.event.Event_TempMute</a></p>
+</blockquote>
+<h3 id='events-wt-event_tpdeny'>Event_TpDeny</h3>
+<p>tpdenyコマンドに関する処理を行います。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onTeleportCommand</td>
+<td>TeleportCommandEvent</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_TpDeny.java">com.jaoafa.mymaid4.event.Event_TpDeny</a></p>
 </blockquote>
 <h3 id='events-wt-event_vote'>Event_Vote</h3>
 <p>各サーバリストサイトからの投票通知を受け取り、処理します。</p>
