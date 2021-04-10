@@ -108,6 +108,33 @@ ChatBan一覧を表示します。
 | - | - | - | - |
 | `player` | PlayerArgument | はい | 説明なし |
 
+## debstick
+
+```plaintext
+/debstick
+/debstick <player>
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Debstick](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Debstick.java)
+
+デバッグステイックを入手します。
+
+### `/debstick`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+デバッグステイックをコマンド実行者のメインハンドのアイテムと置き換えます。
+
+### `/debstick <player>`
+
+デバッグステイックを指定したプレイヤーのメインハンドのアイテムと置き換えます。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `player` | PlayerArgument | はい | 説明なし |
+
 ## ded
 
 ```plaintext
@@ -1009,6 +1036,64 @@ Jailの遺言を残します。jail testmentのエイリアスです。
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
 | `message` | StringArgument | はい | 説明なし |
+
+## tpdeny
+
+```plaintext
+/tpdeny add <target>
+/tpdeny remove <target>
+/tpdeny notify <target> <changeTo>
+/tpdeny list
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_TpDeny](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_TpDeny.java)
+
+TpDeny(特定ユーザーからのテレポート拒否)の設定をします。
+
+### `/tpdeny add <target>`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+TpDenyにプレイヤーを追加し、以降のテレポートを拒否します。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `target` | OfflinePlayerArgument | はい | 説明なし |
+
+### `/tpdeny remove <target>`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+TpDenyからプレイヤーを解除し、以降のテレポートを許可します。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `target` | OfflinePlayerArgument | はい | 説明なし |
+
+### `/tpdeny notify <target> <changeTo>`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+テレポートを拒否した場合に通知するかどうかを設定します。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `target` | OfflinePlayerArgument | はい | 通知をするか |
+| `changeTo` | EnumArgument | はい | 説明なし |
+
+### `/tpdeny list`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+現在TpDenyに追加されている(テレポートを拒否されている)プレイヤーの一覧を表示します。
 
 ## wt
 

@@ -67,13 +67,13 @@ jaoium制限に関する処理を行います。
 
 | メソッド名 | イベント |
 | - | - |
-| onProjectileLaunchEvent | ProjectileLaunchEvent|
-| onPotionSplashEvent | PotionSplashEvent|
 | OnPickup | EntityPickupItemEvent|
 | InvClick | InventoryClickEvent|
 | onPlayerItemHeldEvent | PlayerItemHeldEvent|
 | onPlayerInteractEvent | PlayerInteractEvent|
 | OnBlockDispenseEvent | BlockDispenseEvent|
+| onProjectileLaunchEvent | ProjectileLaunchEvent|
+| onPotionSplashEvent | PotionSplashEvent|
 > ソースコード: [com.jaoafa.mymaid4.event.Event_Antijaoium](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Antijaoium.java)
 
 ### Event_ChatBan
@@ -83,10 +83,10 @@ ChatBanに関する各種処理を行います。
 | メソッド名 | イベント |
 | - | - |
 | OnEvent_LoginChatBanCheck | PlayerJoinEvent|
+| onJoinClearCache | PlayerJoinEvent|
 | onQuitClearCache | PlayerQuitEvent|
 | onChat | AsyncChatEvent|
 | onPlayerCommandPreprocessEvent | PlayerCommandPreprocessEvent|
-| onJoinClearCache | PlayerJoinEvent|
 > ソースコード: [com.jaoafa.mymaid4.event.Event_ChatBan](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_ChatBan.java)
 
 ### Event_ClearSelection
@@ -176,8 +176,9 @@ EBanに関する各種処理を行います。
 
 | メソッド名 | イベント |
 | - | - |
+| onPlayerRespawnEvent | PlayerRespawnEvent|
+| onJoinClearCache | PlayerJoinEvent|
 | onPlayerCommandPreprocessEvent | PlayerCommandPreprocessEvent|
-| OnEvent_LoginEBanCheck | PlayerJoinEvent|
 | onEvent_ChatLiquidBounce | AsyncChatEvent|
 | onBlockPlaceEvent | BlockPlaceEvent|
 | onBlockBreakEvent | BlockBreakEvent|
@@ -187,10 +188,9 @@ EBanに関する各種処理を行います。
 | onPlayerPickupItemEvent | EntityPickupItemEvent|
 | onPlayerDropItemEvent | PlayerDropItemEvent|
 | onProjectileLaunchEvent | ProjectileLaunchEvent|
+| OnEvent_LoginEBanCheck | PlayerJoinEvent|
 | onPlayerMoveEvent | PlayerMoveEvent|
-| onPlayerRespawnEvent | PlayerRespawnEvent|
 | onPotionSplashEvent | PotionSplashEvent|
-| onJoinClearCache | PlayerJoinEvent|
 > ソースコード: [com.jaoafa.mymaid4.event.Event_EBan](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_EBan.java)
 
 ### Event_Explosion
@@ -246,6 +246,8 @@ Jailに関する各種処理を行います。
 
 | メソッド名 | イベント |
 | - | - |
+| onPlayerRespawnEvent | PlayerRespawnEvent|
+| onJoinClearCache | PlayerJoinEvent|
 | onPlayerCommandPreprocessEvent | PlayerCommandPreprocessEvent|
 | onBlockPlaceEvent | BlockPlaceEvent|
 | onBlockBreakEvent | BlockBreakEvent|
@@ -257,9 +259,7 @@ Jailに関する各種処理を行います。
 | onProjectileLaunchEvent | ProjectileLaunchEvent|
 | OnEvent_LoginJailCheck | PlayerJoinEvent|
 | onPlayerMoveEvent | PlayerMoveEvent|
-| onPlayerRespawnEvent | PlayerRespawnEvent|
 | onPotionSplashEvent | PotionSplashEvent|
-| onJoinClearCache | PlayerJoinEvent|
 > ソースコード: [com.jaoafa.mymaid4.event.Event_Jail](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Jail.java)
 
 ### Event_LoginSuccessful
@@ -290,6 +290,15 @@ lookingコマンドに関する処理を行います。
 | OnLoginCheck | AsyncPlayerPreLoginEvent|
 > ソースコード: [com.jaoafa.mymaid4.event.Event_MCBansLoginCheck](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_MCBansLoginCheck.java)
 
+### Event_ManageCPPerms
+
+CoreProtectのパーミッションノードを管理します。
+
+| メソッド名 | イベント |
+| - | - |
+| onCommand | PlayerCommandPreprocessEvent|
+> ソースコード: [com.jaoafa.mymaid4.event.Event_ManageCPPerms](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_ManageCPPerms.java)
+
 ### Event_NewPlayerAutoBlMap
 
 新規プレイヤーがログアウトした際にブロック編集情報を通知します。
@@ -315,16 +324,16 @@ SandBoxをRegular権限グループ未満のプレイヤーが編集できない
 
 | メソッド名 | イベント |
 | - | - |
-| onProjectileLaunchEvent | ProjectileLaunchEvent|
+| onSandBoxBucketFillEvent | PlayerBucketFillEvent|
 | ontoSandBox | PlayerChangedWorldEvent|
 | onSandBoxPlace | BlockPlaceEvent|
 | onSandBoxBreak | BlockBreakEvent|
 | onSandBoxIgniteEvent | BlockIgniteEvent|
 | onSandBoxBucketEmptyEvent | PlayerBucketEmptyEvent|
-| onSandBoxBucketFillEvent | PlayerBucketFillEvent|
 | onInteractRight | PlayerInteractEvent|
 | onInteractLeft | PlayerInteractEvent|
 | onDamageArmorStand | EntityDamageByEntityEvent|
+| onProjectileLaunchEvent | ProjectileLaunchEvent|
 > ソースコード: [com.jaoafa.mymaid4.event.Event_ProtectionSandBox](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_ProtectionSandBox.java)
 
 ### Event_SKKColor
@@ -355,6 +364,15 @@ tempmuteコマンドに関する処理を行います。
 | - | - |
 | onChat | AsyncChatEvent|
 > ソースコード: [com.jaoafa.mymaid4.event.Event_TempMute](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_TempMute.java)
+
+### Event_TpDeny
+
+tpdenyコマンドに関する処理を行います。
+
+| メソッド名 | イベント |
+| - | - |
+| onTeleportCommand | TeleportCommandEvent|
+> ソースコード: [com.jaoafa.mymaid4.event.Event_TpDeny](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_TpDeny.java)
 
 ### Event_Vote
 
