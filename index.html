@@ -2111,6 +2111,10 @@
 <td>PlayerJoinEvent</td>
 </tr>
 <tr>
+<td>OnEvent_LoginChatBanCheck</td>
+<td>PlayerJoinEvent</td>
+</tr>
+<tr>
 <td>onQuitClearCache</td>
 <td>PlayerQuitEvent</td>
 </tr>
@@ -2121,10 +2125,6 @@
 <tr>
 <td>onPlayerCommandPreprocessEvent</td>
 <td>PlayerCommandPreprocessEvent</td>
-</tr>
-<tr>
-<td>OnEvent_LoginChatBanCheck</td>
-<td>PlayerJoinEvent</td>
 </tr>
 </tbody></table>
 
@@ -2323,16 +2323,12 @@
 <td>PlayerCommandPreprocessEvent</td>
 </tr>
 <tr>
-<td>onEvent_ChatLiquidBounce</td>
-<td>AsyncChatEvent</td>
+<td>OnEvent_LoginEBanCheck</td>
+<td>PlayerJoinEvent</td>
 </tr>
 <tr>
 <td>onBlockPlaceEvent</td>
 <td>BlockPlaceEvent</td>
-</tr>
-<tr>
-<td>onBlockBreakEvent</td>
-<td>BlockBreakEvent</td>
 </tr>
 <tr>
 <td>onBlockIgniteEvent</td>
@@ -2359,8 +2355,12 @@
 <td>ProjectileLaunchEvent</td>
 </tr>
 <tr>
-<td>OnEvent_LoginEBanCheck</td>
-<td>PlayerJoinEvent</td>
+<td>onEvent_ChatLiquidBounce</td>
+<td>AsyncChatEvent</td>
+</tr>
+<tr>
+<td>onBlockBreakEvent</td>
+<td>BlockBreakEvent</td>
 </tr>
 </tbody></table>
 
@@ -2499,10 +2499,6 @@
 <td>BlockPlaceEvent</td>
 </tr>
 <tr>
-<td>onBlockBreakEvent</td>
-<td>BlockBreakEvent</td>
-</tr>
-<tr>
 <td>onBlockIgniteEvent</td>
 <td>BlockIgniteEvent</td>
 </tr>
@@ -2525,6 +2521,10 @@
 <tr>
 <td>onProjectileLaunchEvent</td>
 <td>ProjectileLaunchEvent</td>
+</tr>
+<tr>
+<td>onBlockBreakEvent</td>
+<td>BlockBreakEvent</td>
 </tr>
 <tr>
 <td>OnEvent_LoginJailCheck</td>
@@ -2581,12 +2581,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>OnLoginCheck</td>
-<td>AsyncPlayerPreLoginEvent</td>
-</tr>
-<tr>
 <td>OnLoginAfterCheck</td>
 <td>PlayerJoinEvent</td>
+</tr>
+<tr>
+<td>OnLoginCheck</td>
+<td>AsyncPlayerPreLoginEvent</td>
 </tr>
 </tbody></table>
 
@@ -2697,12 +2697,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onEvent_ChatSKK</td>
-<td>AsyncPlayerChatEvent</td>
-</tr>
-<tr>
 <td>onEvent_JoinTabReload</td>
 <td>PlayerJoinEvent</td>
+</tr>
+<tr>
+<td>onEvent_ChatSKK</td>
+<td>AsyncPlayerChatEvent</td>
 </tr>
 </tbody></table>
 
