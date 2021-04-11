@@ -559,7 +559,7 @@
 
 <p>新しいコマンド・機能の要望、不具合の報告などは <a href="https://forms.gle/EZGVhKdbryfW5fCm8">開発部リクエストボックス</a> か <a href="https://github.com/jaoafa/MyMaid4/issues">MyMaid4 の Issue</a> へお願いします。</p>
 <ul>
-<li>Version: 2021.04.10_21.33_e7e7f55</li>
+<li>Version: 2021.04.11_14.26_a9ed1af</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -2197,6 +2197,14 @@
 </tr>
 </thead><tbody>
 <tr>
+<td>onPotionSplashEvent</td>
+<td>PotionSplashEvent</td>
+</tr>
+<tr>
+<td>onProjectileLaunchEvent</td>
+<td>ProjectileLaunchEvent</td>
+</tr>
+<tr>
 <td>OnPickup</td>
 <td>EntityPickupItemEvent</td>
 </tr>
@@ -2216,14 +2224,6 @@
 <td>OnBlockDispenseEvent</td>
 <td>BlockDispenseEvent</td>
 </tr>
-<tr>
-<td>onProjectileLaunchEvent</td>
-<td>ProjectileLaunchEvent</td>
-</tr>
-<tr>
-<td>onPotionSplashEvent</td>
-<td>PotionSplashEvent</td>
-</tr>
 </tbody></table>
 
 <blockquote>
@@ -2239,10 +2239,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>OnEvent_LoginChatBanCheck</td>
-<td>PlayerJoinEvent</td>
-</tr>
-<tr>
 <td>onJoinClearCache</td>
 <td>PlayerJoinEvent</td>
 </tr>
@@ -2257,6 +2253,10 @@
 <tr>
 <td>onPlayerCommandPreprocessEvent</td>
 <td>PlayerCommandPreprocessEvent</td>
+</tr>
+<tr>
+<td>OnEvent_LoginChatBanCheck</td>
+<td>PlayerJoinEvent</td>
 </tr>
 </tbody></table>
 
@@ -2435,6 +2435,18 @@
 </tr>
 </thead><tbody>
 <tr>
+<td>onPlayerMoveEvent</td>
+<td>PlayerMoveEvent</td>
+</tr>
+<tr>
+<td>onPlayerRespawnEvent</td>
+<td>PlayerRespawnEvent</td>
+</tr>
+<tr>
+<td>onPotionSplashEvent</td>
+<td>PotionSplashEvent</td>
+</tr>
+<tr>
 <td>onJoinClearCache</td>
 <td>PlayerJoinEvent</td>
 </tr>
@@ -2443,20 +2455,20 @@
 <td>PlayerCommandPreprocessEvent</td>
 </tr>
 <tr>
-<td>OnEvent_LoginEBanCheck</td>
-<td>PlayerJoinEvent</td>
+<td>onBlockBreakEvent</td>
+<td>BlockBreakEvent</td>
 </tr>
 <tr>
-<td>onEvent_ChatLiquidBounce</td>
-<td>AsyncChatEvent</td>
+<td>OnEvent_LoginEBanCheck</td>
+<td>PlayerJoinEvent</td>
 </tr>
 <tr>
 <td>onBlockPlaceEvent</td>
 <td>BlockPlaceEvent</td>
 </tr>
 <tr>
-<td>onBlockBreakEvent</td>
-<td>BlockBreakEvent</td>
+<td>onEvent_ChatLiquidBounce</td>
+<td>AsyncChatEvent</td>
 </tr>
 <tr>
 <td>onBlockIgniteEvent</td>
@@ -2481,18 +2493,6 @@
 <tr>
 <td>onProjectileLaunchEvent</td>
 <td>ProjectileLaunchEvent</td>
-</tr>
-<tr>
-<td>onPlayerRespawnEvent</td>
-<td>PlayerRespawnEvent</td>
-</tr>
-<tr>
-<td>onPlayerMoveEvent</td>
-<td>PlayerMoveEvent</td>
-</tr>
-<tr>
-<td>onPotionSplashEvent</td>
-<td>PotionSplashEvent</td>
 </tr>
 </tbody></table>
 
@@ -2607,6 +2607,18 @@
 </tr>
 </thead><tbody>
 <tr>
+<td>onPlayerMoveEvent</td>
+<td>PlayerMoveEvent</td>
+</tr>
+<tr>
+<td>onPlayerRespawnEvent</td>
+<td>PlayerRespawnEvent</td>
+</tr>
+<tr>
+<td>onPotionSplashEvent</td>
+<td>PotionSplashEvent</td>
+</tr>
+<tr>
 <td>onJoinClearCache</td>
 <td>PlayerJoinEvent</td>
 </tr>
@@ -2615,12 +2627,12 @@
 <td>PlayerCommandPreprocessEvent</td>
 </tr>
 <tr>
-<td>onBlockPlaceEvent</td>
-<td>BlockPlaceEvent</td>
-</tr>
-<tr>
 <td>onBlockBreakEvent</td>
 <td>BlockBreakEvent</td>
+</tr>
+<tr>
+<td>onBlockPlaceEvent</td>
+<td>BlockPlaceEvent</td>
 </tr>
 <tr>
 <td>onBlockIgniteEvent</td>
@@ -2649,18 +2661,6 @@
 <tr>
 <td>OnEvent_LoginJailCheck</td>
 <td>PlayerJoinEvent</td>
-</tr>
-<tr>
-<td>onPlayerRespawnEvent</td>
-<td>PlayerRespawnEvent</td>
-</tr>
-<tr>
-<td>onPlayerMoveEvent</td>
-<td>PlayerMoveEvent</td>
-</tr>
-<tr>
-<td>onPotionSplashEvent</td>
-<td>PotionSplashEvent</td>
 </tr>
 </tbody></table>
 
@@ -2753,12 +2753,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>OnEvent_Quit</td>
-<td>PlayerQuitEvent</td>
-</tr>
-<tr>
 <td>OnEvent_FirstLogin</td>
 <td>PlayerJoinEvent</td>
+</tr>
+<tr>
+<td>OnEvent_Quit</td>
+<td>PlayerQuitEvent</td>
 </tr>
 </tbody></table>
 
@@ -2792,6 +2792,10 @@
 <th>イベント</th>
 </tr>
 </thead><tbody>
+<tr>
+<td>onProjectileLaunchEvent</td>
+<td>ProjectileLaunchEvent</td>
+</tr>
 <tr>
 <td>onDamageArmorStand</td>
 <td>EntityDamageByEntityEvent</td>
@@ -2828,10 +2832,6 @@
 <td>onInteractLeft</td>
 <td>PlayerInteractEvent</td>
 </tr>
-<tr>
-<td>onProjectileLaunchEvent</td>
-<td>ProjectileLaunchEvent</td>
-</tr>
 </tbody></table>
 
 <blockquote>
@@ -2847,12 +2847,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onEvent_JoinTabReload</td>
-<td>PlayerJoinEvent</td>
+<td>onEvent_ChatSKK</td>
+<td>AsyncChatEvent</td>
 </tr>
 <tr>
-<td>onEvent_ChatSKK</td>
-<td>AsyncPlayerChatEvent</td>
+<td>onEvent_JoinTabReload</td>
+<td>PlayerJoinEvent</td>
 </tr>
 </tbody></table>
 
@@ -2869,12 +2869,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onTeleportCommandFromPlayer</td>
-<td>PlayerCommandPreprocessEvent</td>
-</tr>
-<tr>
 <td>onTeleportCommandFromNonPlayer</td>
 <td>ServerCommandEvent</td>
+</tr>
+<tr>
+<td>onTeleportCommandFromPlayer</td>
+<td>PlayerCommandPreprocessEvent</td>
 </tr>
 </tbody></table>
 
