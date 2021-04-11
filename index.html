@@ -397,6 +397,9 @@
                     <a href="#commands-player" class="toc-h2 toc-link" data-title="player">player</a>
                   </li>
                   <li>
+                    <a href="#commands-rider" class="toc-h2 toc-link" data-title="rider">rider</a>
+                  </li>
+                  <li>
                     <a href="#commands-selclick" class="toc-h2 toc-link" data-title="selclick">selclick</a>
                   </li>
                   <li>
@@ -559,7 +562,7 @@
 
 <p>新しいコマンド・機能の要望、不具合の報告などは <a href="https://forms.gle/EZGVhKdbryfW5fCm8">開発部リクエストボックス</a> か <a href="https://github.com/jaoafa/MyMaid4/issues">MyMaid4 の Issue</a> へお願いします。</p>
 <ul>
-<li>Version: 2021.04.11_14.26_a9ed1af</li>
+<li>Version: 2021.04.12_01.27_ff2f792</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -1725,6 +1728,79 @@
 <td>説明なし</td>
 </tr>
 </tbody></table>
+<h2 id='commands-rider'>rider</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/rider [target]
+/rider ride &lt;from&gt; &lt;to&gt;
+/rider leave [target]
+</code></pre></div>
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Rider.java">com.jaoafa.mymaid4.command.Cmd_Rider</a></p>
+</blockquote>
+
+<p>プレイヤーやエンティティに乗ったり下ろしたりします。</p>
+<h3 id='commands-rider-rider-target'><code>/rider [target]</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>プレイヤー・エンティティに乗ります。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>target</code></td>
+<td>SingleEntitySelectorArgument</td>
+<td>いいえ</td>
+<td>対象のプレイヤー・エンティティ。指定しない場合見ているプレイヤー</td>
+</tr>
+</tbody></table>
+<h3 id='commands-rider-rider-ride-lt-from-gt-lt-to-gt'><code>/rider ride &lt;from&gt; &lt;to&gt;</code></h3>
+<p>プレイヤー・エンティティをプレイヤー・エンティティに乗せます。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>from</code></td>
+<td>SingleEntitySelectorArgument</td>
+<td>はい</td>
+<td>乗せるプレイヤー・エンティティ</td>
+</tr>
+<tr>
+<td><code>to</code></td>
+<td>SingleEntitySelectorArgument</td>
+<td>はい</td>
+<td>乗せられるプレイヤー・エンティティ</td>
+</tr>
+</tbody></table>
+<h3 id='commands-rider-rider-leave-target'><code>/rider leave [target]</code></h3>
+<p>乗っているプレイヤー・エンティティを下ろします。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>target</code></td>
+<td>SingleEntitySelectorArgument</td>
+<td>いいえ</td>
+<td>対象のプレイヤー・エンティティ。指定しない場合実行者</td>
+</tr>
+</tbody></table>
 <h2 id='commands-selclick'>selclick</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/selclick
 </code></pre></div>
 <blockquote>
@@ -1946,7 +2022,7 @@
 <td><code>target</code></td>
 <td>OfflinePlayerArgument</td>
 <td>はい</td>
-<td>説明なし</td>
+<td>拒否する対象プレイヤー</td>
 </tr>
 </tbody></table>
 <h3 id='commands-tpdeny-tpdeny-remove-lt-target-gt'><code>/tpdeny remove &lt;target&gt;</code></h3>
@@ -1968,7 +2044,7 @@
 <td><code>target</code></td>
 <td>OfflinePlayerArgument</td>
 <td>はい</td>
-<td>説明なし</td>
+<td>解除する対象プレイヤー</td>
 </tr>
 </tbody></table>
 <h3 id='commands-tpdeny-tpdeny-notify-lt-target-gt-lt-changeto-gt'><code>/tpdeny notify &lt;target&gt; &lt;changeTo&gt;</code></h3>
@@ -1990,13 +2066,13 @@
 <td><code>target</code></td>
 <td>OfflinePlayerArgument</td>
 <td>はい</td>
-<td>通知をするか</td>
+<td>通知設定する対象プレイヤー</td>
 </tr>
 <tr>
 <td><code>changeTo</code></td>
 <td>EnumArgument</td>
 <td>はい</td>
-<td>説明なし</td>
+<td>通知をするか</td>
 </tr>
 </tbody></table>
 <h3 id='commands-tpdeny-tpdeny-list'><code>/tpdeny list</code></h3>
@@ -2239,10 +2315,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onJoinClearCache</td>
-<td>PlayerJoinEvent</td>
-</tr>
-<tr>
 <td>onQuitClearCache</td>
 <td>PlayerQuitEvent</td>
 </tr>
@@ -2253,6 +2325,10 @@
 <tr>
 <td>onPlayerCommandPreprocessEvent</td>
 <td>PlayerCommandPreprocessEvent</td>
+</tr>
+<tr>
+<td>onJoinClearCache</td>
+<td>PlayerJoinEvent</td>
 </tr>
 <tr>
 <td>OnEvent_LoginChatBanCheck</td>
@@ -2435,40 +2511,40 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onPlayerMoveEvent</td>
-<td>PlayerMoveEvent</td>
-</tr>
-<tr>
 <td>onPlayerRespawnEvent</td>
 <td>PlayerRespawnEvent</td>
+</tr>
+<tr>
+<td>onPlayerMoveEvent</td>
+<td>PlayerMoveEvent</td>
 </tr>
 <tr>
 <td>onPotionSplashEvent</td>
 <td>PotionSplashEvent</td>
 </tr>
 <tr>
-<td>onJoinClearCache</td>
-<td>PlayerJoinEvent</td>
-</tr>
-<tr>
 <td>onPlayerCommandPreprocessEvent</td>
 <td>PlayerCommandPreprocessEvent</td>
 </tr>
 <tr>
-<td>onBlockBreakEvent</td>
-<td>BlockBreakEvent</td>
+<td>onJoinClearCache</td>
+<td>PlayerJoinEvent</td>
 </tr>
 <tr>
 <td>OnEvent_LoginEBanCheck</td>
 <td>PlayerJoinEvent</td>
 </tr>
 <tr>
+<td>onEvent_ChatLiquidBounce</td>
+<td>AsyncChatEvent</td>
+</tr>
+<tr>
 <td>onBlockPlaceEvent</td>
 <td>BlockPlaceEvent</td>
 </tr>
 <tr>
-<td>onEvent_ChatLiquidBounce</td>
-<td>AsyncChatEvent</td>
+<td>onBlockBreakEvent</td>
+<td>BlockBreakEvent</td>
 </tr>
 <tr>
 <td>onBlockIgniteEvent</td>
@@ -2607,32 +2683,32 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onPlayerMoveEvent</td>
-<td>PlayerMoveEvent</td>
-</tr>
-<tr>
 <td>onPlayerRespawnEvent</td>
 <td>PlayerRespawnEvent</td>
+</tr>
+<tr>
+<td>onPlayerMoveEvent</td>
+<td>PlayerMoveEvent</td>
 </tr>
 <tr>
 <td>onPotionSplashEvent</td>
 <td>PotionSplashEvent</td>
 </tr>
 <tr>
-<td>onJoinClearCache</td>
-<td>PlayerJoinEvent</td>
-</tr>
-<tr>
 <td>onPlayerCommandPreprocessEvent</td>
 <td>PlayerCommandPreprocessEvent</td>
 </tr>
 <tr>
-<td>onBlockBreakEvent</td>
-<td>BlockBreakEvent</td>
+<td>onJoinClearCache</td>
+<td>PlayerJoinEvent</td>
 </tr>
 <tr>
 <td>onBlockPlaceEvent</td>
 <td>BlockPlaceEvent</td>
+</tr>
+<tr>
+<td>onBlockBreakEvent</td>
+<td>BlockBreakEvent</td>
 </tr>
 <tr>
 <td>onBlockIgniteEvent</td>
@@ -2797,14 +2873,6 @@
 <td>ProjectileLaunchEvent</td>
 </tr>
 <tr>
-<td>onDamageArmorStand</td>
-<td>EntityDamageByEntityEvent</td>
-</tr>
-<tr>
-<td>onSandBoxBucketFillEvent</td>
-<td>PlayerBucketFillEvent</td>
-</tr>
-<tr>
 <td>ontoSandBox</td>
 <td>PlayerChangedWorldEvent</td>
 </tr>
@@ -2825,12 +2893,20 @@
 <td>PlayerBucketEmptyEvent</td>
 </tr>
 <tr>
+<td>onSandBoxBucketFillEvent</td>
+<td>PlayerBucketFillEvent</td>
+</tr>
+<tr>
 <td>onInteractRight</td>
 <td>PlayerInteractEvent</td>
 </tr>
 <tr>
 <td>onInteractLeft</td>
 <td>PlayerInteractEvent</td>
+</tr>
+<tr>
+<td>onDamageArmorStand</td>
+<td>EntityDamageByEntityEvent</td>
 </tr>
 </tbody></table>
 
