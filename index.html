@@ -565,7 +565,7 @@
 
 <p>新しいコマンド・機能の要望、不具合の報告などは <a href="https://forms.gle/EZGVhKdbryfW5fCm8">開発部リクエストボックス</a> か <a href="https://github.com/jaoafa/MyMaid4/issues">MyMaid4 の Issue</a> へお願いします。</p>
 <ul>
-<li>Version: 2021.04.12_11.13_679f3d0</li>
+<li>Version: 2021.04.12_23.14_13fbf91</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -2276,6 +2276,14 @@
 </tr>
 </thead><tbody>
 <tr>
+<td>onPotionSplashEvent</td>
+<td>PotionSplashEvent</td>
+</tr>
+<tr>
+<td>onProjectileLaunchEvent</td>
+<td>ProjectileLaunchEvent</td>
+</tr>
+<tr>
 <td>OnPickup</td>
 <td>EntityPickupItemEvent</td>
 </tr>
@@ -2294,14 +2302,6 @@
 <tr>
 <td>OnBlockDispenseEvent</td>
 <td>BlockDispenseEvent</td>
-</tr>
-<tr>
-<td>onProjectileLaunchEvent</td>
-<td>ProjectileLaunchEvent</td>
-</tr>
-<tr>
-<td>onPotionSplashEvent</td>
-<td>PotionSplashEvent</td>
 </tr>
 </tbody></table>
 
@@ -2522,12 +2522,24 @@
 <td>PlayerMoveEvent</td>
 </tr>
 <tr>
+<td>onPotionSplashEvent</td>
+<td>PotionSplashEvent</td>
+</tr>
+<tr>
 <td>onJoinClearCache</td>
 <td>PlayerJoinEvent</td>
 </tr>
 <tr>
 <td>onPlayerCommandPreprocessEvent</td>
 <td>PlayerCommandPreprocessEvent</td>
+</tr>
+<tr>
+<td>OnEvent_LoginEBanCheck</td>
+<td>PlayerJoinEvent</td>
+</tr>
+<tr>
+<td>onProjectileLaunchEvent</td>
+<td>ProjectileLaunchEvent</td>
 </tr>
 <tr>
 <td>onEvent_ChatLiquidBounce</td>
@@ -2560,18 +2572,6 @@
 <tr>
 <td>onPlayerDropItemEvent</td>
 <td>PlayerDropItemEvent</td>
-</tr>
-<tr>
-<td>onProjectileLaunchEvent</td>
-<td>ProjectileLaunchEvent</td>
-</tr>
-<tr>
-<td>OnEvent_LoginEBanCheck</td>
-<td>PlayerJoinEvent</td>
-</tr>
-<tr>
-<td>onPotionSplashEvent</td>
-<td>PotionSplashEvent</td>
 </tr>
 </tbody></table>
 
@@ -2686,6 +2686,10 @@
 </tr>
 </thead><tbody>
 <tr>
+<td>onQuit</td>
+<td>PlayerQuitEvent</td>
+</tr>
+<tr>
 <td>onPlayerRespawnEvent</td>
 <td>PlayerRespawnEvent</td>
 </tr>
@@ -2694,8 +2698,8 @@
 <td>PlayerMoveEvent</td>
 </tr>
 <tr>
-<td>OnEvent_LoginJailCheck</td>
-<td>PlayerJoinEvent</td>
+<td>onPotionSplashEvent</td>
+<td>PotionSplashEvent</td>
 </tr>
 <tr>
 <td>onJoinClearCache</td>
@@ -2704,6 +2708,10 @@
 <tr>
 <td>onPlayerCommandPreprocessEvent</td>
 <td>PlayerCommandPreprocessEvent</td>
+</tr>
+<tr>
+<td>onProjectileLaunchEvent</td>
+<td>ProjectileLaunchEvent</td>
 </tr>
 <tr>
 <td>onBlockPlaceEvent</td>
@@ -2734,12 +2742,8 @@
 <td>PlayerDropItemEvent</td>
 </tr>
 <tr>
-<td>onProjectileLaunchEvent</td>
-<td>ProjectileLaunchEvent</td>
-</tr>
-<tr>
-<td>onPotionSplashEvent</td>
-<td>PotionSplashEvent</td>
+<td>OnEvent_LoginJailCheck</td>
+<td>PlayerJoinEvent</td>
 </tr>
 </tbody></table>
 
@@ -2832,12 +2836,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>OnEvent_Quit</td>
-<td>PlayerQuitEvent</td>
-</tr>
-<tr>
 <td>OnEvent_FirstLogin</td>
 <td>PlayerJoinEvent</td>
+</tr>
+<tr>
+<td>OnEvent_Quit</td>
+<td>PlayerQuitEvent</td>
 </tr>
 </tbody></table>
 
@@ -2872,8 +2876,8 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onSandBoxBucketFillEvent</td>
-<td>PlayerBucketFillEvent</td>
+<td>onProjectileLaunchEvent</td>
+<td>ProjectileLaunchEvent</td>
 </tr>
 <tr>
 <td>ontoSandBox</td>
@@ -2896,6 +2900,10 @@
 <td>PlayerBucketEmptyEvent</td>
 </tr>
 <tr>
+<td>onSandBoxBucketFillEvent</td>
+<td>PlayerBucketFillEvent</td>
+</tr>
+<tr>
 <td>onInteractRight</td>
 <td>PlayerInteractEvent</td>
 </tr>
@@ -2906,10 +2914,6 @@
 <tr>
 <td>onDamageArmorStand</td>
 <td>EntityDamageByEntityEvent</td>
-</tr>
-<tr>
-<td>onProjectileLaunchEvent</td>
-<td>ProjectileLaunchEvent</td>
 </tr>
 </tbody></table>
 
@@ -2948,12 +2952,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onTeleportCommandFromPlayer</td>
-<td>PlayerCommandPreprocessEvent</td>
-</tr>
-<tr>
 <td>onTeleportCommandFromNonPlayer</td>
 <td>ServerCommandEvent</td>
+</tr>
+<tr>
+<td>onTeleportCommandFromPlayer</td>
+<td>PlayerCommandPreprocessEvent</td>
 </tr>
 </tbody></table>
 
