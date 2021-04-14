@@ -352,6 +352,9 @@
                     <a href="#commands-elytra" class="toc-h2 toc-link" data-title="elytra">elytra</a>
                   </li>
                   <li>
+                    <a href="#commands-flyspeed" class="toc-h2 toc-link" data-title="flyspeed">flyspeed</a>
+                  </li>
+                  <li>
                     <a href="#commands-g" class="toc-h2 toc-link" data-title="g">g</a>
                   </li>
                   <li>
@@ -425,6 +428,9 @@
                   </li>
                   <li>
                     <a href="#commands-tpdeny" class="toc-h2 toc-link" data-title="tpdeny">tpdeny</a>
+                  </li>
+                  <li>
+                    <a href="#commands-walkspeed" class="toc-h2 toc-link" data-title="walkspeed">walkspeed</a>
                   </li>
                   <li>
                     <a href="#commands-wt" class="toc-h2 toc-link" data-title="wt">wt</a>
@@ -565,7 +571,7 @@
 
 <p>新しいコマンド・機能の要望、不具合の報告などは <a href="https://forms.gle/EZGVhKdbryfW5fCm8">開発部リクエストボックス</a> か <a href="https://github.com/jaoafa/MyMaid4/issues">MyMaid4 の Issue</a> へお願いします。</p>
 <ul>
-<li>Version: 2021.04.13_22.01_8568695</li>
+<li>Version: 2021.04.14_22.32_67e0c62</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -1073,6 +1079,54 @@
 </aside>
 
 <p>プレイヤーにエリトラと花火を付与します。</p>
+<h2 id='commands-flyspeed'>flyspeed</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/flyspeed [target]
+/flyspeed set &lt;percent&gt;
+</code></pre></div>
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_FlySpeed.java">com.jaoafa.mymaid4.command.Cmd_FlySpeed</a></p>
+</blockquote>
+
+<p>クリエイティブ飛行速度を変更します。</p>
+<h3 id='commands-flyspeed-flyspeed-target'><code>/flyspeed [target]</code></h3>
+<p>指定したプレイヤーのクリエイティブ飛行速度を表示します。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>target</code></td>
+<td>PlayerArgument</td>
+<td>いいえ</td>
+<td>ターゲットプレイヤー</td>
+</tr>
+</tbody></table>
+<h3 id='commands-flyspeed-flyspeed-set-lt-percent-gt'><code>/flyspeed set &lt;percent&gt;</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>クリエイティブ飛行速度を設定します。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>percent</code></td>
+<td>FloatArgument</td>
+<td>はい</td>
+<td>クリエイティブ飛行速度(通常100%)</td>
+</tr>
+</tbody></table>
 <h2 id='commands-g'>g</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/g
 /g &lt;gamemode&gt;
 /g &lt;gamemode&gt; &lt;player&gt;
@@ -2084,6 +2138,54 @@
 </aside>
 
 <p>現在TpDenyに追加されている(テレポートを拒否されている)プレイヤーの一覧を表示します。</p>
+<h2 id='commands-walkspeed'>walkspeed</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/walkspeed [target]
+/walkspeed set &lt;percent&gt;
+</code></pre></div>
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_WalkSpeed.java">com.jaoafa.mymaid4.command.Cmd_WalkSpeed</a></p>
+</blockquote>
+
+<p>移動速度を変更します。</p>
+<h3 id='commands-walkspeed-walkspeed-target'><code>/walkspeed [target]</code></h3>
+<p>指定したプレイヤーの移動速度を表示します。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>target</code></td>
+<td>PlayerArgument</td>
+<td>いいえ</td>
+<td>ターゲットプレイヤー</td>
+</tr>
+</tbody></table>
+<h3 id='commands-walkspeed-walkspeed-set-lt-percent-gt'><code>/walkspeed set &lt;percent&gt;</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>移動速度を設定します。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>percent</code></td>
+<td>FloatArgument</td>
+<td>はい</td>
+<td>移動速度(通常100%)</td>
+</tr>
+</tbody></table>
 <h2 id='commands-wt'>wt</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/wt &lt;worldName&gt;
 /wt &lt;worldName&gt; &lt;player&gt;
 </code></pre></div>
@@ -2514,16 +2616,16 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onPlayerRespawnEvent</td>
-<td>PlayerRespawnEvent</td>
+<td>onPotionSplashEvent</td>
+<td>PotionSplashEvent</td>
 </tr>
 <tr>
 <td>onPlayerMoveEvent</td>
 <td>PlayerMoveEvent</td>
 </tr>
 <tr>
-<td>onPotionSplashEvent</td>
-<td>PotionSplashEvent</td>
+<td>onPlayerRespawnEvent</td>
+<td>PlayerRespawnEvent</td>
 </tr>
 <tr>
 <td>onJoinClearCache</td>
@@ -2536,10 +2638,6 @@
 <tr>
 <td>OnEvent_LoginEBanCheck</td>
 <td>PlayerJoinEvent</td>
-</tr>
-<tr>
-<td>onEvent_ChatLiquidBounce</td>
-<td>AsyncChatEvent</td>
 </tr>
 <tr>
 <td>onBlockPlaceEvent</td>
@@ -2572,6 +2670,10 @@
 <tr>
 <td>onProjectileLaunchEvent</td>
 <td>ProjectileLaunchEvent</td>
+</tr>
+<tr>
+<td>onEvent_ChatLiquidBounce</td>
+<td>AsyncChatEvent</td>
 </tr>
 </tbody></table>
 
@@ -2642,12 +2744,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onAsyncPlayerChatEvent</td>
-<td>AsyncChatEvent</td>
-</tr>
-<tr>
 <td>onPlayerJoinEvent</td>
 <td>PlayerJoinEvent</td>
+</tr>
+<tr>
+<td>onAsyncPlayerChatEvent</td>
+<td>AsyncChatEvent</td>
 </tr>
 <tr>
 <td>onCommand</td>
@@ -2690,16 +2792,16 @@
 <td>PlayerQuitEvent</td>
 </tr>
 <tr>
-<td>onPlayerRespawnEvent</td>
-<td>PlayerRespawnEvent</td>
+<td>onPotionSplashEvent</td>
+<td>PotionSplashEvent</td>
 </tr>
 <tr>
 <td>onPlayerMoveEvent</td>
 <td>PlayerMoveEvent</td>
 </tr>
 <tr>
-<td>onPotionSplashEvent</td>
-<td>PotionSplashEvent</td>
+<td>onPlayerRespawnEvent</td>
+<td>PlayerRespawnEvent</td>
 </tr>
 <tr>
 <td>onJoinClearCache</td>
@@ -2796,12 +2898,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>OnLoginAfterCheck</td>
-<td>PlayerJoinEvent</td>
-</tr>
-<tr>
 <td>OnLoginCheck</td>
 <td>AsyncPlayerPreLoginEvent</td>
+</tr>
+<tr>
+<td>OnLoginAfterCheck</td>
+<td>PlayerJoinEvent</td>
 </tr>
 </tbody></table>
 
@@ -2930,12 +3032,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onEvent_JoinTabReload</td>
-<td>PlayerJoinEvent</td>
-</tr>
-<tr>
 <td>onEvent_ChatSKK</td>
 <td>AsyncChatEvent</td>
+</tr>
+<tr>
+<td>onEvent_JoinTabReload</td>
+<td>PlayerJoinEvent</td>
 </tr>
 </tbody></table>
 
