@@ -362,6 +362,37 @@ EBan一覧を表示します。
 
 プレイヤーにエリトラと花火を付与します。
 
+## flyspeed
+
+```plaintext
+/flyspeed [target]
+/flyspeed set <percent>
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_FlySpeed](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_FlySpeed.java)
+
+クリエイティブ飛行速度を変更します。
+
+### `/flyspeed [target]`
+
+指定したプレイヤーのクリエイティブ飛行速度を表示します。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `target` | PlayerArgument | いいえ | ターゲットプレイヤー |
+
+### `/flyspeed set <percent>`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+クリエイティブ飛行速度を設定します。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `percent` | FloatArgument | はい | クリエイティブ飛行速度(通常100%) |
+
 ## g
 
 ```plaintext
@@ -1135,6 +1166,37 @@ TpDenyからプレイヤーを解除し、以降のテレポートを許可し�
 </aside>
 
 現在TpDenyに追加されている(テレポートを拒否されている)プレイヤーの一覧を表示します。
+
+## walkspeed
+
+```plaintext
+/walkspeed [target]
+/walkspeed set <percent>
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_WalkSpeed](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_WalkSpeed.java)
+
+移動速度を変更します。
+
+### `/walkspeed [target]`
+
+指定したプレイヤーの移動速度を表示します。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `target` | PlayerArgument | いいえ | ターゲットプレイヤー |
+
+### `/walkspeed set <percent>`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+移動速度を設定します。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `percent` | FloatArgument | はい | 移動速度(通常100%) |
 
 ## wt
 
