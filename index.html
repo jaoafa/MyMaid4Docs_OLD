@@ -519,6 +519,9 @@
                     <a href="#events-wt-event_jail" class="toc-h2 toc-link" data-title="Event_Jail">Event_Jail</a>
                   </li>
                   <li>
+                    <a href="#events-wt-event_killafterrespawn" class="toc-h2 toc-link" data-title="Event_KillAfterRespawn">Event_KillAfterRespawn</a>
+                  </li>
+                  <li>
                     <a href="#events-wt-event_loginsuccessful" class="toc-h2 toc-link" data-title="Event_LoginSuccessful">Event_LoginSuccessful</a>
                   </li>
                   <li>
@@ -574,7 +577,7 @@
 
 <p>新しいコマンド・機能の要望、不具合の報告などは <a href="https://forms.gle/EZGVhKdbryfW5fCm8">開発部リクエストボックス</a> か <a href="https://github.com/jaoafa/MyMaid4/issues">MyMaid4 の Issue</a> へお願いします。</p>
 <ul>
-<li>Version: 2021.04.15_22.24_a1283b7</li>
+<li>Version: 2021.04.15_23.59_d4f830b</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -2431,10 +2434,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onPotionSplashEvent</td>
-<td>PotionSplashEvent</td>
-</tr>
-<tr>
 <td>onProjectileLaunchEvent</td>
 <td>ProjectileLaunchEvent</td>
 </tr>
@@ -2458,6 +2457,10 @@
 <td>OnBlockDispenseEvent</td>
 <td>BlockDispenseEvent</td>
 </tr>
+<tr>
+<td>onPotionSplashEvent</td>
+<td>PotionSplashEvent</td>
+</tr>
 </tbody></table>
 
 <blockquote>
@@ -2473,6 +2476,10 @@
 </tr>
 </thead><tbody>
 <tr>
+<td>OnEvent_LoginChatBanCheck</td>
+<td>PlayerJoinEvent</td>
+</tr>
+<tr>
 <td>onJoinClearCache</td>
 <td>PlayerJoinEvent</td>
 </tr>
@@ -2487,10 +2494,6 @@
 <tr>
 <td>onPlayerCommandPreprocessEvent</td>
 <td>PlayerCommandPreprocessEvent</td>
-</tr>
-<tr>
-<td>OnEvent_LoginChatBanCheck</td>
-<td>PlayerJoinEvent</td>
 </tr>
 </tbody></table>
 
@@ -2673,14 +2676,6 @@
 <td>PlayerRespawnEvent</td>
 </tr>
 <tr>
-<td>onPlayerMoveEvent</td>
-<td>PlayerMoveEvent</td>
-</tr>
-<tr>
-<td>onPotionSplashEvent</td>
-<td>PotionSplashEvent</td>
-</tr>
-<tr>
 <td>onJoinClearCache</td>
 <td>PlayerJoinEvent</td>
 </tr>
@@ -2689,16 +2684,12 @@
 <td>PlayerCommandPreprocessEvent</td>
 </tr>
 <tr>
-<td>OnEvent_LoginEBanCheck</td>
-<td>PlayerJoinEvent</td>
+<td>onEvent_ChatLiquidBounce</td>
+<td>AsyncChatEvent</td>
 </tr>
 <tr>
 <td>onBlockPlaceEvent</td>
 <td>BlockPlaceEvent</td>
-</tr>
-<tr>
-<td>onEvent_ChatLiquidBounce</td>
-<td>AsyncChatEvent</td>
 </tr>
 <tr>
 <td>onBlockBreakEvent</td>
@@ -2727,6 +2718,18 @@
 <tr>
 <td>onProjectileLaunchEvent</td>
 <td>ProjectileLaunchEvent</td>
+</tr>
+<tr>
+<td>OnEvent_LoginEBanCheck</td>
+<td>PlayerJoinEvent</td>
+</tr>
+<tr>
+<td>onPlayerMoveEvent</td>
+<td>PlayerMoveEvent</td>
+</tr>
+<tr>
+<td>onPotionSplashEvent</td>
+<td>PotionSplashEvent</td>
 </tr>
 </tbody></table>
 
@@ -2841,20 +2844,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onQuit</td>
-<td>PlayerQuitEvent</td>
-</tr>
-<tr>
 <td>onPlayerRespawnEvent</td>
 <td>PlayerRespawnEvent</td>
 </tr>
 <tr>
-<td>onPlayerMoveEvent</td>
-<td>PlayerMoveEvent</td>
-</tr>
-<tr>
-<td>onPotionSplashEvent</td>
-<td>PotionSplashEvent</td>
+<td>onQuit</td>
+<td>PlayerQuitEvent</td>
 </tr>
 <tr>
 <td>onJoinClearCache</td>
@@ -2900,10 +2895,36 @@
 <td>OnEvent_LoginJailCheck</td>
 <td>PlayerJoinEvent</td>
 </tr>
+<tr>
+<td>onPlayerMoveEvent</td>
+<td>PlayerMoveEvent</td>
+</tr>
+<tr>
+<td>onPotionSplashEvent</td>
+<td>PotionSplashEvent</td>
+</tr>
 </tbody></table>
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Jail.java">com.jaoafa.mymaid4.event.Event_Jail</a></p>
+</blockquote>
+<h3 id='events-wt-event_killafterrespawn'>Event_KillAfterRespawn</h3>
+<p>死亡してから3分後に自動的にリスポーンします。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onDeath</td>
+<td>PlayerDeathEvent</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_KillAfterRespawn.java">com.jaoafa.mymaid4.event.Event_KillAfterRespawn</a></p>
 </blockquote>
 <h3 id='events-wt-event_loginsuccessful'>Event_LoginSuccessful</h3>
 <p>ログインに成功したことをデータベースに書き込みます。</p>
@@ -3031,14 +3052,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onProjectileLaunchEvent</td>
-<td>ProjectileLaunchEvent</td>
-</tr>
-<tr>
-<td>onSandBoxBucketFillEvent</td>
-<td>PlayerBucketFillEvent</td>
-</tr>
-<tr>
 <td>ontoSandBox</td>
 <td>PlayerChangedWorldEvent</td>
 </tr>
@@ -3059,6 +3072,10 @@
 <td>PlayerBucketEmptyEvent</td>
 </tr>
 <tr>
+<td>onSandBoxBucketFillEvent</td>
+<td>PlayerBucketFillEvent</td>
+</tr>
+<tr>
 <td>onInteractRight</td>
 <td>PlayerInteractEvent</td>
 </tr>
@@ -3069,6 +3086,10 @@
 <tr>
 <td>onDamageArmorStand</td>
 <td>EntityDamageByEntityEvent</td>
+</tr>
+<tr>
+<td>onProjectileLaunchEvent</td>
+<td>ProjectileLaunchEvent</td>
 </tr>
 </tbody></table>
 
@@ -3107,12 +3128,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onTeleportCommandFromPlayer</td>
-<td>PlayerCommandPreprocessEvent</td>
-</tr>
-<tr>
 <td>onTeleportCommandFromNonPlayer</td>
 <td>ServerCommandEvent</td>
+</tr>
+<tr>
+<td>onTeleportCommandFromPlayer</td>
+<td>PlayerCommandPreprocessEvent</td>
 </tr>
 </tbody></table>
 
