@@ -878,6 +878,34 @@ linkコマンドはjMS Gamers Clubで実行するのだ。
 | - | - | - | - |
 | `player` | StringArgument | はい | 説明なし |
 
+## respawn
+
+```plaintext
+/respawn <player>
+/respawn <player> <delay>
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Respawn](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Respawn.java)
+
+プレイヤーをリスポーンします。
+
+### `/respawn <player>`
+
+指定したプレイヤーをリスポーンします。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `player` | PlayerArgument | はい | リスポーンさせるプレイヤー |
+
+### `/respawn <player> <delay>`
+
+指定した秒数後にプレイヤーをリスポーンします。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `player` | PlayerArgument | はい | リスポーンさせるプレイヤー |
+| `delay` | LongArgument | はい | 遅延させる秒数 |
+
 ## rider
 
 ```plaintext

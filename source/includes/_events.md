@@ -176,13 +176,14 @@ EBanに関する各種処理を行います。
 
 | メソッド名 | イベント |
 | - | - |
-| onPotionSplashEvent | PotionSplashEvent|
-| onPlayerMoveEvent | PlayerMoveEvent|
 | onPlayerRespawnEvent | PlayerRespawnEvent|
+| onPlayerMoveEvent | PlayerMoveEvent|
+| onPotionSplashEvent | PotionSplashEvent|
 | onJoinClearCache | PlayerJoinEvent|
 | onPlayerCommandPreprocessEvent | PlayerCommandPreprocessEvent|
 | OnEvent_LoginEBanCheck | PlayerJoinEvent|
 | onBlockPlaceEvent | BlockPlaceEvent|
+| onEvent_ChatLiquidBounce | AsyncChatEvent|
 | onBlockBreakEvent | BlockBreakEvent|
 | onBlockIgniteEvent | BlockIgniteEvent|
 | onPlayerBucketEmptyEvent | PlayerBucketEmptyEvent|
@@ -190,7 +191,6 @@ EBanに関する各種処理を行います。
 | onPlayerPickupItemEvent | EntityPickupItemEvent|
 | onPlayerDropItemEvent | PlayerDropItemEvent|
 | onProjectileLaunchEvent | ProjectileLaunchEvent|
-| onEvent_ChatLiquidBounce | AsyncChatEvent|
 > ソースコード: [com.jaoafa.mymaid4.event.Event_EBan](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_EBan.java)
 
 ### Event_Explosion
@@ -226,8 +226,8 @@ hideコマンドに関する処理を行います。
 
 | メソッド名 | イベント |
 | - | - |
-| onPlayerJoinEvent | PlayerJoinEvent|
 | onAsyncPlayerChatEvent | AsyncChatEvent|
+| onPlayerJoinEvent | PlayerJoinEvent|
 | onCommand | PlayerCommandPreprocessEvent|
 > ソースコード: [com.jaoafa.mymaid4.event.Event_Hide](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Hide.java)
 
@@ -247,9 +247,9 @@ Jailに関する各種処理を行います。
 | メソッド名 | イベント |
 | - | - |
 | onQuit | PlayerQuitEvent|
-| onPotionSplashEvent | PotionSplashEvent|
-| onPlayerMoveEvent | PlayerMoveEvent|
 | onPlayerRespawnEvent | PlayerRespawnEvent|
+| onPlayerMoveEvent | PlayerMoveEvent|
+| onPotionSplashEvent | PotionSplashEvent|
 | onJoinClearCache | PlayerJoinEvent|
 | onPlayerCommandPreprocessEvent | PlayerCommandPreprocessEvent|
 | onBlockPlaceEvent | BlockPlaceEvent|
@@ -287,8 +287,8 @@ lookingコマンドに関する処理を行います。
 
 | メソッド名 | イベント |
 | - | - |
-| OnLoginCheck | AsyncPlayerPreLoginEvent|
 | OnLoginAfterCheck | PlayerJoinEvent|
+| OnLoginCheck | AsyncPlayerPreLoginEvent|
 > ソースコード: [com.jaoafa.mymaid4.event.Event_MCBansLoginCheck](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_MCBansLoginCheck.java)
 
 ### Event_ManageCPPerms
@@ -343,8 +343,8 @@ SandBoxをRegular権限グループ未満のプレイヤーが編集できない
 
 | メソッド名 | イベント |
 | - | - |
-| onEvent_ChatSKK | AsyncChatEvent|
 | onEvent_JoinTabReload | PlayerJoinEvent|
+| onEvent_ChatSKK | AsyncChatEvent|
 > ソースコード: [com.jaoafa.mymaid4.event.Event_SKKColor](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_SKKColor.java)
 
 ### Event_TeleportCmd
