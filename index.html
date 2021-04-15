@@ -400,6 +400,9 @@
                     <a href="#commands-player" class="toc-h2 toc-link" data-title="player">player</a>
                   </li>
                   <li>
+                    <a href="#commands-respawn" class="toc-h2 toc-link" data-title="respawn">respawn</a>
+                  </li>
+                  <li>
                     <a href="#commands-rider" class="toc-h2 toc-link" data-title="rider">rider</a>
                   </li>
                   <li>
@@ -571,7 +574,7 @@
 
 <p>新しいコマンド・機能の要望、不具合の報告などは <a href="https://forms.gle/EZGVhKdbryfW5fCm8">開発部リクエストボックス</a> か <a href="https://github.com/jaoafa/MyMaid4/issues">MyMaid4 の Issue</a> へお願いします。</p>
 <ul>
-<li>Version: 2021.04.14_22.32_67e0c62</li>
+<li>Version: 2021.04.15_22.24_a1283b7</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -1785,6 +1788,56 @@
 <td>説明なし</td>
 </tr>
 </tbody></table>
+<h2 id='commands-respawn'>respawn</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/respawn &lt;player&gt;
+/respawn &lt;player&gt; &lt;delay&gt;
+</code></pre></div>
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Respawn.java">com.jaoafa.mymaid4.command.Cmd_Respawn</a></p>
+</blockquote>
+
+<p>プレイヤーをリスポーンします。</p>
+<h3 id='commands-respawn-respawn-lt-player-gt'><code>/respawn &lt;player&gt;</code></h3>
+<p>指定したプレイヤーをリスポーンします。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>player</code></td>
+<td>PlayerArgument</td>
+<td>はい</td>
+<td>リスポーンさせるプレイヤー</td>
+</tr>
+</tbody></table>
+<h3 id='commands-respawn-respawn-lt-player-gt-lt-delay-gt'><code>/respawn &lt;player&gt; &lt;delay&gt;</code></h3>
+<p>指定した秒数後にプレイヤーをリスポーンします。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>player</code></td>
+<td>PlayerArgument</td>
+<td>はい</td>
+<td>リスポーンさせるプレイヤー</td>
+</tr>
+<tr>
+<td><code>delay</code></td>
+<td>LongArgument</td>
+<td>はい</td>
+<td>遅延させる秒数</td>
+</tr>
+</tbody></table>
 <h2 id='commands-rider'>rider</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/rider [target]
 /rider ride &lt;from&gt; &lt;to&gt;
 /rider leave [target]
@@ -2616,16 +2669,16 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onPotionSplashEvent</td>
-<td>PotionSplashEvent</td>
+<td>onPlayerRespawnEvent</td>
+<td>PlayerRespawnEvent</td>
 </tr>
 <tr>
 <td>onPlayerMoveEvent</td>
 <td>PlayerMoveEvent</td>
 </tr>
 <tr>
-<td>onPlayerRespawnEvent</td>
-<td>PlayerRespawnEvent</td>
+<td>onPotionSplashEvent</td>
+<td>PotionSplashEvent</td>
 </tr>
 <tr>
 <td>onJoinClearCache</td>
@@ -2642,6 +2695,10 @@
 <tr>
 <td>onBlockPlaceEvent</td>
 <td>BlockPlaceEvent</td>
+</tr>
+<tr>
+<td>onEvent_ChatLiquidBounce</td>
+<td>AsyncChatEvent</td>
 </tr>
 <tr>
 <td>onBlockBreakEvent</td>
@@ -2670,10 +2727,6 @@
 <tr>
 <td>onProjectileLaunchEvent</td>
 <td>ProjectileLaunchEvent</td>
-</tr>
-<tr>
-<td>onEvent_ChatLiquidBounce</td>
-<td>AsyncChatEvent</td>
 </tr>
 </tbody></table>
 
@@ -2744,12 +2797,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onPlayerJoinEvent</td>
-<td>PlayerJoinEvent</td>
-</tr>
-<tr>
 <td>onAsyncPlayerChatEvent</td>
 <td>AsyncChatEvent</td>
+</tr>
+<tr>
+<td>onPlayerJoinEvent</td>
+<td>PlayerJoinEvent</td>
 </tr>
 <tr>
 <td>onCommand</td>
@@ -2792,16 +2845,16 @@
 <td>PlayerQuitEvent</td>
 </tr>
 <tr>
-<td>onPotionSplashEvent</td>
-<td>PotionSplashEvent</td>
+<td>onPlayerRespawnEvent</td>
+<td>PlayerRespawnEvent</td>
 </tr>
 <tr>
 <td>onPlayerMoveEvent</td>
 <td>PlayerMoveEvent</td>
 </tr>
 <tr>
-<td>onPlayerRespawnEvent</td>
-<td>PlayerRespawnEvent</td>
+<td>onPotionSplashEvent</td>
+<td>PotionSplashEvent</td>
 </tr>
 <tr>
 <td>onJoinClearCache</td>
@@ -2898,12 +2951,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>OnLoginCheck</td>
-<td>AsyncPlayerPreLoginEvent</td>
-</tr>
-<tr>
 <td>OnLoginAfterCheck</td>
 <td>PlayerJoinEvent</td>
+</tr>
+<tr>
+<td>OnLoginCheck</td>
+<td>AsyncPlayerPreLoginEvent</td>
 </tr>
 </tbody></table>
 
@@ -3032,12 +3085,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onEvent_ChatSKK</td>
-<td>AsyncChatEvent</td>
-</tr>
-<tr>
 <td>onEvent_JoinTabReload</td>
 <td>PlayerJoinEvent</td>
+</tr>
+<tr>
+<td>onEvent_ChatSKK</td>
+<td>AsyncChatEvent</td>
 </tr>
 </tbody></table>
 
