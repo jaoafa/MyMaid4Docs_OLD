@@ -68,11 +68,11 @@ jaoium制限に関する処理を行います。
 | メソッド名 | イベント |
 | - | - |
 | onPotionSplashEvent | PotionSplashEvent|
+| onPlayerInteractEvent | PlayerInteractEvent|
 | onProjectileLaunchEvent | ProjectileLaunchEvent|
 | OnPickup | EntityPickupItemEvent|
 | InvClick | InventoryClickEvent|
 | onPlayerItemHeldEvent | PlayerItemHeldEvent|
-| onPlayerInteractEvent | PlayerInteractEvent|
 | OnBlockDispenseEvent | BlockDispenseEvent|
 > ソースコード: [com.jaoafa.mymaid4.event.Event_Antijaoium](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Antijaoium.java)
 
@@ -82,10 +82,10 @@ ChatBanに関する各種処理を行います。
 
 | メソッド名 | イベント |
 | - | - |
-| onJoinClearCache | PlayerJoinEvent|
 | onQuitClearCache | PlayerQuitEvent|
 | onChat | AsyncChatEvent|
 | onPlayerCommandPreprocessEvent | PlayerCommandPreprocessEvent|
+| onJoinClearCache | PlayerJoinEvent|
 | OnEvent_LoginChatBanCheck | PlayerJoinEvent|
 > ソースコード: [com.jaoafa.mymaid4.event.Event_ChatBan](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_ChatBan.java)
 
@@ -161,6 +161,15 @@ dedコマンドに関する処理を行います。
 | onBlockFadeEvent | BlockFadeEvent|
 > ソースコード: [com.jaoafa.mymaid4.event.Event_DisableCoralTransition](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_DisableCoralTransition.java)
 
+### Event_DisableKicks
+
+不要なキックを無効化します。
+
+| メソッド名 | イベント |
+| - | - |
+| onKick | PlayerKickEvent|
+> ソースコード: [com.jaoafa.mymaid4.event.Event_DisableKicks](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_DisableKicks.java)
+
 ### Event_DisableRespawnAnchor
 
 リスポーンアンカーの爆発を無効化します。
@@ -179,15 +188,15 @@ EBanに関する各種処理を行います。
 | onPlayerRespawnEvent | PlayerRespawnEvent|
 | onPlayerMoveEvent | PlayerMoveEvent|
 | onPotionSplashEvent | PotionSplashEvent|
-| onJoinClearCache | PlayerJoinEvent|
-| onPlayerCommandPreprocessEvent | PlayerCommandPreprocessEvent|
-| OnEvent_LoginEBanCheck | PlayerJoinEvent|
-| onEvent_ChatLiquidBounce | AsyncChatEvent|
 | onBlockPlaceEvent | BlockPlaceEvent|
 | onBlockBreakEvent | BlockBreakEvent|
+| onPlayerCommandPreprocessEvent | PlayerCommandPreprocessEvent|
+| onJoinClearCache | PlayerJoinEvent|
 | onBlockIgniteEvent | BlockIgniteEvent|
 | onPlayerBucketEmptyEvent | PlayerBucketEmptyEvent|
 | onPlayerBucketFillEvent | PlayerBucketFillEvent|
+| OnEvent_LoginEBanCheck | PlayerJoinEvent|
+| onEvent_ChatLiquidBounce | AsyncChatEvent|
 | onPlayerPickupItemEvent | EntityPickupItemEvent|
 | onPlayerDropItemEvent | PlayerDropItemEvent|
 | onProjectileLaunchEvent | ProjectileLaunchEvent|
@@ -250,10 +259,10 @@ Jailに関する各種処理を行います。
 | onPlayerRespawnEvent | PlayerRespawnEvent|
 | onPlayerMoveEvent | PlayerMoveEvent|
 | onPotionSplashEvent | PotionSplashEvent|
-| onJoinClearCache | PlayerJoinEvent|
-| onPlayerCommandPreprocessEvent | PlayerCommandPreprocessEvent|
 | onBlockPlaceEvent | BlockPlaceEvent|
 | onBlockBreakEvent | BlockBreakEvent|
+| onPlayerCommandPreprocessEvent | PlayerCommandPreprocessEvent|
+| onJoinClearCache | PlayerJoinEvent|
 | onBlockIgniteEvent | BlockIgniteEvent|
 | onPlayerBucketEmptyEvent | PlayerBucketEmptyEvent|
 | onPlayerBucketFillEvent | PlayerBucketFillEvent|
@@ -296,8 +305,8 @@ lookingコマンドに関する処理を行います。
 
 | メソッド名 | イベント |
 | - | - |
-| OnLoginCheck | AsyncPlayerPreLoginEvent|
 | OnLoginAfterCheck | PlayerJoinEvent|
+| OnLoginCheck | AsyncPlayerPreLoginEvent|
 > ソースコード: [com.jaoafa.mymaid4.event.Event_MCBansLoginCheck](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_MCBansLoginCheck.java)
 
 ### Event_ManageCPPerms
@@ -315,9 +324,27 @@ CoreProtectのパーミッションノードを管理します。
 
 | メソッド名 | イベント |
 | - | - |
-| OnEvent_FirstLogin | PlayerJoinEvent|
 | OnEvent_Quit | PlayerQuitEvent|
+| OnEvent_FirstLogin | PlayerJoinEvent|
 > ソースコード: [com.jaoafa.mymaid4.event.Event_NewPlayerAutoBlMap](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_NewPlayerAutoBlMap.java)
+
+### Event_NotifyKick
+
+キックされた際にAdminとModeratorに理由を通知します。
+
+| メソッド名 | イベント |
+| - | - |
+| onKick | PlayerKickEvent|
+> ソースコード: [com.jaoafa.mymaid4.event.Event_NotifyKick](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_NotifyKick.java)
+
+### Event_PacketLimiterKick
+
+PacketLimiterによるキック時に通知を行います。
+
+| メソッド名 | イベント |
+| - | - |
+| onKick | PlayerKickEvent|
+> ソースコード: [com.jaoafa.mymaid4.event.Event_PacketLimiterKick](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_PacketLimiterKick.java)
 
 ### Event_PlayerCheckPreLogin
 
@@ -328,6 +355,20 @@ CoreProtectのパーミッションノードを管理します。
 | OnEvent_PlayerCheckPreLogin | AsyncPlayerPreLoginEvent|
 > ソースコード: [com.jaoafa.mymaid4.event.Event_PlayerCheckPreLogin](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_PlayerCheckPreLogin.java)
 
+### Event_ProtectionOldWorlds
+
+旧ワールドへの干渉禁止処理を行います。
+
+| メソッド名 | イベント |
+| - | - |
+| onBlockPlaceEvent | BlockPlaceEvent|
+| onBlockBreakEvent | BlockBreakEvent|
+| onBlockIgniteEvent | BlockIgniteEvent|
+| onPlayerBucketEmptyEvent | PlayerBucketEmptyEvent|
+| onPlayerBucketFillEvent | PlayerBucketFillEvent|
+| onPlayerInteractEvent | PlayerInteractEvent|
+> ソースコード: [com.jaoafa.mymaid4.event.Event_ProtectionOldWorlds](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_ProtectionOldWorlds.java)
+
 ### Event_ProtectionSandBox
 
 SandBoxをRegular権限グループ未満のプレイヤーが編集できないように制限します。
@@ -335,12 +376,12 @@ SandBoxをRegular権限グループ未満のプレイヤーが編集できない
 | メソッド名 | イベント |
 | - | - |
 | onProjectileLaunchEvent | ProjectileLaunchEvent|
+| onSandBoxBucketFillEvent | PlayerBucketFillEvent|
 | ontoSandBox | PlayerChangedWorldEvent|
 | onSandBoxPlace | BlockPlaceEvent|
 | onSandBoxBreak | BlockBreakEvent|
 | onSandBoxIgniteEvent | BlockIgniteEvent|
 | onSandBoxBucketEmptyEvent | PlayerBucketEmptyEvent|
-| onSandBoxBucketFillEvent | PlayerBucketFillEvent|
 | onInteractRight | PlayerInteractEvent|
 | onInteractLeft | PlayerInteractEvent|
 | onDamageArmorStand | EntityDamageByEntityEvent|
@@ -352,8 +393,8 @@ SandBoxをRegular権限グループ未満のプレイヤーが編集できない
 
 | メソッド名 | イベント |
 | - | - |
-| onEvent_ChatSKK | AsyncChatEvent|
 | onEvent_JoinTabReload | PlayerJoinEvent|
+| onEvent_ChatSKK | AsyncChatEvent|
 > ソースコード: [com.jaoafa.mymaid4.event.Event_SKKColor](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_SKKColor.java)
 
 ### Event_TeleportCmd
@@ -362,8 +403,8 @@ tpコマンドを受けてTeleportCommandEventを動作させます。
 
 | メソッド名 | イベント |
 | - | - |
-| onTeleportCommandFromNonPlayer | ServerCommandEvent|
 | onTeleportCommandFromPlayer | PlayerCommandPreprocessEvent|
+| onTeleportCommandFromNonPlayer | ServerCommandEvent|
 > ソースコード: [com.jaoafa.mymaid4.event.Event_TeleportCmd](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_TeleportCmd.java)
 
 ### Event_TempMute
