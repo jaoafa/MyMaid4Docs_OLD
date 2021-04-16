@@ -543,6 +543,9 @@
                     <a href="#events-wt-event_notifykick" class="toc-h2 toc-link" data-title="Event_NotifyKick">Event_NotifyKick</a>
                   </li>
                   <li>
+                    <a href="#events-wt-event_onlinetimedb" class="toc-h2 toc-link" data-title="Event_OnlineTimeDB">Event_OnlineTimeDB</a>
+                  </li>
+                  <li>
                     <a href="#events-wt-event_packetlimiterkick" class="toc-h2 toc-link" data-title="Event_PacketLimiterKick">Event_PacketLimiterKick</a>
                   </li>
                   <li>
@@ -589,7 +592,7 @@
 
 <p>新しいコマンド・機能の要望、不具合の報告などは <a href="https://forms.gle/EZGVhKdbryfW5fCm8">開発部リクエストボックス</a> か <a href="https://github.com/jaoafa/MyMaid4/issues">MyMaid4 の Issue</a> へお願いします。</p>
 <ul>
-<li>Version: 2021.04.17_05.25_94e638f</li>
+<li>Version: 2021.04.17_06.26_4be241f</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -2446,18 +2449,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onPotionSplashEvent</td>
-<td>PotionSplashEvent</td>
-</tr>
-<tr>
-<td>onPlayerInteractEvent</td>
-<td>PlayerInteractEvent</td>
-</tr>
-<tr>
-<td>onProjectileLaunchEvent</td>
-<td>ProjectileLaunchEvent</td>
-</tr>
-<tr>
 <td>OnPickup</td>
 <td>EntityPickupItemEvent</td>
 </tr>
@@ -2472,6 +2463,18 @@
 <tr>
 <td>OnBlockDispenseEvent</td>
 <td>BlockDispenseEvent</td>
+</tr>
+<tr>
+<td>onPotionSplashEvent</td>
+<td>PotionSplashEvent</td>
+</tr>
+<tr>
+<td>onPlayerInteractEvent</td>
+<td>PlayerInteractEvent</td>
+</tr>
+<tr>
+<td>onProjectileLaunchEvent</td>
+<td>ProjectileLaunchEvent</td>
 </tr>
 </tbody></table>
 
@@ -2488,6 +2491,14 @@
 </tr>
 </thead><tbody>
 <tr>
+<td>OnEvent_LoginChatBanCheck</td>
+<td>PlayerJoinEvent</td>
+</tr>
+<tr>
+<td>onJoinClearCache</td>
+<td>PlayerJoinEvent</td>
+</tr>
+<tr>
 <td>onQuitClearCache</td>
 <td>PlayerQuitEvent</td>
 </tr>
@@ -2498,14 +2509,6 @@
 <tr>
 <td>onPlayerCommandPreprocessEvent</td>
 <td>PlayerCommandPreprocessEvent</td>
-</tr>
-<tr>
-<td>onJoinClearCache</td>
-<td>PlayerJoinEvent</td>
-</tr>
-<tr>
-<td>OnEvent_LoginChatBanCheck</td>
-<td>PlayerJoinEvent</td>
 </tr>
 </tbody></table>
 
@@ -2702,16 +2705,20 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onPlayerRespawnEvent</td>
-<td>PlayerRespawnEvent</td>
-</tr>
-<tr>
 <td>onPlayerMoveEvent</td>
 <td>PlayerMoveEvent</td>
 </tr>
 <tr>
+<td>onPlayerRespawnEvent</td>
+<td>PlayerRespawnEvent</td>
+</tr>
+<tr>
 <td>onPotionSplashEvent</td>
 <td>PotionSplashEvent</td>
+</tr>
+<tr>
+<td>onJoinClearCache</td>
+<td>PlayerJoinEvent</td>
 </tr>
 <tr>
 <td>onBlockPlaceEvent</td>
@@ -2724,10 +2731,6 @@
 <tr>
 <td>onPlayerCommandPreprocessEvent</td>
 <td>PlayerCommandPreprocessEvent</td>
-</tr>
-<tr>
-<td>onJoinClearCache</td>
-<td>PlayerJoinEvent</td>
 </tr>
 <tr>
 <td>onBlockIgniteEvent</td>
@@ -2874,6 +2877,10 @@
 </tr>
 </thead><tbody>
 <tr>
+<td>onPlayerMoveEvent</td>
+<td>PlayerMoveEvent</td>
+</tr>
+<tr>
 <td>onQuit</td>
 <td>PlayerQuitEvent</td>
 </tr>
@@ -2882,12 +2889,16 @@
 <td>PlayerRespawnEvent</td>
 </tr>
 <tr>
-<td>onPlayerMoveEvent</td>
-<td>PlayerMoveEvent</td>
+<td>OnEvent_LoginJailCheck</td>
+<td>PlayerJoinEvent</td>
 </tr>
 <tr>
 <td>onPotionSplashEvent</td>
 <td>PotionSplashEvent</td>
+</tr>
+<tr>
+<td>onJoinClearCache</td>
+<td>PlayerJoinEvent</td>
 </tr>
 <tr>
 <td>onBlockPlaceEvent</td>
@@ -2900,10 +2911,6 @@
 <tr>
 <td>onPlayerCommandPreprocessEvent</td>
 <td>PlayerCommandPreprocessEvent</td>
-</tr>
-<tr>
-<td>onJoinClearCache</td>
-<td>PlayerJoinEvent</td>
 </tr>
 <tr>
 <td>onBlockIgniteEvent</td>
@@ -2928,10 +2935,6 @@
 <tr>
 <td>onProjectileLaunchEvent</td>
 <td>ProjectileLaunchEvent</td>
-</tr>
-<tr>
-<td>OnEvent_LoginJailCheck</td>
-<td>PlayerJoinEvent</td>
 </tr>
 </tbody></table>
 
@@ -3072,6 +3075,28 @@
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_NotifyKick.java">com.jaoafa.mymaid4.event.Event_NotifyKick</a></p>
 </blockquote>
+<h3 id='events-wt-event_onlinetimedb'>Event_OnlineTimeDB</h3>
+<p>ログイン時間を計測し、データベースに記録します。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>OnEvent_LoginDBInsert</td>
+<td>PlayerJoinEvent</td>
+</tr>
+<tr>
+<td>OnEvent_QuitDBInsert</td>
+<td>PlayerQuitEvent</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_OnlineTimeDB.java">com.jaoafa.mymaid4.event.Event_OnlineTimeDB</a></p>
+</blockquote>
 <h3 id='events-wt-event_packetlimiterkick'>Event_PacketLimiterKick</h3>
 <p>PacketLimiterによるキック時に通知を行います。</p>
 
@@ -3156,14 +3181,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onProjectileLaunchEvent</td>
-<td>ProjectileLaunchEvent</td>
-</tr>
-<tr>
-<td>onSandBoxBucketFillEvent</td>
-<td>PlayerBucketFillEvent</td>
-</tr>
-<tr>
 <td>ontoSandBox</td>
 <td>PlayerChangedWorldEvent</td>
 </tr>
@@ -3184,6 +3201,10 @@
 <td>PlayerBucketEmptyEvent</td>
 </tr>
 <tr>
+<td>onSandBoxBucketFillEvent</td>
+<td>PlayerBucketFillEvent</td>
+</tr>
+<tr>
 <td>onInteractRight</td>
 <td>PlayerInteractEvent</td>
 </tr>
@@ -3194,6 +3215,10 @@
 <tr>
 <td>onDamageArmorStand</td>
 <td>EntityDamageByEntityEvent</td>
+</tr>
+<tr>
+<td>onProjectileLaunchEvent</td>
+<td>ProjectileLaunchEvent</td>
 </tr>
 </tbody></table>
 
@@ -3210,12 +3235,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onEvent_JoinTabReload</td>
-<td>PlayerJoinEvent</td>
-</tr>
-<tr>
 <td>onEvent_ChatSKK</td>
 <td>AsyncChatEvent</td>
+</tr>
+<tr>
+<td>onEvent_JoinTabReload</td>
+<td>PlayerJoinEvent</td>
 </tr>
 </tbody></table>
 
