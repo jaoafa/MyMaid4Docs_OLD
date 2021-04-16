@@ -495,6 +495,9 @@
                     <a href="#events-wt-event_disablecoraltransition" class="toc-h2 toc-link" data-title="Event_DisableCoralTransition">Event_DisableCoralTransition</a>
                   </li>
                   <li>
+                    <a href="#events-wt-event_disablekicks" class="toc-h2 toc-link" data-title="Event_DisableKicks">Event_DisableKicks</a>
+                  </li>
+                  <li>
                     <a href="#events-wt-event_disablerespawnanchor" class="toc-h2 toc-link" data-title="Event_DisableRespawnAnchor">Event_DisableRespawnAnchor</a>
                   </li>
                   <li>
@@ -537,7 +540,16 @@
                     <a href="#events-wt-event_newplayerautoblmap" class="toc-h2 toc-link" data-title="Event_NewPlayerAutoBlMap">Event_NewPlayerAutoBlMap</a>
                   </li>
                   <li>
+                    <a href="#events-wt-event_notifykick" class="toc-h2 toc-link" data-title="Event_NotifyKick">Event_NotifyKick</a>
+                  </li>
+                  <li>
+                    <a href="#events-wt-event_packetlimiterkick" class="toc-h2 toc-link" data-title="Event_PacketLimiterKick">Event_PacketLimiterKick</a>
+                  </li>
+                  <li>
                     <a href="#events-wt-event_playercheckprelogin" class="toc-h2 toc-link" data-title="Event_PlayerCheckPreLogin">Event_PlayerCheckPreLogin</a>
+                  </li>
+                  <li>
+                    <a href="#events-wt-event_protectionoldworlds" class="toc-h2 toc-link" data-title="Event_ProtectionOldWorlds">Event_ProtectionOldWorlds</a>
                   </li>
                   <li>
                     <a href="#events-wt-event_protectionsandbox" class="toc-h2 toc-link" data-title="Event_ProtectionSandBox">Event_ProtectionSandBox</a>
@@ -577,7 +589,7 @@
 
 <p>新しいコマンド・機能の要望、不具合の報告などは <a href="https://forms.gle/EZGVhKdbryfW5fCm8">開発部リクエストボックス</a> か <a href="https://github.com/jaoafa/MyMaid4/issues">MyMaid4 の Issue</a> へお願いします。</p>
 <ul>
-<li>Version: 2021.04.16_17.28_cc66a02</li>
+<li>Version: 2021.04.17_05.25_94e638f</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -2438,6 +2450,10 @@
 <td>PotionSplashEvent</td>
 </tr>
 <tr>
+<td>onPlayerInteractEvent</td>
+<td>PlayerInteractEvent</td>
+</tr>
+<tr>
 <td>onProjectileLaunchEvent</td>
 <td>ProjectileLaunchEvent</td>
 </tr>
@@ -2452,10 +2468,6 @@
 <tr>
 <td>onPlayerItemHeldEvent</td>
 <td>PlayerItemHeldEvent</td>
-</tr>
-<tr>
-<td>onPlayerInteractEvent</td>
-<td>PlayerInteractEvent</td>
 </tr>
 <tr>
 <td>OnBlockDispenseEvent</td>
@@ -2476,10 +2488,6 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onJoinClearCache</td>
-<td>PlayerJoinEvent</td>
-</tr>
-<tr>
 <td>onQuitClearCache</td>
 <td>PlayerQuitEvent</td>
 </tr>
@@ -2490,6 +2498,10 @@
 <tr>
 <td>onPlayerCommandPreprocessEvent</td>
 <td>PlayerCommandPreprocessEvent</td>
+</tr>
+<tr>
+<td>onJoinClearCache</td>
+<td>PlayerJoinEvent</td>
 </tr>
 <tr>
 <td>OnEvent_LoginChatBanCheck</td>
@@ -2644,6 +2656,24 @@
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_DisableCoralTransition.java">com.jaoafa.mymaid4.event.Event_DisableCoralTransition</a></p>
 </blockquote>
+<h3 id='events-wt-event_disablekicks'>Event_DisableKicks</h3>
+<p>不要なキックを無効化します。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onKick</td>
+<td>PlayerKickEvent</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_DisableKicks.java">com.jaoafa.mymaid4.event.Event_DisableKicks</a></p>
+</blockquote>
 <h3 id='events-wt-event_disablerespawnanchor'>Event_DisableRespawnAnchor</h3>
 <p>リスポーンアンカーの爆発を無効化します。</p>
 
@@ -2684,28 +2714,20 @@
 <td>PotionSplashEvent</td>
 </tr>
 <tr>
-<td>onJoinClearCache</td>
-<td>PlayerJoinEvent</td>
-</tr>
-<tr>
-<td>onPlayerCommandPreprocessEvent</td>
-<td>PlayerCommandPreprocessEvent</td>
-</tr>
-<tr>
-<td>OnEvent_LoginEBanCheck</td>
-<td>PlayerJoinEvent</td>
-</tr>
-<tr>
-<td>onEvent_ChatLiquidBounce</td>
-<td>AsyncChatEvent</td>
-</tr>
-<tr>
 <td>onBlockPlaceEvent</td>
 <td>BlockPlaceEvent</td>
 </tr>
 <tr>
 <td>onBlockBreakEvent</td>
 <td>BlockBreakEvent</td>
+</tr>
+<tr>
+<td>onPlayerCommandPreprocessEvent</td>
+<td>PlayerCommandPreprocessEvent</td>
+</tr>
+<tr>
+<td>onJoinClearCache</td>
+<td>PlayerJoinEvent</td>
 </tr>
 <tr>
 <td>onBlockIgniteEvent</td>
@@ -2718,6 +2740,14 @@
 <tr>
 <td>onPlayerBucketFillEvent</td>
 <td>PlayerBucketFillEvent</td>
+</tr>
+<tr>
+<td>OnEvent_LoginEBanCheck</td>
+<td>PlayerJoinEvent</td>
+</tr>
+<tr>
+<td>onEvent_ChatLiquidBounce</td>
+<td>AsyncChatEvent</td>
 </tr>
 <tr>
 <td>onPlayerPickupItemEvent</td>
@@ -2860,20 +2890,20 @@
 <td>PotionSplashEvent</td>
 </tr>
 <tr>
-<td>onJoinClearCache</td>
-<td>PlayerJoinEvent</td>
-</tr>
-<tr>
-<td>onPlayerCommandPreprocessEvent</td>
-<td>PlayerCommandPreprocessEvent</td>
-</tr>
-<tr>
 <td>onBlockPlaceEvent</td>
 <td>BlockPlaceEvent</td>
 </tr>
 <tr>
 <td>onBlockBreakEvent</td>
 <td>BlockBreakEvent</td>
+</tr>
+<tr>
+<td>onPlayerCommandPreprocessEvent</td>
+<td>PlayerCommandPreprocessEvent</td>
+</tr>
+<tr>
+<td>onJoinClearCache</td>
+<td>PlayerJoinEvent</td>
 </tr>
 <tr>
 <td>onBlockIgniteEvent</td>
@@ -2972,12 +3002,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>OnLoginCheck</td>
-<td>AsyncPlayerPreLoginEvent</td>
-</tr>
-<tr>
 <td>OnLoginAfterCheck</td>
 <td>PlayerJoinEvent</td>
+</tr>
+<tr>
+<td>OnLoginCheck</td>
+<td>AsyncPlayerPreLoginEvent</td>
 </tr>
 </tbody></table>
 
@@ -3012,17 +3042,53 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>OnEvent_FirstLogin</td>
-<td>PlayerJoinEvent</td>
-</tr>
-<tr>
 <td>OnEvent_Quit</td>
 <td>PlayerQuitEvent</td>
+</tr>
+<tr>
+<td>OnEvent_FirstLogin</td>
+<td>PlayerJoinEvent</td>
 </tr>
 </tbody></table>
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_NewPlayerAutoBlMap.java">com.jaoafa.mymaid4.event.Event_NewPlayerAutoBlMap</a></p>
+</blockquote>
+<h3 id='events-wt-event_notifykick'>Event_NotifyKick</h3>
+<p>キックされた際にAdminとModeratorに理由を通知します。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onKick</td>
+<td>PlayerKickEvent</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_NotifyKick.java">com.jaoafa.mymaid4.event.Event_NotifyKick</a></p>
+</blockquote>
+<h3 id='events-wt-event_packetlimiterkick'>Event_PacketLimiterKick</h3>
+<p>PacketLimiterによるキック時に通知を行います。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onKick</td>
+<td>PlayerKickEvent</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_PacketLimiterKick.java">com.jaoafa.mymaid4.event.Event_PacketLimiterKick</a></p>
 </blockquote>
 <h3 id='events-wt-event_playercheckprelogin'>Event_PlayerCheckPreLogin</h3>
 <p>プレイヤーログイン前に各種チェック等を行います。</p>
@@ -3042,6 +3108,44 @@
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_PlayerCheckPreLogin.java">com.jaoafa.mymaid4.event.Event_PlayerCheckPreLogin</a></p>
 </blockquote>
+<h3 id='events-wt-event_protectionoldworlds'>Event_ProtectionOldWorlds</h3>
+<p>旧ワールドへの干渉禁止処理を行います。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onBlockPlaceEvent</td>
+<td>BlockPlaceEvent</td>
+</tr>
+<tr>
+<td>onBlockBreakEvent</td>
+<td>BlockBreakEvent</td>
+</tr>
+<tr>
+<td>onBlockIgniteEvent</td>
+<td>BlockIgniteEvent</td>
+</tr>
+<tr>
+<td>onPlayerBucketEmptyEvent</td>
+<td>PlayerBucketEmptyEvent</td>
+</tr>
+<tr>
+<td>onPlayerBucketFillEvent</td>
+<td>PlayerBucketFillEvent</td>
+</tr>
+<tr>
+<td>onPlayerInteractEvent</td>
+<td>PlayerInteractEvent</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_ProtectionOldWorlds.java">com.jaoafa.mymaid4.event.Event_ProtectionOldWorlds</a></p>
+</blockquote>
 <h3 id='events-wt-event_protectionsandbox'>Event_ProtectionSandBox</h3>
 <p>SandBoxをRegular権限グループ未満のプレイヤーが編集できないように制限します。</p>
 
@@ -3054,6 +3158,10 @@
 <tr>
 <td>onProjectileLaunchEvent</td>
 <td>ProjectileLaunchEvent</td>
+</tr>
+<tr>
+<td>onSandBoxBucketFillEvent</td>
+<td>PlayerBucketFillEvent</td>
 </tr>
 <tr>
 <td>ontoSandBox</td>
@@ -3074,10 +3182,6 @@
 <tr>
 <td>onSandBoxBucketEmptyEvent</td>
 <td>PlayerBucketEmptyEvent</td>
-</tr>
-<tr>
-<td>onSandBoxBucketFillEvent</td>
-<td>PlayerBucketFillEvent</td>
 </tr>
 <tr>
 <td>onInteractRight</td>
@@ -3106,12 +3210,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onEvent_ChatSKK</td>
-<td>AsyncChatEvent</td>
-</tr>
-<tr>
 <td>onEvent_JoinTabReload</td>
 <td>PlayerJoinEvent</td>
+</tr>
+<tr>
+<td>onEvent_ChatSKK</td>
+<td>AsyncChatEvent</td>
 </tr>
 </tbody></table>
 
@@ -3128,12 +3232,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onTeleportCommandFromNonPlayer</td>
-<td>ServerCommandEvent</td>
-</tr>
-<tr>
 <td>onTeleportCommandFromPlayer</td>
 <td>PlayerCommandPreprocessEvent</td>
+</tr>
+<tr>
+<td>onTeleportCommandFromNonPlayer</td>
+<td>ServerCommandEvent</td>
 </tr>
 </tbody></table>
 
