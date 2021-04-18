@@ -510,6 +510,9 @@
                     <a href="#events-wt-event_firstlogin" class="toc-h2 toc-link" data-title="Event_FirstLogin">Event_FirstLogin</a>
                   </li>
                   <li>
+                    <a href="#events-wt-event_flyspeed" class="toc-h2 toc-link" data-title="Event_FlySpeed">Event_FlySpeed</a>
+                  </li>
+                  <li>
                     <a href="#events-wt-event_gamemodecmd" class="toc-h2 toc-link" data-title="Event_GameModeCmd">Event_GameModeCmd</a>
                   </li>
                   <li>
@@ -592,7 +595,7 @@
 
 <p>新しいコマンド・機能の要望、不具合の報告などは <a href="https://forms.gle/EZGVhKdbryfW5fCm8">開発部リクエストボックス</a> か <a href="https://github.com/jaoafa/MyMaid4/issues">MyMaid4 の Issue</a> へお願いします。</p>
 <ul>
-<li>Version: 2021.04.17_06.26_4be241f</li>
+<li>Version: 2021.04.19_01.48_7d31349</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -2495,16 +2498,16 @@
 <td>PlayerQuitEvent</td>
 </tr>
 <tr>
+<td>onChat</td>
+<td>AsyncChatEvent</td>
+</tr>
+<tr>
 <td>onPlayerCommandPreprocessEvent</td>
 <td>PlayerCommandPreprocessEvent</td>
 </tr>
 <tr>
 <td>onJoinClearCache</td>
 <td>PlayerJoinEvent</td>
-</tr>
-<tr>
-<td>onChat</td>
-<td>AsyncChatEvent</td>
 </tr>
 <tr>
 <td>OnEvent_LoginChatBanCheck</td>
@@ -2705,24 +2708,16 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onPlayerRespawnEvent</td>
-<td>PlayerRespawnEvent</td>
-</tr>
-<tr>
 <td>onPlayerMoveEvent</td>
 <td>PlayerMoveEvent</td>
 </tr>
 <tr>
+<td>onPlayerRespawnEvent</td>
+<td>PlayerRespawnEvent</td>
+</tr>
+<tr>
 <td>onPotionSplashEvent</td>
 <td>PotionSplashEvent</td>
-</tr>
-<tr>
-<td>onPlayerCommandPreprocessEvent</td>
-<td>PlayerCommandPreprocessEvent</td>
-</tr>
-<tr>
-<td>onJoinClearCache</td>
-<td>PlayerJoinEvent</td>
 </tr>
 <tr>
 <td>onBlockPlaceEvent</td>
@@ -2731,6 +2726,14 @@
 <tr>
 <td>onBlockBreakEvent</td>
 <td>BlockBreakEvent</td>
+</tr>
+<tr>
+<td>onPlayerCommandPreprocessEvent</td>
+<td>PlayerCommandPreprocessEvent</td>
+</tr>
+<tr>
+<td>onJoinClearCache</td>
+<td>PlayerJoinEvent</td>
 </tr>
 <tr>
 <td>onBlockIgniteEvent</td>
@@ -2805,6 +2808,24 @@
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_FirstLogin.java">com.jaoafa.mymaid4.event.Event_FirstLogin</a></p>
 </blockquote>
+<h3 id='events-wt-event_flyspeed'>Event_FlySpeed</h3>
+<p>flyspeedコマンドに関する処理を行います。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onSprint</td>
+<td>PlayerToggleSprintEvent</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_FlySpeed.java">com.jaoafa.mymaid4.event.Event_FlySpeed</a></p>
+</blockquote>
 <h3 id='events-wt-event_gamemodecmd'>Event_GameModeCmd</h3>
 <p>hideコマンドに関する処理を行います。</p>
 
@@ -2833,12 +2854,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onPlayerJoinEvent</td>
-<td>PlayerJoinEvent</td>
-</tr>
-<tr>
 <td>onAsyncPlayerChatEvent</td>
 <td>AsyncChatEvent</td>
+</tr>
+<tr>
+<td>onPlayerJoinEvent</td>
+<td>PlayerJoinEvent</td>
 </tr>
 <tr>
 <td>onCommand</td>
@@ -2881,24 +2902,16 @@
 <td>PlayerQuitEvent</td>
 </tr>
 <tr>
-<td>onPlayerRespawnEvent</td>
-<td>PlayerRespawnEvent</td>
-</tr>
-<tr>
 <td>onPlayerMoveEvent</td>
 <td>PlayerMoveEvent</td>
 </tr>
 <tr>
+<td>onPlayerRespawnEvent</td>
+<td>PlayerRespawnEvent</td>
+</tr>
+<tr>
 <td>onPotionSplashEvent</td>
 <td>PotionSplashEvent</td>
-</tr>
-<tr>
-<td>onPlayerCommandPreprocessEvent</td>
-<td>PlayerCommandPreprocessEvent</td>
-</tr>
-<tr>
-<td>onJoinClearCache</td>
-<td>PlayerJoinEvent</td>
 </tr>
 <tr>
 <td>onBlockPlaceEvent</td>
@@ -2907,6 +2920,14 @@
 <tr>
 <td>onBlockBreakEvent</td>
 <td>BlockBreakEvent</td>
+</tr>
+<tr>
+<td>onPlayerCommandPreprocessEvent</td>
+<td>PlayerCommandPreprocessEvent</td>
+</tr>
+<tr>
+<td>onJoinClearCache</td>
+<td>PlayerJoinEvent</td>
 </tr>
 <tr>
 <td>onBlockIgniteEvent</td>
@@ -3005,12 +3026,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>OnLoginAfterCheck</td>
-<td>PlayerJoinEvent</td>
-</tr>
-<tr>
 <td>OnLoginCheck</td>
 <td>AsyncPlayerPreLoginEvent</td>
+</tr>
+<tr>
+<td>OnLoginAfterCheck</td>
+<td>PlayerJoinEvent</td>
 </tr>
 </tbody></table>
 
@@ -3045,12 +3066,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>OnEvent_FirstLogin</td>
-<td>PlayerJoinEvent</td>
-</tr>
-<tr>
 <td>OnEvent_Quit</td>
 <td>PlayerQuitEvent</td>
+</tr>
+<tr>
+<td>OnEvent_FirstLogin</td>
+<td>PlayerJoinEvent</td>
 </tr>
 </tbody></table>
 
@@ -3085,12 +3106,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>OnEvent_LoginDBInsert</td>
-<td>PlayerJoinEvent</td>
-</tr>
-<tr>
 <td>OnEvent_QuitDBInsert</td>
 <td>PlayerQuitEvent</td>
+</tr>
+<tr>
+<td>OnEvent_LoginDBInsert</td>
+<td>PlayerJoinEvent</td>
 </tr>
 </tbody></table>
 
@@ -3235,12 +3256,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>onEvent_JoinTabReload</td>
-<td>PlayerJoinEvent</td>
-</tr>
-<tr>
 <td>onEvent_ChatSKK</td>
 <td>AsyncChatEvent</td>
+</tr>
+<tr>
+<td>onEvent_JoinTabReload</td>
+<td>PlayerJoinEvent</td>
 </tr>
 </tbody></table>
 
