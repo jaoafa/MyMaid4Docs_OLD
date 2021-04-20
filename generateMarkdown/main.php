@@ -97,7 +97,7 @@ foreach ($commands as $command) {
             $markdown[] = "";
         }
 
-        if (count($subcommand["alias"]) != 0) {
+        if (isset($subcommand["alias"]) && count($subcommand["alias"]) != 0) {
             $markdown[] = "- エイリアスがあります: `" . implode(", ", $subcommand["alias"]) . "`";
             $markdown[] = "";
         }
@@ -146,7 +146,12 @@ foreach ($events as $event) {
         $markdown[] = "| メソッド名 | イベント |";
         $markdown[] = "| - | - |";
         $methods = $event["methods"];
-        array_multisort(array_column($methods, "name"), SORT_ASC, $methods);
+        usort($methods, function ($a, $b) {
+            if ($a["name"] == $b["name"]) {
+                return 0;
+            }
+            return ($a["name"] < $b["name"]) ? 1 : -1;
+        });
         foreach ($event["methods"] as $method) {
             $markdown[] = "| " . $method["name"] . " | " . substr($method["event"], strrpos($method["event"], ".") + 1) . " |";
         }
