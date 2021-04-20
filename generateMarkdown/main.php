@@ -145,8 +145,10 @@ foreach ($events as $event) {
     if (isset($event["methods"]) && count($event["methods"]) != 0) {
         $markdown[] = "| メソッド名 | イベント |";
         $markdown[] = "| - | - |";
+        $methods = $event["methods"];
+        array_multisort(array_column($methods, "name"), SORT_ASC, $methods);
         foreach ($event["methods"] as $method) {
-            $markdown[] = "| " . $method["name"] . " | " . substr($method["event"], strrpos($method["event"], ".") + 1) . "|";
+            $markdown[] = "| " . $method["name"] . " | " . substr($method["event"], strrpos($method["event"], ".") + 1) . " |";
         }
     }
     $markdown[] = "> ソースコード: [" . $event["class"] . "](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/" . str_replace(".", "/", $event["class"]) . ".java)";
