@@ -595,7 +595,7 @@
 
 <p>新しいコマンド・機能の要望、不具合の報告などは <a href="https://forms.gle/EZGVhKdbryfW5fCm8">開発部リクエストボックス</a> か <a href="https://github.com/jaoafa/MyMaid4/issues">MyMaid4 の Issue</a> へお願いします。</p>
 <ul>
-<li>Version: 2021.04.19_01.48_7d31349</li>
+<li>Version: 2021.04.22_05.52_7b06f18</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -1319,6 +1319,7 @@
 <p>他のプレイヤーから姿を隠します。</p>
 <h2 id='commands-history'>history</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/history add &lt;target&gt; &lt;message&gt;
 /history disable &lt;target&gt; &lt;item&gt;
+/history notify &lt;target&gt; &lt;item&gt; &lt;changeTo&gt;
 /history status &lt;target&gt;
 </code></pre></div>
 <blockquote>
@@ -1370,6 +1371,36 @@
 <tr>
 <td><code>item</code></td>
 <td>IntegerArgument</td>
+<td>はい</td>
+<td>説明なし</td>
+</tr>
+</tbody></table>
+<h3 id='commands-history-history-notify-lt-target-gt-lt-item-gt-lt-changeto-gt'><code>/history notify &lt;target&gt; &lt;item&gt; &lt;changeTo&gt;</code></h3>
+<p>指定したプレイヤーのjaoHistory項目の通知設定を行います。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>target</code></td>
+<td>OfflinePlayerArgument</td>
+<td>はい</td>
+<td>説明なし</td>
+</tr>
+<tr>
+<td><code>item</code></td>
+<td>IntegerArgument</td>
+<td>はい</td>
+<td>説明なし</td>
+</tr>
+<tr>
+<td><code>changeTo</code></td>
+<td>BooleanArgument</td>
 <td>はい</td>
 <td>説明なし</td>
 </tr>
@@ -2712,12 +2743,12 @@
 <td>PlayerRespawnEvent</td>
 </tr>
 <tr>
-<td>onPlayerMoveEvent</td>
-<td>PlayerMoveEvent</td>
-</tr>
-<tr>
 <td>onPotionSplashEvent</td>
 <td>PotionSplashEvent</td>
+</tr>
+<tr>
+<td>onPlayerMoveEvent</td>
+<td>PlayerMoveEvent</td>
 </tr>
 <tr>
 <td>onBlockPlaceEvent</td>
@@ -2748,8 +2779,8 @@
 <td>PlayerBucketFillEvent</td>
 </tr>
 <tr>
-<td>OnEvent_LoginEBanCheck</td>
-<td>PlayerJoinEvent</td>
+<td>onProjectileLaunchEvent</td>
+<td>ProjectileLaunchEvent</td>
 </tr>
 <tr>
 <td>onEvent_ChatLiquidBounce</td>
@@ -2764,8 +2795,8 @@
 <td>PlayerDropItemEvent</td>
 </tr>
 <tr>
-<td>onProjectileLaunchEvent</td>
-<td>ProjectileLaunchEvent</td>
+<td>OnEvent_LoginEBanCheck</td>
+<td>PlayerJoinEvent</td>
 </tr>
 </tbody></table>
 
@@ -2906,12 +2937,12 @@
 <td>PlayerRespawnEvent</td>
 </tr>
 <tr>
-<td>onPlayerMoveEvent</td>
-<td>PlayerMoveEvent</td>
-</tr>
-<tr>
 <td>onPotionSplashEvent</td>
 <td>PotionSplashEvent</td>
+</tr>
+<tr>
+<td>onPlayerMoveEvent</td>
+<td>PlayerMoveEvent</td>
 </tr>
 <tr>
 <td>onBlockPlaceEvent</td>
@@ -2942,16 +2973,16 @@
 <td>PlayerBucketFillEvent</td>
 </tr>
 <tr>
+<td>onProjectileLaunchEvent</td>
+<td>ProjectileLaunchEvent</td>
+</tr>
+<tr>
 <td>onPlayerPickupItemEvent</td>
 <td>EntityPickupItemEvent</td>
 </tr>
 <tr>
 <td>onPlayerDropItemEvent</td>
 <td>PlayerDropItemEvent</td>
-</tr>
-<tr>
-<td>onProjectileLaunchEvent</td>
-<td>ProjectileLaunchEvent</td>
 </tr>
 <tr>
 <td>OnEvent_LoginJailCheck</td>
@@ -3026,12 +3057,12 @@
 </tr>
 </thead><tbody>
 <tr>
-<td>OnLoginCheck</td>
-<td>AsyncPlayerPreLoginEvent</td>
-</tr>
-<tr>
 <td>OnLoginAfterCheck</td>
 <td>PlayerJoinEvent</td>
+</tr>
+<tr>
+<td>OnLoginCheck</td>
+<td>AsyncPlayerPreLoginEvent</td>
 </tr>
 </tbody></table>
 
