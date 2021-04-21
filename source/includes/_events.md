@@ -186,8 +186,8 @@ EBanに関する各種処理を行います。
 | メソッド名 | イベント |
 | - | - |
 | onPlayerRespawnEvent | PlayerRespawnEvent |
-| onPlayerMoveEvent | PlayerMoveEvent |
 | onPotionSplashEvent | PotionSplashEvent |
+| onPlayerMoveEvent | PlayerMoveEvent |
 | onBlockPlaceEvent | BlockPlaceEvent |
 | onPlayerCommandPreprocessEvent | PlayerCommandPreprocessEvent |
 | onJoinClearCache | PlayerJoinEvent |
@@ -195,11 +195,11 @@ EBanに関する各種処理を行います。
 | onBlockIgniteEvent | BlockIgniteEvent |
 | onPlayerBucketEmptyEvent | PlayerBucketEmptyEvent |
 | onPlayerBucketFillEvent | PlayerBucketFillEvent |
-| OnEvent_LoginEBanCheck | PlayerJoinEvent |
+| onProjectileLaunchEvent | ProjectileLaunchEvent |
 | onEvent_ChatLiquidBounce | AsyncChatEvent |
 | onPlayerPickupItemEvent | EntityPickupItemEvent |
 | onPlayerDropItemEvent | PlayerDropItemEvent |
-| onProjectileLaunchEvent | ProjectileLaunchEvent |
+| OnEvent_LoginEBanCheck | PlayerJoinEvent |
 > ソースコード: [com.jaoafa.mymaid4.event.Event_EBan](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_EBan.java)
 
 ### Event_Explosion
@@ -266,8 +266,8 @@ Jailに関する各種処理を行います。
 | - | - |
 | onQuit | PlayerQuitEvent |
 | onPlayerRespawnEvent | PlayerRespawnEvent |
-| onPlayerMoveEvent | PlayerMoveEvent |
 | onPotionSplashEvent | PotionSplashEvent |
+| onPlayerMoveEvent | PlayerMoveEvent |
 | onBlockPlaceEvent | BlockPlaceEvent |
 | onPlayerCommandPreprocessEvent | PlayerCommandPreprocessEvent |
 | onJoinClearCache | PlayerJoinEvent |
@@ -275,9 +275,9 @@ Jailに関する各種処理を行います。
 | onBlockIgniteEvent | BlockIgniteEvent |
 | onPlayerBucketEmptyEvent | PlayerBucketEmptyEvent |
 | onPlayerBucketFillEvent | PlayerBucketFillEvent |
+| onProjectileLaunchEvent | ProjectileLaunchEvent |
 | onPlayerPickupItemEvent | EntityPickupItemEvent |
 | onPlayerDropItemEvent | PlayerDropItemEvent |
-| onProjectileLaunchEvent | ProjectileLaunchEvent |
 | OnEvent_LoginJailCheck | PlayerJoinEvent |
 > ソースコード: [com.jaoafa.mymaid4.event.Event_Jail](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Jail.java)
 
@@ -314,8 +314,8 @@ lookingコマンドに関する処理を行います。
 
 | メソッド名 | イベント |
 | - | - |
-| OnLoginCheck | AsyncPlayerPreLoginEvent |
 | OnLoginAfterCheck | PlayerJoinEvent |
+| OnLoginCheck | AsyncPlayerPreLoginEvent |
 > ソースコード: [com.jaoafa.mymaid4.event.Event_MCBansLoginCheck](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_MCBansLoginCheck.java)
 
 ### Event_ManageCPPerms

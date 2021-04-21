@@ -552,6 +552,7 @@ EBan一覧を表示します。
 ```plaintext
 /history add <target> <message>
 /history disable <target> <item>
+/history notify <target> <item> <changeTo>
 /history status <target>
 ```
 
@@ -576,6 +577,16 @@ jaoHistoryに関する操作を行います。
 | - | - | - | - |
 | `target` | OfflinePlayerArgument | はい | 説明なし |
 | `item` | IntegerArgument | はい | 説明なし |
+
+### `/history notify <target> <item> <changeTo>`
+
+指定したプレイヤーのjaoHistory項目の通知設定を行います。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `target` | OfflinePlayerArgument | はい | 説明なし |
+| `item` | IntegerArgument | はい | 説明なし |
+| `changeTo` | BooleanArgument | はい | 説明なし |
 
 ### `/history status <target>`
 
