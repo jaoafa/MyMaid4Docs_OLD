@@ -186,20 +186,20 @@ EBanに関する各種処理を行います。
 | メソッド名 | イベント |
 | - | - |
 | onPlayerRespawnEvent | PlayerRespawnEvent |
-| onPotionSplashEvent | PotionSplashEvent |
 | onPlayerMoveEvent | PlayerMoveEvent |
+| onPotionSplashEvent | PotionSplashEvent |
 | onBlockPlaceEvent | BlockPlaceEvent |
+| onBlockBreakEvent | BlockBreakEvent |
 | onPlayerCommandPreprocessEvent | PlayerCommandPreprocessEvent |
 | onJoinClearCache | PlayerJoinEvent |
-| onBlockBreakEvent | BlockBreakEvent |
 | onBlockIgniteEvent | BlockIgniteEvent |
 | onPlayerBucketEmptyEvent | PlayerBucketEmptyEvent |
 | onPlayerBucketFillEvent | PlayerBucketFillEvent |
-| onProjectileLaunchEvent | ProjectileLaunchEvent |
+| OnEvent_LoginEBanCheck | PlayerJoinEvent |
 | onEvent_ChatLiquidBounce | AsyncChatEvent |
 | onPlayerPickupItemEvent | EntityPickupItemEvent |
 | onPlayerDropItemEvent | PlayerDropItemEvent |
-| OnEvent_LoginEBanCheck | PlayerJoinEvent |
+| onProjectileLaunchEvent | ProjectileLaunchEvent |
 > ソースコード: [com.jaoafa.mymaid4.event.Event_EBan](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_EBan.java)
 
 ### Event_Explosion
@@ -266,18 +266,18 @@ Jailに関する各種処理を行います。
 | - | - |
 | onQuit | PlayerQuitEvent |
 | onPlayerRespawnEvent | PlayerRespawnEvent |
-| onPotionSplashEvent | PotionSplashEvent |
 | onPlayerMoveEvent | PlayerMoveEvent |
+| onPotionSplashEvent | PotionSplashEvent |
 | onBlockPlaceEvent | BlockPlaceEvent |
+| onBlockBreakEvent | BlockBreakEvent |
 | onPlayerCommandPreprocessEvent | PlayerCommandPreprocessEvent |
 | onJoinClearCache | PlayerJoinEvent |
-| onBlockBreakEvent | BlockBreakEvent |
 | onBlockIgniteEvent | BlockIgniteEvent |
 | onPlayerBucketEmptyEvent | PlayerBucketEmptyEvent |
 | onPlayerBucketFillEvent | PlayerBucketFillEvent |
-| onProjectileLaunchEvent | ProjectileLaunchEvent |
 | onPlayerPickupItemEvent | EntityPickupItemEvent |
 | onPlayerDropItemEvent | PlayerDropItemEvent |
+| onProjectileLaunchEvent | ProjectileLaunchEvent |
 | OnEvent_LoginJailCheck | PlayerJoinEvent |
 > ソースコード: [com.jaoafa.mymaid4.event.Event_Jail](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Jail.java)
 
@@ -333,8 +333,8 @@ CoreProtectのパーミッションノードを管理します。
 
 | メソッド名 | イベント |
 | - | - |
-| OnEvent_FirstLogin | PlayerJoinEvent |
 | OnEvent_Quit | PlayerQuitEvent |
+| OnEvent_FirstLogin | PlayerJoinEvent |
 > ソースコード: [com.jaoafa.mymaid4.event.Event_NewPlayerAutoBlMap](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_NewPlayerAutoBlMap.java)
 
 ### Event_NotifyKick
@@ -352,8 +352,8 @@ CoreProtectのパーミッションノードを管理します。
 
 | メソッド名 | イベント |
 | - | - |
-| OnEvent_LoginDBInsert | PlayerJoinEvent |
 | OnEvent_QuitDBInsert | PlayerQuitEvent |
+| OnEvent_LoginDBInsert | PlayerJoinEvent |
 > ソースコード: [com.jaoafa.mymaid4.event.Event_OnlineTimeDB](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_OnlineTimeDB.java)
 
 ### Event_PacketLimiterKick
@@ -395,12 +395,12 @@ SandBoxをRegular権限グループ未満のプレイヤーが編集できない
 | メソッド名 | イベント |
 | - | - |
 | onProjectileLaunchEvent | ProjectileLaunchEvent |
+| onSandBoxBucketFillEvent | PlayerBucketFillEvent |
 | ontoSandBox | PlayerChangedWorldEvent |
 | onSandBoxPlace | BlockPlaceEvent |
 | onSandBoxBreak | BlockBreakEvent |
 | onSandBoxIgniteEvent | BlockIgniteEvent |
 | onSandBoxBucketEmptyEvent | PlayerBucketEmptyEvent |
-| onSandBoxBucketFillEvent | PlayerBucketFillEvent |
 | onInteractRight | PlayerInteractEvent |
 | onInteractLeft | PlayerInteractEvent |
 | onDamageArmorStand | EntityDamageByEntityEvent |
