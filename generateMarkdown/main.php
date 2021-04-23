@@ -152,7 +152,7 @@ foreach ($events as $event) {
             }
             return ($a["name"] < $b["name"]) ? 1 : -1;
         });
-        foreach ($event["methods"] as $method) {
+        foreach ($methods as $method) {
             $markdown[] = "| " . $method["name"] . " | " . substr($method["event"], strrpos($method["event"], ".") + 1) . " |";
         }
     }
