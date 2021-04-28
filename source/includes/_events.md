@@ -1,12 +1,3 @@
-### Event_AntiLoginCmd
-
-ログインコマンドの使用制限を行います。
-
-| メソッド名 | イベント |
-| - | - |
-| onOPCommand | PlayerCommandPreprocessEvent |
-> ソースコード: [com.jaoafa.mymaid4.event.Event_AntiLoginCmd](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_AntiLoginCmd.java)
-
 ### Event_AntiProblemCommand
 
 迷惑コマンドの制限を行います。
