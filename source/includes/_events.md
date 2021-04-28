@@ -416,6 +416,16 @@ SandBoxをRegular権限グループ未満のプレイヤーが編集できない
 | onEvent_ChatSKK | AsyncChatEvent |
 > ソースコード: [com.jaoafa.mymaid4.event.Event_SKKColor](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_SKKColor.java)
 
+### Event_TabList
+
+Tabで表示されるヘッダー・フッターに関する処理を行います。
+
+| メソッド名 | イベント |
+| - | - |
+| onQuit | PlayerQuitEvent |
+| onJoin | PlayerJoinEvent |
+> ソースコード: [com.jaoafa.mymaid4.event.Event_TabList](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_TabList.java)
+
 ### Event_TeleportCmd
 
 tpコマンドを受けてTeleportCommandEventを動作させます。
