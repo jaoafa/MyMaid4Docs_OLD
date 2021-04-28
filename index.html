@@ -564,6 +564,9 @@
                     <a href="#events-wt-event_skkcolor" class="toc-h2 toc-link" data-title="Event_SKKColor">Event_SKKColor</a>
                   </li>
                   <li>
+                    <a href="#events-wt-event_tablist" class="toc-h2 toc-link" data-title="Event_TabList">Event_TabList</a>
+                  </li>
+                  <li>
                     <a href="#events-wt-event_teleportcmd" class="toc-h2 toc-link" data-title="Event_TeleportCmd">Event_TeleportCmd</a>
                   </li>
                   <li>
@@ -595,7 +598,7 @@
 
 <p>新しいコマンド・機能の要望、不具合の報告などは <a href="https://forms.gle/EZGVhKdbryfW5fCm8">開発部リクエストボックス</a> か <a href="https://github.com/jaoafa/MyMaid4/issues">MyMaid4 の Issue</a> へお願いします。</p>
 <ul>
-<li>Version: 2021.04.29_00.20_c34719c</li>
+<li>Version: 2021.04.29_03.04_a73e13f</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -3298,6 +3301,28 @@
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_SKKColor.java">com.jaoafa.mymaid4.event.Event_SKKColor</a></p>
+</blockquote>
+<h3 id='events-wt-event_tablist'>Event_TabList</h3>
+<p>Tabで表示されるヘッダー・フッターに関する処理を行います。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onQuit</td>
+<td>PlayerQuitEvent</td>
+</tr>
+<tr>
+<td>onJoin</td>
+<td>PlayerJoinEvent</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_TabList.java">com.jaoafa.mymaid4.event.Event_TabList</a></p>
 </blockquote>
 <h3 id='events-wt-event_teleportcmd'>Event_TeleportCmd</h3>
 <p>tpコマンドを受けてTeleportCommandEventを動作させます。</p>
