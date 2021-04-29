@@ -430,6 +430,9 @@
                     <a href="#commands-testment" class="toc-h2 toc-link" data-title="testment">testment</a>
                   </li>
                   <li>
+                    <a href="#commands-time" class="toc-h2 toc-link" data-title="time">time</a>
+                  </li>
+                  <li>
                     <a href="#commands-tpdeny" class="toc-h2 toc-link" data-title="tpdeny">tpdeny</a>
                   </li>
                   <li>
@@ -561,6 +564,9 @@
                     <a href="#events-wt-event_skkcolor" class="toc-h2 toc-link" data-title="Event_SKKColor">Event_SKKColor</a>
                   </li>
                   <li>
+                    <a href="#events-wt-event_set43" class="toc-h2 toc-link" data-title="Event_Set43">Event_Set43</a>
+                  </li>
+                  <li>
                     <a href="#events-wt-event_tablist" class="toc-h2 toc-link" data-title="Event_TabList">Event_TabList</a>
                   </li>
                   <li>
@@ -595,7 +601,7 @@
 
 <p>新しいコマンド・機能の要望、不具合の報告などは <a href="https://forms.gle/EZGVhKdbryfW5fCm8">開発部リクエストボックス</a> か <a href="https://github.com/jaoafa/MyMaid4/issues">MyMaid4 の Issue</a> へお願いします。</p>
 <ul>
-<li>Version: 2021.04.29_07.36_044e02b</li>
+<li>Version: 2021.04.29_19.16_100d97e</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -902,6 +908,7 @@
 /dt del &lt;markerName&gt;
 /dt random
 /dt near
+/dt neartp
 /dt list [page]
 </code></pre></div>
 <blockquote>
@@ -999,6 +1006,12 @@
 </aside>
 
 <p>近くのマーカーを表示します。</p>
+<h3 id='commands-dt-dt-neartp'><code>/dt neartp</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>近くのマーカーにテレポートします。</p>
 <h3 id='commands-dt-dt-list-page'><code>/dt list [page]</code></h3>
 <aside class="notice">
 このコマンドはプレイヤーからの実行のみに制限されています。
@@ -2116,6 +2129,7 @@
 </tbody></table>
 <h2 id='commands-test'>test</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/test version
 /test database
+/test nbt
 </code></pre></div>
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Test.java">com.jaoafa.mymaid4.command.Cmd_Test</a></p>
@@ -2125,6 +2139,8 @@
 <h3 id='commands-test-test-version'><code>/test version</code></h3>
 <p>MyMaidテストコマンド</p>
 <h3 id='commands-test-test-database'><code>/test database</code></h3>
+<p>MyMaidテストコマンド</p>
+<h3 id='commands-test-test-nbt'><code>/test nbt</code></h3>
 <p>MyMaidテストコマンド</p>
 <h2 id='commands-testment'>testment</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/testment &lt;message&gt;
 </code></pre></div>
@@ -2152,6 +2168,70 @@
 <td><code>message</code></td>
 <td>StringArgument</td>
 <td>はい</td>
+<td>説明なし</td>
+</tr>
+</tbody></table>
+<h2 id='commands-time'>time</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/time set &lt;timeName&gt; [isRelative]
+/time add &lt;timeInt&gt; [isRelative]
+</code></pre></div>
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Time.java">com.jaoafa.mymaid4.command.Cmd_Time</a></p>
+</blockquote>
+
+<p>自分だけに適用される時間を設定します。</p>
+<h3 id='commands-time-time-set-lt-timename-gt-isrelative'><code>/time set &lt;timeName&gt; [isRelative]</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>自分だけに適用される時間を設定します。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>timeName</code></td>
+<td>StringArgument</td>
+<td>はい</td>
+<td>説明なし</td>
+</tr>
+<tr>
+<td><code>isRelative</code></td>
+<td>BooleanArgument</td>
+<td>いいえ</td>
+<td>説明なし</td>
+</tr>
+</tbody></table>
+<h3 id='commands-time-time-add-lt-timeint-gt-isrelative'><code>/time add &lt;timeInt&gt; [isRelative]</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>自分だけに適用される時間を進めます。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>timeInt</code></td>
+<td>IntegerArgument</td>
+<td>はい</td>
+<td>説明なし</td>
+</tr>
+<tr>
+<td><code>isRelative</code></td>
+<td>BooleanArgument</td>
+<td>いいえ</td>
 <td>説明なし</td>
 </tr>
 </tbody></table>
@@ -2481,6 +2561,10 @@
 <td>PlayerInteractEvent</td>
 </tr>
 <tr>
+<td>PlayerCreativeInv</td>
+<td>InventoryCreativeEvent</td>
+</tr>
+<tr>
 <td>OnPickup</td>
 <td>EntityPickupItemEvent</td>
 </tr>
@@ -2491,6 +2575,18 @@
 <tr>
 <td>InvClick</td>
 <td>InventoryClickEvent</td>
+</tr>
+<tr>
+<td>ByPlayerCommand</td>
+<td>PlayerCommandPreprocessEvent</td>
+</tr>
+<tr>
+<td>ByItemPickup</td>
+<td>EntityPickupItemEvent</td>
+</tr>
+<tr>
+<td>ByCommandBlock</td>
+<td>ServerCommandEvent</td>
 </tr>
 </tbody></table>
 
@@ -3280,6 +3376,24 @@
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_SKKColor.java">com.jaoafa.mymaid4.event.Event_SKKColor</a></p>
+</blockquote>
+<h3 id='events-wt-event_set43'>Event_Set43</h3>
+<p>set 43コマンドを従来の動作に戻します。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onTeleportCommandFromPlayer</td>
+<td>PlayerCommandPreprocessEvent</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Set43.java">com.jaoafa.mymaid4.event.Event_Set43</a></p>
 </blockquote>
 <h3 id='events-wt-event_tablist'>Event_TabList</h3>
 <p>Tabで表示されるヘッダー・フッターに関する処理を行います。</p>
