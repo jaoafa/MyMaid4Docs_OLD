@@ -234,6 +234,7 @@ DiscordアカウントとMinecraftアカウントを紐づけます。
 /dt del <markerName>
 /dt random
 /dt near
+/dt neartp
 /dt list [page]
 ```
 
@@ -294,6 +295,14 @@ DynmapのMarkerを編集・テレポートします。
 </aside>
 
 近くのマーカーを表示します。
+
+### `/dt neartp`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+近くのマーカーにテレポートします。
 
 ### `/dt list [page]`
 
@@ -1112,6 +1121,7 @@ TempMuteをオン・オフします。指定しない場合、トグルで変更
 ```plaintext
 /test version
 /test database
+/test nbt
 ```
 
 > ソースコード: [com.jaoafa.mymaid4.command.Cmd_Test](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Test.java)
@@ -1123,6 +1133,10 @@ MyMaidテストコマンド
 MyMaidテストコマンド
 
 ### `/test database`
+
+MyMaidテストコマンド
+
+### `/test nbt`
 
 MyMaidテストコマンド
 
@@ -1147,6 +1161,43 @@ Jailの遺言を残します。jail testmentのエイリアスです。
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
 | `message` | StringArgument | はい | 説明なし |
+
+## time
+
+```plaintext
+/time set <timeName> [isRelative]
+/time add <timeInt> [isRelative]
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Time](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Time.java)
+
+自分だけに適用される時間を設定します。
+
+### `/time set <timeName> [isRelative]`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+自分だけに適用される時間を設定します。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `timeName` | StringArgument | はい | 説明なし |
+| `isRelative` | BooleanArgument | いいえ | 説明なし |
+
+### `/time add <timeInt> [isRelative]`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+自分だけに適用される時間を進めます。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `timeInt` | IntegerArgument | はい | 説明なし |
+| `isRelative` | BooleanArgument | いいえ | 説明なし |
 
 ## tpdeny
 

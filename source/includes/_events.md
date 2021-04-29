@@ -62,9 +62,13 @@ jaoium制限に関する処理を行います。
 | onPotionSplashEvent | PotionSplashEvent |
 | onPlayerItemHeldEvent | PlayerItemHeldEvent |
 | onPlayerInteractEvent | PlayerInteractEvent |
+| PlayerCreativeInv | InventoryCreativeEvent |
 | OnPickup | EntityPickupItemEvent |
 | OnBlockDispenseEvent | BlockDispenseEvent |
 | InvClick | InventoryClickEvent |
+| ByPlayerCommand | PlayerCommandPreprocessEvent |
+| ByItemPickup | EntityPickupItemEvent |
+| ByCommandBlock | ServerCommandEvent |
 > ソースコード: [com.jaoafa.mymaid4.event.Event_Antijaoium](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Antijaoium.java)
 
 ### Event_ChatBan
@@ -406,6 +410,15 @@ SandBoxをRegular権限グループ未満のプレイヤーが編集できない
 | onEvent_JoinTabReload | PlayerJoinEvent |
 | onEvent_ChatSKK | AsyncChatEvent |
 > ソースコード: [com.jaoafa.mymaid4.event.Event_SKKColor](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_SKKColor.java)
+
+### Event_Set43
+
+set 43コマンドを従来の動作に戻します。
+
+| メソッド名 | イベント |
+| - | - |
+| onTeleportCommandFromPlayer | PlayerCommandPreprocessEvent |
+> ソースコード: [com.jaoafa.mymaid4.event.Event_Set43](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Set43.java)
 
 ### Event_TabList
 
