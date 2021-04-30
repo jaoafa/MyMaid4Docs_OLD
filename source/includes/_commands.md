@@ -414,6 +414,8 @@ EBan一覧を表示します。
 
 ゲームモードを変更します。
 
+- エイリアスがあります: `gm`
+
 ### `/g`
 
 <aside class="notice">
@@ -802,6 +804,26 @@ linkコマンドはjMS Gamers Clubで実行するのだ。
 </aside>
 
 プレイヤーを見続けるのをやめます。
+
+## makecmd
+
+```plaintext
+/makecmd
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_MakeCmd](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_MakeCmd.java)
+
+giveコマンドを生成します。
+
+- エイリアスがあります: `givecmd`
+
+### `/makecmd`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+giveコマンドを生成します。
 
 ## pigeon
 
