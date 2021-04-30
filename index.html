@@ -394,6 +394,9 @@
                     <a href="#commands-looking" class="toc-h2 toc-link" data-title="looking">looking</a>
                   </li>
                   <li>
+                    <a href="#commands-makecmd" class="toc-h2 toc-link" data-title="makecmd">makecmd</a>
+                  </li>
+                  <li>
                     <a href="#commands-pigeon" class="toc-h2 toc-link" data-title="pigeon">pigeon</a>
                   </li>
                   <li>
@@ -601,7 +604,7 @@
 
 <p>新しいコマンド・機能の要望、不具合の報告などは <a href="https://forms.gle/EZGVhKdbryfW5fCm8">開発部リクエストボックス</a> か <a href="https://github.com/jaoafa/MyMaid4/issues">MyMaid4 の Issue</a> へお願いします。</p>
 <ul>
-<li>Version: 2021.04.29_22.01_e25c261</li>
+<li>Version: 2021.04.30_16.04_6c9b8a4</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -1173,6 +1176,10 @@
 </blockquote>
 
 <p>ゲームモードを変更します。</p>
+
+<ul>
+<li>エイリアスがあります: <code>gm</code></li>
+</ul>
 <h3 id='commands-g-g'><code>/g</code></h3>
 <aside class="notice">
 このコマンドはプレイヤーからの実行のみに制限されています。
@@ -1706,6 +1713,23 @@
 </aside>
 
 <p>プレイヤーを見続けるのをやめます。</p>
+<h2 id='commands-makecmd'>makecmd</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/makecmd
+</code></pre></div>
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_MakeCmd.java">com.jaoafa.mymaid4.command.Cmd_MakeCmd</a></p>
+</blockquote>
+
+<p>giveコマンドを生成します。</p>
+
+<ul>
+<li>エイリアスがあります: <code>givecmd</code></li>
+</ul>
+<h3 id='commands-makecmd-makecmd'><code>/makecmd</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>giveコマンドを生成します。</p>
 <h2 id='commands-pigeon'>pigeon</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/pigeon speaker add &lt;speaker&gt;
 /pigeon messages add &lt;message&gt;
 /pigeon speaker remove [speaker]
