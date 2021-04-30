@@ -337,6 +337,9 @@
                     <a href="#commands-dedbull" class="toc-h2 toc-link" data-title="dedbull">dedbull</a>
                   </li>
                   <li>
+                    <a href="#commands-dedmessage" class="toc-h2 toc-link" data-title="dedmessage">dedmessage</a>
+                  </li>
+                  <li>
                     <a href="#commands-delhome" class="toc-h2 toc-link" data-title="delhome">delhome</a>
                   </li>
                   <li>
@@ -492,6 +495,9 @@
                     <a href="#events-wt-event_ded" class="toc-h2 toc-link" data-title="Event_Ded">Event_Ded</a>
                   </li>
                   <li>
+                    <a href="#events-wt-event_dedmessage" class="toc-h2 toc-link" data-title="Event_DedMessage">Event_DedMessage</a>
+                  </li>
+                  <li>
                     <a href="#events-wt-event_disableconcretetransition" class="toc-h2 toc-link" data-title="Event_DisableConcreteTransition">Event_DisableConcreteTransition</a>
                   </li>
                   <li>
@@ -604,7 +610,7 @@
 
 <p>新しいコマンド・機能の要望、不具合の報告などは <a href="https://forms.gle/EZGVhKdbryfW5fCm8">開発部リクエストボックス</a> か <a href="https://github.com/jaoafa/MyMaid4/issues">MyMaid4 の Issue</a> へお願いします。</p>
 <ul>
-<li>Version: 2021.04.30_16.04_6c9b8a4</li>
+<li>Version: 2021.05.01_04.34_87acfa7</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -837,6 +843,95 @@
 </aside>
 
 <p>プレイヤーに暗視効果を付与します。すでに付与されている場合は削除します。</p>
+<h2 id='commands-dedmessage'>dedmessage</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/dedmessage
+/dedmessage register &lt;message&gt;
+/dedmessage disable
+/dedmessage remove &lt;id&gt;
+/dedmessage list [page]
+</code></pre></div>
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_DedMessage.java">com.jaoafa.mymaid4.command.Cmd_DedMessage</a></p>
+</blockquote>
+
+<p>カスタム死亡メッセージを設定します。</p>
+<h3 id='commands-dedmessage-dedmessage'><code>/dedmessage</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>今いる場所にカスタム死亡メッセージが設定されているかどうかを調べます。</p>
+<h3 id='commands-dedmessage-dedmessage-register-lt-message-gt'><code>/dedmessage register &lt;message&gt;</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>カスタム死亡メッセージを登録します。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>message</code></td>
+<td>StringArgument</td>
+<td>はい</td>
+<td>カスタム死亡メッセージ（%player% はプレイヤー名、%killer% はキルした人の名前に置き換わります）</td>
+</tr>
+</tbody></table>
+<h3 id='commands-dedmessage-dedmessage-disable'><code>/dedmessage disable</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>死亡メッセージ表示を無効化します。</p>
+<h3 id='commands-dedmessage-dedmessage-remove-lt-id-gt'><code>/dedmessage remove &lt;id&gt;</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>カスタム死亡メッセージを削除します。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>id</code></td>
+<td>IntegerArgument</td>
+<td>はい</td>
+<td>説明なし</td>
+</tr>
+</tbody></table>
+<h3 id='commands-dedmessage-dedmessage-list-page'><code>/dedmessage list [page]</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>カスタム死亡メッセージの一覧を表示します。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>page</code></td>
+<td>IntegerArgument</td>
+<td>いいえ</td>
+<td>説明なし</td>
+</tr>
+</tbody></table>
 <h2 id='commands-delhome'>delhome</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/delhome
 /delhome [name]
 </code></pre></div>
@@ -2758,6 +2853,24 @@
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Ded.java">com.jaoafa.mymaid4.event.Event_Ded</a></p>
+</blockquote>
+<h3 id='events-wt-event_dedmessage'>Event_DedMessage</h3>
+<p>コンクリートパウダーの変化を無効化します。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onDeath</td>
+<td>PlayerDeathEvent</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_DedMessage.java">com.jaoafa.mymaid4.event.Event_DedMessage</a></p>
 </blockquote>
 <h3 id='events-wt-event_disableconcretetransition'>Event_DisableConcreteTransition</h3>
 <p>コンクリートパウダーの変化を無効化します。</p>
