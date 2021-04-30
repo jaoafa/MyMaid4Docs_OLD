@@ -138,6 +138,15 @@ dedコマンドに関する処理を行います。
 | onPlayerDeathEvent | PlayerDeathEvent |
 > ソースコード: [com.jaoafa.mymaid4.event.Event_Ded](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Ded.java)
 
+### Event_DedMessage
+
+コンクリートパウダーの変化を無効化します。
+
+| メソッド名 | イベント |
+| - | - |
+| onDeath | PlayerDeathEvent |
+> ソースコード: [com.jaoafa.mymaid4.event.Event_DedMessage](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_DedMessage.java)
+
 ### Event_DisableConcreteTransition
 
 コンクリートパウダーの変化を無効化します。

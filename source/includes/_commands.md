@@ -171,6 +171,72 @@ ChatBan一覧を表示します。
 
 プレイヤーに暗視効果を付与します。すでに付与されている場合は削除します。
 
+## dedmessage
+
+```plaintext
+/dedmessage
+/dedmessage register <message>
+/dedmessage disable
+/dedmessage remove <id>
+/dedmessage list [page]
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_DedMessage](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_DedMessage.java)
+
+カスタム死亡メッセージを設定します。
+
+### `/dedmessage`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+今いる場所にカスタム死亡メッセージが設定されているかどうかを調べます。
+
+### `/dedmessage register <message>`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+カスタム死亡メッセージを登録します。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `message` | StringArgument | はい | カスタム死亡メッセージ（%player% はプレイヤー名、%killer% はキルした人の名前に置き換わります） |
+
+### `/dedmessage disable`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+死亡メッセージ表示を無効化します。
+
+### `/dedmessage remove <id>`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+カスタム死亡メッセージを削除します。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `id` | IntegerArgument | はい | 説明なし |
+
+### `/dedmessage list [page]`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+カスタム死亡メッセージの一覧を表示します。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `page` | IntegerArgument | いいえ | 説明なし |
+
 ## delhome
 
 ```plaintext
