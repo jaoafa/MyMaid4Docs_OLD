@@ -421,6 +421,9 @@
                     <a href="#commands-show" class="toc-h2 toc-link" data-title="show">show</a>
                   </li>
                   <li>
+                    <a href="#commands-sign" class="toc-h2 toc-link" data-title="sign">sign</a>
+                  </li>
+                  <li>
                     <a href="#commands-skkcolor" class="toc-h2 toc-link" data-title="skkcolor">skkcolor</a>
                   </li>
                   <li>
@@ -576,6 +579,9 @@
                     <a href="#events-wt-event_set43" class="toc-h2 toc-link" data-title="Event_Set43">Event_Set43</a>
                   </li>
                   <li>
+                    <a href="#events-wt-event_sign" class="toc-h2 toc-link" data-title="Event_Sign">Event_Sign</a>
+                  </li>
+                  <li>
                     <a href="#events-wt-event_tablist" class="toc-h2 toc-link" data-title="Event_TabList">Event_TabList</a>
                   </li>
                   <li>
@@ -610,7 +616,7 @@
 
 <p>新しいコマンド・機能の要望、不具合の報告などは <a href="https://forms.gle/EZGVhKdbryfW5fCm8">開発部リクエストボックス</a> か <a href="https://github.com/jaoafa/MyMaid4/issues">MyMaid4 の Issue</a> へお願いします。</p>
 <ul>
-<li>Version: 2021.05.01_04.34_87acfa7</li>
+<li>Version: 2021.05.02_07.27_2191d15</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -2161,6 +2167,64 @@
 </aside>
 
 <p>Hide状態を解除します。</p>
+<h2 id='commands-sign'>sign</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/sign editmode [changeTo]
+/sign set &lt;line&gt; &lt;text&gt;
+</code></pre></div>
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Sign.java">com.jaoafa.mymaid4.command.Cmd_Sign</a></p>
+</blockquote>
+
+<p>看板を編集します。</p>
+<h3 id='commands-sign-sign-editmode-changeto'><code>/sign editmode [changeTo]</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>看板編集モードをオン・オフします。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>changeTo</code></td>
+<td>BooleanArgument</td>
+<td>いいえ</td>
+<td>オン・オフのいずれか (未指定の場合トグル)</td>
+</tr>
+</tbody></table>
+<h3 id='commands-sign-sign-set-lt-line-gt-lt-text-gt'><code>/sign set &lt;line&gt; &lt;text&gt;</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>看板の指定行のテキストを置き換えします。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>line</code></td>
+<td>IntegerArgument</td>
+<td>はい</td>
+<td>編集する行</td>
+</tr>
+<tr>
+<td><code>text</code></td>
+<td>StringArgument</td>
+<td>はい</td>
+<td>置き換えるテキスト</td>
+</tr>
+</tbody></table>
 <h2 id='commands-skkcolor'>skkcolor</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/skkcolor
 /skkcolor &lt;color&gt;
 </code></pre></div>
@@ -3531,6 +3595,24 @@
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Set43.java">com.jaoafa.mymaid4.event.Event_Set43</a></p>
+</blockquote>
+<h3 id='events-wt-event_sign'>Event_Sign</h3>
+<p>signコマンドに関する処理を行います。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onInteract</td>
+<td>PlayerInteractEvent</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Sign.java">com.jaoafa.mymaid4.event.Event_Sign</a></p>
 </blockquote>
 <h3 id='events-wt-event_tablist'>Event_TabList</h3>
 <p>Tabで表示されるヘッダー・フッターに関する処理を行います。</p>
