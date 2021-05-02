@@ -400,6 +400,9 @@
                     <a href="#commands-makecmd" class="toc-h2 toc-link" data-title="makecmd">makecmd</a>
                   </li>
                   <li>
+                    <a href="#commands-mymaid4" class="toc-h2 toc-link" data-title="mymaid4">mymaid4</a>
+                  </li>
+                  <li>
                     <a href="#commands-pigeon" class="toc-h2 toc-link" data-title="pigeon">pigeon</a>
                   </li>
                   <li>
@@ -475,6 +478,9 @@
                   </li>
                   <li>
                     <a href="#events-wt-event_antijaoium" class="toc-h2 toc-link" data-title="Event_Antijaoium">Event_Antijaoium</a>
+                  </li>
+                  <li>
+                    <a href="#events-wt-event_blacklist" class="toc-h2 toc-link" data-title="Event_BlackList">Event_BlackList</a>
                   </li>
                   <li>
                     <a href="#events-wt-event_chatban" class="toc-h2 toc-link" data-title="Event_ChatBan">Event_ChatBan</a>
@@ -616,7 +622,7 @@
 
 <p>新しいコマンド・機能の要望、不具合の報告などは <a href="https://forms.gle/EZGVhKdbryfW5fCm8">開発部リクエストボックス</a> か <a href="https://github.com/jaoafa/MyMaid4/issues">MyMaid4 の Issue</a> へお願いします。</p>
 <ul>
-<li>Version: 2021.05.02_07.27_2191d15</li>
+<li>Version: 2021.05.02_20.53_37cfd77</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -1831,6 +1837,15 @@
 </aside>
 
 <p>giveコマンドを生成します。</p>
+<h2 id='commands-mymaid4'>mymaid4</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/mymaid4 reload-blacklist
+</code></pre></div>
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_MyMaid4.java">com.jaoafa.mymaid4.command.Cmd_MyMaid4</a></p>
+</blockquote>
+
+<p>MyMaid4基本コマンド</p>
+<h3 id='commands-mymaid4-mymaid4-reload-blacklist'><code>/mymaid4 reload-blacklist</code></h3>
+<p>MyMaid4基本コマンド</p>
 <h2 id='commands-pigeon'>pigeon</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/pigeon speaker add &lt;speaker&gt;
 /pigeon messages add &lt;message&gt;
 /pigeon speaker remove [speaker]
@@ -2775,6 +2790,68 @@
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Antijaoium.java">com.jaoafa.mymaid4.event.Event_Antijaoium</a></p>
+</blockquote>
+<h3 id='events-wt-event_blacklist'>Event_BlackList</h3>
+<p>アイテム・ブロックブラックリストに関する処理を行います。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onUseItem</td>
+<td>UseItemEvent</td>
+</tr>
+<tr>
+<td>onUseBlock</td>
+<td>UseBlockEvent</td>
+</tr>
+<tr>
+<td>onSpawnEntity</td>
+<td>SpawnEntityEvent</td>
+</tr>
+<tr>
+<td>onPlayerItemHeld</td>
+<td>PlayerItemHeldEvent</td>
+</tr>
+<tr>
+<td>onPlayerDropItem</td>
+<td>PlayerDropItemEvent</td>
+</tr>
+<tr>
+<td>onPlaceBlock</td>
+<td>PlaceBlockEvent</td>
+</tr>
+<tr>
+<td>onInventoryDrag</td>
+<td>InventoryDragEvent</td>
+</tr>
+<tr>
+<td>onInventoryCreative</td>
+<td>InventoryCreativeEvent</td>
+</tr>
+<tr>
+<td>onInventoryClick</td>
+<td>InventoryClickEvent</td>
+</tr>
+<tr>
+<td>onDestroyEntity</td>
+<td>DestroyEntityEvent</td>
+</tr>
+<tr>
+<td>onBreakBlock</td>
+<td>BreakBlockEvent</td>
+</tr>
+<tr>
+<td>onBlockDispenseArmor</td>
+<td>BlockDispenseArmorEvent</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_BlackList.java">com.jaoafa.mymaid4.event.Event_BlackList</a></p>
 </blockquote>
 <h3 id='events-wt-event_chatban'>Event_ChatBan</h3>
 <p>ChatBanに関する各種処理を行います。</p>
