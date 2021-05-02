@@ -1124,6 +1124,42 @@ Hide状態を解除します。
 
 Hide状態を解除します。
 
+## sign
+
+```plaintext
+/sign editmode [changeTo]
+/sign set <line> <text>
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Sign](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Sign.java)
+
+看板を編集します。
+
+### `/sign editmode [changeTo]`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+看板編集モードをオン・オフします。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `changeTo` | BooleanArgument | いいえ | オン・オフのいずれか (未指定の場合トグル) |
+
+### `/sign set <line> <text>`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+看板の指定行のテキストを置き換えします。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `line` | IntegerArgument | はい | 編集する行 |
+| `text` | StringArgument | はい | 置き換えるテキスト |
+
 ## skkcolor
 
 ```plaintext

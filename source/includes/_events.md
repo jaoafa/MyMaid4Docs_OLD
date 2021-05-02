@@ -429,6 +429,15 @@ set 43コマンドを従来の動作に戻します。
 | onTeleportCommandFromPlayer | PlayerCommandPreprocessEvent |
 > ソースコード: [com.jaoafa.mymaid4.event.Event_Set43](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Set43.java)
 
+### Event_Sign
+
+signコマンドに関する処理を行います。
+
+| メソッド名 | イベント |
+| - | - |
+| onInteract | PlayerInteractEvent |
+> ソースコード: [com.jaoafa.mymaid4.event.Event_Sign](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Sign.java)
+
 ### Event_TabList
 
 Tabで表示されるヘッダー・フッターに関する処理を行います。
