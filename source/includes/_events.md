@@ -71,6 +71,26 @@ jaoium制限に関する処理を行います。
 | ByCommandBlock | ServerCommandEvent |
 > ソースコード: [com.jaoafa.mymaid4.event.Event_Antijaoium](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Antijaoium.java)
 
+### Event_BlackList
+
+アイテム・ブロックブラックリストに関する処理を行います。
+
+| メソッド名 | イベント |
+| - | - |
+| onUseItem | UseItemEvent |
+| onUseBlock | UseBlockEvent |
+| onSpawnEntity | SpawnEntityEvent |
+| onPlayerItemHeld | PlayerItemHeldEvent |
+| onPlayerDropItem | PlayerDropItemEvent |
+| onPlaceBlock | PlaceBlockEvent |
+| onInventoryDrag | InventoryDragEvent |
+| onInventoryCreative | InventoryCreativeEvent |
+| onInventoryClick | InventoryClickEvent |
+| onDestroyEntity | DestroyEntityEvent |
+| onBreakBlock | BreakBlockEvent |
+| onBlockDispenseArmor | BlockDispenseArmorEvent |
+> ソースコード: [com.jaoafa.mymaid4.event.Event_BlackList](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_BlackList.java)
+
 ### Event_ChatBan
 
 ChatBanに関する各種処理を行います。

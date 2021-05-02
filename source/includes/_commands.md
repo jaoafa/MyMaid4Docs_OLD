@@ -891,6 +891,20 @@ giveコマンドを生成します。
 
 giveコマンドを生成します。
 
+## mymaid4
+
+```plaintext
+/mymaid4 reload-blacklist
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_MyMaid4](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_MyMaid4.java)
+
+MyMaid4基本コマンド
+
+### `/mymaid4 reload-blacklist`
+
+MyMaid4基本コマンド
+
 ## pigeon
 
 ```plaintext
