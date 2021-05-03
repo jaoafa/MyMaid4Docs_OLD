@@ -513,3 +513,12 @@ tpdenyコマンドに関する処理を行います。
 | - | - |
 | onVotifierEvent | VotifierEvent |
 > ソースコード: [com.jaoafa.mymaid4.event.Event_Vote](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Vote.java)
+
+### Event_WorldEditAutoFacing
+
+「[facing=look]」が含まれるコマンドが実行された際に自動で向いている方向に置き換えます。
+
+| メソッド名 | イベント |
+| - | - |
+| onSetHandFacingCommand | PlayerCommandPreprocessEvent |
+> ソースコード: [com.jaoafa.mymaid4.event.Event_WorldEditAutoFacing](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_WorldEditAutoFacing.java)
