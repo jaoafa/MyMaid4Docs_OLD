@@ -605,6 +605,9 @@
                   <li>
                     <a href="#events-wt-event_vote" class="toc-h2 toc-link" data-title="Event_Vote">Event_Vote</a>
                   </li>
+                  <li>
+                    <a href="#events-wt-event_worldeditautofacing" class="toc-h2 toc-link" data-title="Event_WorldEditAutoFacing">Event_WorldEditAutoFacing</a>
+                  </li>
               </ul>
           </li>
       </ul>
@@ -622,7 +625,7 @@
 
 <p>新しいコマンド・機能の要望、不具合の報告などは <a href="https://forms.gle/EZGVhKdbryfW5fCm8">開発部リクエストボックス</a> か <a href="https://github.com/jaoafa/MyMaid4/issues">MyMaid4 の Issue</a> へお願いします。</p>
 <ul>
-<li>Version: 2021.05.02_20.53_37cfd77</li>
+<li>Version: 2021.05.03_14.58_3c78893</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -3806,6 +3809,24 @@
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Vote.java">com.jaoafa.mymaid4.event.Event_Vote</a></p>
+</blockquote>
+<h3 id='events-wt-event_worldeditautofacing'>Event_WorldEditAutoFacing</h3>
+<p>「[facing=look]」が含まれるコマンドが実行された際に自動で向いている方向に置き換えます。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onSetHandFacingCommand</td>
+<td>PlayerCommandPreprocessEvent</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_WorldEditAutoFacing.java">com.jaoafa.mymaid4.event.Event_WorldEditAutoFacing</a></p>
 </blockquote>
 
       </div>
