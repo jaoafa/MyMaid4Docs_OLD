@@ -25,6 +25,42 @@
 | - | - | - | - |
 | `player` | PlayerArgument | はい | 説明なし |
 
+## bug
+
+```plaintext
+/bug
+/bug true
+/bug false
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Bug](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Bug.java)
+
+本によるIssueの作成を行います。
+
+### `/bug`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+本によるIssueの作成を行います。
+
+### `/bug true`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+本によりIssue作成処理を行います。
+
+### `/bug false`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+記入済みの本を記入可能な本に戻します。
+
 ## chat
 
 ```plaintext

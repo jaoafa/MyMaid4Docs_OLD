@@ -91,6 +91,15 @@ jaoium制限に関する処理を行います。
 | onBlockDispenseArmor | BlockDispenseArmorEvent |
 > ソースコード: [com.jaoafa.mymaid4.event.Event_BlackList](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_BlackList.java)
 
+### Event_Bug
+
+bugコマンドに関する処理を行います。
+
+| メソッド名 | イベント |
+| - | - |
+| onEditedBook | PlayerEditBookEvent |
+> ソースコード: [com.jaoafa.mymaid4.event.Event_Bug](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Bug.java)
+
 ### Event_ChatBan
 
 ChatBanに関する各種処理を行います。
