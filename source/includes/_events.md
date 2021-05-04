@@ -43,6 +43,15 @@
 | onTeleportCommand | TeleportCommandEvent |
 > ソースコード: [com.jaoafa.mymaid4.event.Event_AntiTeleportToSpectator](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_AntiTeleportToSpectator.java)
 
+### Event_AntiToolbar
+
+ツールバーの利用を制限します。
+
+| メソッド名 | イベント |
+| - | - |
+| onInventoryCreative | InventoryCreativeEvent |
+> ソースコード: [com.jaoafa.mymaid4.event.Event_AntiToolbar](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_AntiToolbar.java)
+
 ### Event_AntiWither
 
 ウィザーの出現制限を行います。
@@ -169,7 +178,7 @@ dedコマンドに関する処理を行います。
 
 ### Event_DedMessage
 
-コンクリートパウダーの変化を無効化します。
+dedmessageコマンドに関する処理を行います。
 
 | メソッド名 | イベント |
 | - | - |

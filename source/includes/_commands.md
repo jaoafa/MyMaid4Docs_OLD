@@ -61,6 +61,28 @@
 
 記入済みの本を記入可能な本に戻します。
 
+## calctree
+
+```plaintext
+/calctree [placeEdgeTree]
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Calctree](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Calctree.java)
+
+WorldEditの選択範囲で植木算を行います。
+
+### `/calctree [placeEdgeTree]`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+WorldEditの選択範囲で植木算を行います。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `placeEdgeTree` | BooleanArgument | いいえ | 両端に木を置くかどうか。 |
+
 ## chat
 
 ```plaintext
@@ -641,6 +663,35 @@ EBan一覧を表示します。
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
 | `player` | StringArgument | はい | 説明なし |
+
+## help
+
+```plaintext
+/help [params]
+/help register
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Help](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Help.java)
+
+ヘルプブックを取得・登録します。
+
+- エイリアスがあります: `?`
+
+### `/help [params]`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+ヘルプブックを取得します。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `params` | StringArgument | いいえ | ヘルプパラメーター |
+
+### `/help register`
+
+ヘルプブックを登録します。
 
 ## hide
 
