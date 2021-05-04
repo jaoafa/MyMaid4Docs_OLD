@@ -322,6 +322,9 @@
                     <a href="#commands-bug" class="toc-h2 toc-link" data-title="bug">bug</a>
                   </li>
                   <li>
+                    <a href="#commands-calctree" class="toc-h2 toc-link" data-title="calctree">calctree</a>
+                  </li>
+                  <li>
                     <a href="#commands-chat" class="toc-h2 toc-link" data-title="chat">chat</a>
                   </li>
                   <li>
@@ -377,6 +380,9 @@
                   </li>
                   <li>
                     <a href="#commands-head" class="toc-h2 toc-link" data-title="head">head</a>
+                  </li>
+                  <li>
+                    <a href="#commands-help" class="toc-h2 toc-link" data-title="help">help</a>
                   </li>
                   <li>
                     <a href="#commands-hide" class="toc-h2 toc-link" data-title="hide">hide</a>
@@ -475,6 +481,9 @@
                   </li>
                   <li>
                     <a href="#events-wt-event_antiteleporttospectator" class="toc-h2 toc-link" data-title="Event_AntiTeleportToSpectator">Event_AntiTeleportToSpectator</a>
+                  </li>
+                  <li>
+                    <a href="#events-wt-event_antitoolbar" class="toc-h2 toc-link" data-title="Event_AntiToolbar">Event_AntiToolbar</a>
                   </li>
                   <li>
                     <a href="#events-wt-event_antiwither" class="toc-h2 toc-link" data-title="Event_AntiWither">Event_AntiWither</a>
@@ -631,7 +640,7 @@
 
 <p>新しいコマンド・機能の要望、不具合の報告などは <a href="https://forms.gle/EZGVhKdbryfW5fCm8">開発部リクエストボックス</a> か <a href="https://github.com/jaoafa/MyMaid4/issues">MyMaid4 の Issue</a> へお願いします。</p>
 <ul>
-<li>Version: 2021.05.04_08.54_790b3cc</li>
+<li>Version: 2021.05.04_22.19_2f8c989</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -701,6 +710,35 @@
 </aside>
 
 <p>記入済みの本を記入可能な本に戻します。</p>
+<h2 id='commands-calctree'>calctree</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/calctree [placeEdgeTree]
+</code></pre></div>
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Calctree.java">com.jaoafa.mymaid4.command.Cmd_Calctree</a></p>
+</blockquote>
+
+<p>WorldEditの選択範囲で植木算を行います。</p>
+<h3 id='commands-calctree-calctree-placeedgetree'><code>/calctree [placeEdgeTree]</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>WorldEditの選択範囲で植木算を行います。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>placeEdgeTree</code></td>
+<td>BooleanArgument</td>
+<td>いいえ</td>
+<td>両端に木を置くかどうか。</td>
+</tr>
+</tbody></table>
 <h2 id='commands-chat'>chat</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/chat &lt;player&gt; &lt;message&gt;
 </code></pre></div>
 <blockquote>
@@ -1467,6 +1505,42 @@
 <td>説明なし</td>
 </tr>
 </tbody></table>
+<h2 id='commands-help'>help</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/help [params]
+/help register
+</code></pre></div>
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Help.java">com.jaoafa.mymaid4.command.Cmd_Help</a></p>
+</blockquote>
+
+<p>ヘルプブックを取得・登録します。</p>
+
+<ul>
+<li>エイリアスがあります: <code>?</code></li>
+</ul>
+<h3 id='commands-help-help-params'><code>/help [params]</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>ヘルプブックを取得します。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>params</code></td>
+<td>StringArgument</td>
+<td>いいえ</td>
+<td>ヘルプパラメーター</td>
+</tr>
+</tbody></table>
+<h3 id='commands-help-help-register'><code>/help register</code></h3>
+<p>ヘルプブックを登録します。</p>
 <h2 id='commands-hide'>hide</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/hide
 </code></pre></div>
 <blockquote>
@@ -2751,6 +2825,24 @@
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_AntiTeleportToSpectator.java">com.jaoafa.mymaid4.event.Event_AntiTeleportToSpectator</a></p>
 </blockquote>
+<h3 id='events-wt-event_antitoolbar'>Event_AntiToolbar</h3>
+<p>ツールバーの利用を制限します。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onInventoryCreative</td>
+<td>InventoryCreativeEvent</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_AntiToolbar.java">com.jaoafa.mymaid4.event.Event_AntiToolbar</a></p>
+</blockquote>
 <h3 id='events-wt-event_antiwither'>Event_AntiWither</h3>
 <p>ウィザーの出現制限を行います。</p>
 
@@ -3050,7 +3142,7 @@
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Ded.java">com.jaoafa.mymaid4.event.Event_Ded</a></p>
 </blockquote>
 <h3 id='events-wt-event_dedmessage'>Event_DedMessage</h3>
-<p>コンクリートパウダーの変化を無効化します。</p>
+<p>dedmessageコマンドに関する処理を行います。</p>
 
 <table><thead>
 <tr>
