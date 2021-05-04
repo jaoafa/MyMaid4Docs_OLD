@@ -319,6 +319,9 @@
                     <a href="#commands-brb" class="toc-h2 toc-link" data-title="brb">brb</a>
                   </li>
                   <li>
+                    <a href="#commands-bug" class="toc-h2 toc-link" data-title="bug">bug</a>
+                  </li>
+                  <li>
                     <a href="#commands-chat" class="toc-h2 toc-link" data-title="chat">chat</a>
                   </li>
                   <li>
@@ -483,6 +486,9 @@
                     <a href="#events-wt-event_blacklist" class="toc-h2 toc-link" data-title="Event_BlackList">Event_BlackList</a>
                   </li>
                   <li>
+                    <a href="#events-wt-event_bug" class="toc-h2 toc-link" data-title="Event_Bug">Event_Bug</a>
+                  </li>
+                  <li>
                     <a href="#events-wt-event_chatban" class="toc-h2 toc-link" data-title="Event_ChatBan">Event_ChatBan</a>
                   </li>
                   <li>
@@ -625,7 +631,7 @@
 
 <p>新しいコマンド・機能の要望、不具合の報告などは <a href="https://forms.gle/EZGVhKdbryfW5fCm8">開発部リクエストボックス</a> か <a href="https://github.com/jaoafa/MyMaid4/issues">MyMaid4 の Issue</a> へお願いします。</p>
 <ul>
-<li>Version: 2021.05.04_04.07_bcab6f4</li>
+<li>Version: 2021.05.04_08.54_790b3cc</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -668,6 +674,33 @@
 <td>説明なし</td>
 </tr>
 </tbody></table>
+<h2 id='commands-bug'>bug</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/bug
+/bug true
+/bug false
+</code></pre></div>
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Bug.java">com.jaoafa.mymaid4.command.Cmd_Bug</a></p>
+</blockquote>
+
+<p>本によるIssueの作成を行います。</p>
+<h3 id='commands-bug-bug'><code>/bug</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>本によるIssueの作成を行います。</p>
+<h3 id='commands-bug-bug-true'><code>/bug true</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>本によりIssue作成処理を行います。</p>
+<h3 id='commands-bug-bug-false'><code>/bug false</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>記入済みの本を記入可能な本に戻します。</p>
 <h2 id='commands-chat'>chat</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/chat &lt;player&gt; &lt;message&gt;
 </code></pre></div>
 <blockquote>
@@ -2855,6 +2888,24 @@
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_BlackList.java">com.jaoafa.mymaid4.event.Event_BlackList</a></p>
+</blockquote>
+<h3 id='events-wt-event_bug'>Event_Bug</h3>
+<p>bugコマンドに関する処理を行います。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onEditedBook</td>
+<td>PlayerEditBookEvent</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Bug.java">com.jaoafa.mymaid4.event.Event_Bug</a></p>
 </blockquote>
 <h3 id='events-wt-event_chatban'>Event_ChatBan</h3>
 <p>ChatBanに関する各種処理を行います。</p>
