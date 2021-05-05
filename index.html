@@ -567,6 +567,9 @@
                     <a href="#events-wt-event_looking" class="toc-h2 toc-link" data-title="Event_Looking">Event_Looking</a>
                   </li>
                   <li>
+                    <a href="#events-wt-event_lookingblock" class="toc-h2 toc-link" data-title="Event_LookingBlock">Event_LookingBlock</a>
+                  </li>
+                  <li>
                     <a href="#events-wt-event_mcbanslogincheck" class="toc-h2 toc-link" data-title="Event_MCBansLoginCheck">Event_MCBansLoginCheck</a>
                   </li>
                   <li>
@@ -640,7 +643,7 @@
 
 <p>新しいコマンド・機能の要望、不具合の報告などは <a href="https://forms.gle/EZGVhKdbryfW5fCm8">開発部リクエストボックス</a> か <a href="https://github.com/jaoafa/MyMaid4/issues">MyMaid4 の Issue</a> へお願いします。</p>
 <ul>
-<li>Version: 2021.05.04_22.19_2f8c989</li>
+<li>Version: 2021.05.05_20.26_7f2359b</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -3548,6 +3551,24 @@
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Looking.java">com.jaoafa.mymaid4.event.Event_Looking</a></p>
+</blockquote>
+<h3 id='events-wt-event_lookingblock'>Event_LookingBlock</h3>
+<p>「LookingBlock」が含まれるコマンドが実行された際に自動で見ているブロックのIDに置き換えます。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onSetHandFacingCommand</td>
+<td>PlayerCommandPreprocessEvent</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_LookingBlock.java">com.jaoafa.mymaid4.event.Event_LookingBlock</a></p>
 </blockquote>
 <h3 id='events-wt-event_mcbanslogincheck'>Event_MCBansLoginCheck</h3>
 <p>ログイン時、MCBansのキャッシュデータベースを確認しGBanされていたりReputationが足りなくないかを確認します。</p>
