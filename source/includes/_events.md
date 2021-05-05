@@ -350,6 +350,15 @@ lookingコマンドに関する処理を行います。
 | onMove | PlayerMoveEvent |
 > ソースコード: [com.jaoafa.mymaid4.event.Event_Looking](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_Looking.java)
 
+### Event_LookingBlock
+
+「LookingBlock」が含まれるコマンドが実行された際に自動で見ているブロックのIDに置き換えます。
+
+| メソッド名 | イベント |
+| - | - |
+| onSetHandFacingCommand | PlayerCommandPreprocessEvent |
+> ソースコード: [com.jaoafa.mymaid4.event.Event_LookingBlock](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_LookingBlock.java)
+
 ### Event_MCBansLoginCheck
 
 ログイン時、MCBansのキャッシュデータベースを確認しGBanされていたりReputationが足りなくないかを確認します。
