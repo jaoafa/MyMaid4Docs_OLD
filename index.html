@@ -460,6 +460,9 @@
                     <a href="#commands-walkspeed" class="toc-h2 toc-link" data-title="walkspeed">walkspeed</a>
                   </li>
                   <li>
+                    <a href="#commands-weather" class="toc-h2 toc-link" data-title="weather">weather</a>
+                  </li>
+                  <li>
                     <a href="#commands-wt" class="toc-h2 toc-link" data-title="wt">wt</a>
                   </li>
               </ul>
@@ -643,7 +646,7 @@
 
 <p>新しいコマンド・機能の要望、不具合の報告などは <a href="https://forms.gle/EZGVhKdbryfW5fCm8">開発部リクエストボックス</a> か <a href="https://github.com/jaoafa/MyMaid4/issues">MyMaid4 の Issue</a> へお願いします。</p>
 <ul>
-<li>Version: 2021.05.05_20.26_7f2359b</li>
+<li>Version: 2021.05.06_21.49_db68ac4</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -2680,6 +2683,35 @@
 <td>FloatArgument</td>
 <td>はい</td>
 <td>移動速度(通常100%)</td>
+</tr>
+</tbody></table>
+<h2 id='commands-weather'>weather</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/weather set &lt;weatherName&gt;
+</code></pre></div>
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Weather.java">com.jaoafa.mymaid4.command.Cmd_Weather</a></p>
+</blockquote>
+
+<p>自分だけに適用される天気を設定します。</p>
+<h3 id='commands-weather-weather-set-lt-weathername-gt'><code>/weather set &lt;weatherName&gt;</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>自分だけに適用される天気を設定します。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>weatherName</code></td>
+<td>StringArgument</td>
+<td>はい</td>
+<td>説明なし</td>
 </tr>
 </tbody></table>
 <h2 id='commands-wt'>wt</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/wt &lt;worldName&gt;
