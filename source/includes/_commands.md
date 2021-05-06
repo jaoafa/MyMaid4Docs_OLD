@@ -1513,6 +1513,28 @@ TpDenyからプレイヤーを解除し、以降のテレポートを許可し�
 | - | - | - | - |
 | `percent` | FloatArgument | はい | 移動速度(通常100%) |
 
+## weather
+
+```plaintext
+/weather set <weatherName>
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Weather](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Weather.java)
+
+自分だけに適用される天気を設定します。
+
+### `/weather set <weatherName>`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+自分だけに適用される天気を設定します。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `weatherName` | StringArgument | はい | 説明なし |
+
 ## wt
 
 ```plaintext
