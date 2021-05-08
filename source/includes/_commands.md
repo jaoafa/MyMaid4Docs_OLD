@@ -867,6 +867,43 @@ Jail一覧を表示します。
 | - | - | - | - |
 | `message` | StringArgument | はい | 説明なし |
 
+## lead
+
+```plaintext
+/lead set [target]
+/lead connect <from> <to>
+/lead leave [target]
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Lead](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Lead.java)
+
+プレイヤー・エンティティにリードを付けます。
+
+### `/lead set [target]`
+
+1辺30ブロックの立方体内にある指定された名前の[エンティティ]にリードを付けます。プレイヤーは指定できません
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `target` | SingleEntitySelectorArgument | いいえ | 対象のエンティティ。指定しない場合見ているエンティティ |
+
+### `/lead connect <from> <to>`
+
+[プレイヤーもしくはエンティティ(付ける側)]から、[エンティティ(付けられる側)]にリードを付けます。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `from` | SingleEntitySelectorArgument | はい | リードを持っている側のプレイヤー・エンティティ |
+| `to` | SingleEntitySelectorArgument | はい | リードを付けられる側のエンティティ。プレイヤーは指定できません |
+
+### `/lead leave [target]`
+
+[エンティティ]に付いているリードを外します。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `target` | SingleEntitySelectorArgument | いいえ | 対象のエンティティ |
+
 ## link
 
 ```plaintext
