@@ -877,32 +877,36 @@ Jail一覧を表示します。
 
 > ソースコード: [com.jaoafa.mymaid4.command.Cmd_Lead](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Lead.java)
 
-プレイヤー・エンティティにリードを付けます。
+Mob（またはプレイヤー）にリードを付けます。
 
 ### `/lead set [target]`
 
-1辺30ブロックの立方体内にある指定された名前の[エンティティ]にリードを付けます。プレイヤーは指定できません
+1辺30ブロックの立方体内にある指定されたターゲットセレクターの[Mob]にリードを付けます。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `target` | SingleEntitySelectorArgument | いいえ | 対象のエンティティ。指定しない場合見ているエンティティ |
+| `target` | SingleEntitySelectorArgument | いいえ | 対象のMob。指定しない場合見ているMob |
 
 ### `/lead connect <from> <to>`
 
-[プレイヤーもしくはエンティティ(付ける側)]から、[エンティティ(付けられる側)]にリードを付けます。
+[Mob（またはプレイヤー）]から、[Mob]にリードを付けます。
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `from` | SingleEntitySelectorArgument | はい | リードを持っている側のプレイヤー・エンティティ |
-| `to` | SingleEntitySelectorArgument | はい | リードを付けられる側のエンティティ。プレイヤーは指定できません |
+| `from` | SingleEntitySelectorArgument | はい | リードを持っている側のMob（またはプレイヤー） |
+| `to` | SingleEntitySelectorArgument | はい | リードを付けられる側のMob |
 
 ### `/lead leave [target]`
 
-[エンティティ]に付いているリードを外します。
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+[Mob（または実行者）]が付けられているか、持っているリードを外します。両方の場合は付けられているリードを優先します
 
 | 引数名 | 種類 | 必須か | 説明 |
 | - | - | - | - |
-| `target` | SingleEntitySelectorArgument | いいえ | 対象のエンティティ |
+| `target` | SingleEntitySelectorArgument | いいえ | 対象のMob（または実行者）。対象を指定しない場合見ているMob、何も見ていない場合実行者 |
 
 ## link
 
