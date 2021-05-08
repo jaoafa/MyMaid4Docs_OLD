@@ -397,6 +397,9 @@
                     <a href="#commands-jail" class="toc-h2 toc-link" data-title="jail">jail</a>
                   </li>
                   <li>
+                    <a href="#commands-lead" class="toc-h2 toc-link" data-title="lead">lead</a>
+                  </li>
+                  <li>
                     <a href="#commands-link" class="toc-h2 toc-link" data-title="link">link</a>
                   </li>
                   <li>
@@ -646,7 +649,7 @@
 
 <p>新しいコマンド・機能の要望、不具合の報告などは <a href="https://forms.gle/EZGVhKdbryfW5fCm8">開発部リクエストボックス</a> か <a href="https://github.com/jaoafa/MyMaid4/issues">MyMaid4 の Issue</a> へお願いします。</p>
 <ul>
-<li>Version: 2021.05.06_21.49_db68ac4</li>
+<li>Version: 2021.05.08_11.33_609b300</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -1838,6 +1841,75 @@
 <td>StringArgument</td>
 <td>はい</td>
 <td>説明なし</td>
+</tr>
+</tbody></table>
+<h2 id='commands-lead'>lead</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/lead set [target]
+/lead connect &lt;from&gt; &lt;to&gt;
+/lead leave [target]
+</code></pre></div>
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Lead.java">com.jaoafa.mymaid4.command.Cmd_Lead</a></p>
+</blockquote>
+
+<p>プレイヤー・エンティティにリードを付けます。</p>
+<h3 id='commands-lead-lead-set-target'><code>/lead set [target]</code></h3>
+<p>1辺30ブロックの立方体内にある指定された名前の[エンティティ]にリードを付けます。プレイヤーは指定できません</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>target</code></td>
+<td>SingleEntitySelectorArgument</td>
+<td>いいえ</td>
+<td>対象のエンティティ。指定しない場合見ているエンティティ</td>
+</tr>
+</tbody></table>
+<h3 id='commands-lead-lead-connect-lt-from-gt-lt-to-gt'><code>/lead connect &lt;from&gt; &lt;to&gt;</code></h3>
+<p>[プレイヤーもしくはエンティティ(付ける側)]から、[エンティティ(付けられる側)]にリードを付けます。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>from</code></td>
+<td>SingleEntitySelectorArgument</td>
+<td>はい</td>
+<td>リードを持っている側のプレイヤー・エンティティ</td>
+</tr>
+<tr>
+<td><code>to</code></td>
+<td>SingleEntitySelectorArgument</td>
+<td>はい</td>
+<td>リードを付けられる側のエンティティ。プレイヤーは指定できません</td>
+</tr>
+</tbody></table>
+<h3 id='commands-lead-lead-leave-target'><code>/lead leave [target]</code></h3>
+<p>[エンティティ]に付いているリードを外します。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>target</code></td>
+<td>SingleEntitySelectorArgument</td>
+<td>いいえ</td>
+<td>対象のエンティティ</td>
 </tr>
 </tbody></table>
 <h2 id='commands-link'>link</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/link
