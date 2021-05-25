@@ -341,6 +341,15 @@ Jailに関する各種処理を行います。
 | OnJoin | PlayerJoinEvent |
 > ソースコード: [com.jaoafa.mymaid4.event.Event_LoginSuccessful](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_LoginSuccessful.java)
 
+### Event_LongTimeNoSee
+
+久々に来た人に「お久しぶりです」と伝えます。
+
+| メソッド名 | イベント |
+| - | - |
+| OnJoin | PlayerJoinEvent |
+> ソースコード: [com.jaoafa.mymaid4.event.Event_LongTimeNoSee](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_LongTimeNoSee.java)
+
 ### Event_Looking
 
 lookingコマンドに関する処理を行います。
