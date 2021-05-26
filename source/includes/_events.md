@@ -1,3 +1,12 @@
+### Event_AntiKillWireUnit
+
+wireコマンドで出現させたコウモリのキルを無効化します。
+
+| メソッド名 | イベント |
+| - | - |
+| EntityDamageByEntity | EntityDeathEvent |
+> ソースコード: [com.jaoafa.mymaid4.event.Event_AntiKillWireUnit](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_AntiKillWireUnit.java)
+
 ### Event_AntiProblemCommand
 
 迷惑コマンドの制限を行います。

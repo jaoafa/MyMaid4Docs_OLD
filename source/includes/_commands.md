@@ -1576,6 +1576,40 @@ TpDenyからプレイヤーを解除し、以降のテレポートを許可し�
 | - | - | - | - |
 | `weatherName` | StringArgument | はい | 説明なし |
 
+## wire
+
+```plaintext
+/wire set <pos1> <pos2>
+/wire setwe
+```
+
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_wire](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_wire.java)
+
+指定した2点間にリードを張ったり、撤去したりします。
+
+- エイリアスがあります: `leadunit`
+
+### `/wire set <pos1> <pos2>`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+指定した2点間にリードを張ります。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `pos1` | ArgumentTriplet | はい | 1つ目のx・y・z座標。リードを付けられている側。 |
+| `pos2` | ArgumentTriplet | はい | 2つ目のx・y・z座標。リードを持っている側。 |
+
+### `/wire setwe`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+WorldEditで選択した2点間にリードを張ります。1座標目がリードを付けられている側、2座標目がリードを持っている側。
+
 ## wt
 
 ```plaintext
