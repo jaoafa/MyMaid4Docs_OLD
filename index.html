@@ -466,6 +466,9 @@
                     <a href="#commands-weather" class="toc-h2 toc-link" data-title="weather">weather</a>
                   </li>
                   <li>
+                    <a href="#commands-wire" class="toc-h2 toc-link" data-title="wire">wire</a>
+                  </li>
+                  <li>
                     <a href="#commands-wt" class="toc-h2 toc-link" data-title="wt">wt</a>
                   </li>
               </ul>
@@ -473,6 +476,9 @@
           <li>
             <a href="#events" class="toc-h1 toc-link" data-title="Events">Events</a>
               <ul class="toc-list-h2">
+                  <li>
+                    <a href="#events-wt-event_antikillwireunit" class="toc-h2 toc-link" data-title="Event_AntiKillWireUnit">Event_AntiKillWireUnit</a>
+                  </li>
                   <li>
                     <a href="#events-wt-event_antiproblemcommand" class="toc-h2 toc-link" data-title="Event_AntiProblemCommand">Event_AntiProblemCommand</a>
                   </li>
@@ -654,7 +660,7 @@
 
 <p>Minecraft サーバ内での MyMaid4 のコマンドヘルプは <code>/mymaidhelp</code> から利用できます。</p>
 <ul>
-<li>Version: 2021.05.25_22.54_ee50b4a</li>
+<li>Version: 2021.05.27_01.06_6a32c53</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -2795,6 +2801,52 @@
 <td>説明なし</td>
 </tr>
 </tbody></table>
+<h2 id='commands-wire'>wire</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/wire set &lt;pos1&gt; &lt;pos2&gt;
+/wire setwe
+</code></pre></div>
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_wire.java">com.jaoafa.mymaid4.command.Cmd_wire</a></p>
+</blockquote>
+
+<p>指定した2点間にリードを張ったり、撤去したりします。</p>
+
+<ul>
+<li>エイリアスがあります: <code>leadunit</code></li>
+</ul>
+<h3 id='commands-wire-wire-set-lt-pos1-gt-lt-pos2-gt'><code>/wire set &lt;pos1&gt; &lt;pos2&gt;</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>指定した2点間にリードを張ります。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>pos1</code></td>
+<td>ArgumentTriplet</td>
+<td>はい</td>
+<td>1つ目のx・y・z座標。リードを付けられている側。</td>
+</tr>
+<tr>
+<td><code>pos2</code></td>
+<td>ArgumentTriplet</td>
+<td>はい</td>
+<td>2つ目のx・y・z座標。リードを持っている側。</td>
+</tr>
+</tbody></table>
+<h3 id='commands-wire-wire-setwe'><code>/wire setwe</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>WorldEditで選択した2点間にリードを張ります。1座標目がリードを付けられている側、2座標目がリードを持っている側。</p>
 <h2 id='commands-wt'>wt</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/wt &lt;worldName&gt;
 /wt &lt;worldName&gt; &lt;player&gt;
 </code></pre></div>
@@ -2851,6 +2903,24 @@
 </tbody></table>
 <h1 id='events'>Events</h1>
 <p>MyMaid4 で実装されている機能（イベント）の一覧です。</p>
+<h3 id='events-wt-event_antikillwireunit'>Event_AntiKillWireUnit</h3>
+<p>wireコマンドで出現させたコウモリのキルを無効化します。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>EntityDamageByEntity</td>
+<td>EntityDeathEvent</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_AntiKillWireUnit.java">com.jaoafa.mymaid4.event.Event_AntiKillWireUnit</a></p>
+</blockquote>
 <h3 id='events-wt-event_antiproblemcommand'>Event_AntiProblemCommand</h3>
 <p>迷惑コマンドの制限を行います。</p>
 
