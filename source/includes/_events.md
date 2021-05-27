@@ -443,6 +443,16 @@ PacketLimiterによるキック時に通知を行います。
 | OnEvent_PlayerCheckPreLogin | AsyncPlayerPreLoginEvent |
 > ソースコード: [com.jaoafa.mymaid4.event.Event_PlayerCheckPreLogin](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_PlayerCheckPreLogin.java)
 
+### Event_PlayerCountNotify
+
+入退出時、プレイヤー数を表示します。
+
+| メソッド名 | イベント |
+| - | - |
+| onQuit | PlayerQuitEvent |
+| onJoin | PlayerJoinEvent |
+> ソースコード: [com.jaoafa.mymaid4.event.Event_PlayerCountNotify](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_PlayerCountNotify.java)
+
 ### Event_ProtectionOldWorlds
 
 旧ワールドへの干渉禁止処理を行います。
