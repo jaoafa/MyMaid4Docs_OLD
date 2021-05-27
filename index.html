@@ -606,6 +606,9 @@
                     <a href="#events-wt-event_playercheckprelogin" class="toc-h2 toc-link" data-title="Event_PlayerCheckPreLogin">Event_PlayerCheckPreLogin</a>
                   </li>
                   <li>
+                    <a href="#events-wt-event_playercountnotify" class="toc-h2 toc-link" data-title="Event_PlayerCountNotify">Event_PlayerCountNotify</a>
+                  </li>
+                  <li>
                     <a href="#events-wt-event_protectionoldworlds" class="toc-h2 toc-link" data-title="Event_ProtectionOldWorlds">Event_ProtectionOldWorlds</a>
                   </li>
                   <li>
@@ -660,7 +663,7 @@
 
 <p>Minecraft サーバ内での MyMaid4 のコマンドヘルプは <code>/mymaidhelp</code> から利用できます。</p>
 <ul>
-<li>Version: 2021.05.27_23.00_784d571</li>
+<li>Version: 2021.05.28_02.53_5b99380</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -3908,6 +3911,28 @@
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_PlayerCheckPreLogin.java">com.jaoafa.mymaid4.event.Event_PlayerCheckPreLogin</a></p>
+</blockquote>
+<h3 id='events-wt-event_playercountnotify'>Event_PlayerCountNotify</h3>
+<p>入退出時、プレイヤー数を表示します。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onQuit</td>
+<td>PlayerQuitEvent</td>
+</tr>
+<tr>
+<td>onJoin</td>
+<td>PlayerJoinEvent</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_PlayerCountNotify.java">com.jaoafa.mymaid4.event.Event_PlayerCountNotify</a></p>
 </blockquote>
 <h3 id='events-wt-event_protectionoldworlds'>Event_ProtectionOldWorlds</h3>
 <p>旧ワールドへの干渉禁止処理を行います。</p>
