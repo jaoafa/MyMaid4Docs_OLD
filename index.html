@@ -486,6 +486,9 @@
                     <a href="#events-wt-event_antiproblemteleport" class="toc-h2 toc-link" data-title="Event_AntiProblemTeleport">Event_AntiProblemTeleport</a>
                   </li>
                   <li>
+                    <a href="#events-wt-event_antitntcart" class="toc-h2 toc-link" data-title="Event_AntiTNTCart">Event_AntiTNTCart</a>
+                  </li>
+                  <li>
                     <a href="#events-wt-event_antitargetallentitycmd" class="toc-h2 toc-link" data-title="Event_AntiTargetAllEntityCmd">Event_AntiTargetAllEntityCmd</a>
                   </li>
                   <li>
@@ -594,7 +597,13 @@
                     <a href="#events-wt-event_newplayerautoblmap" class="toc-h2 toc-link" data-title="Event_NewPlayerAutoBlMap">Event_NewPlayerAutoBlMap</a>
                   </li>
                   <li>
+                    <a href="#events-wt-event_notfadeice" class="toc-h2 toc-link" data-title="Event_NotFadeIce">Event_NotFadeIce</a>
+                  </li>
+                  <li>
                     <a href="#events-wt-event_notifykick" class="toc-h2 toc-link" data-title="Event_NotifyKick">Event_NotifyKick</a>
+                  </li>
+                  <li>
+                    <a href="#events-wt-event_notifytpdiscord" class="toc-h2 toc-link" data-title="Event_NotifyTPDiscord">Event_NotifyTPDiscord</a>
                   </li>
                   <li>
                     <a href="#events-wt-event_onlinetimedb" class="toc-h2 toc-link" data-title="Event_OnlineTimeDB">Event_OnlineTimeDB</a>
@@ -663,7 +672,7 @@
 
 <p>Minecraft サーバ内での MyMaid4 のコマンドヘルプは <code>/mymaidhelp</code> から利用できます。</p>
 <ul>
-<li>Version: 2021.05.28_02.53_5b99380</li>
+<li>Version: 2021.05.28_03.51_1d36815</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -2960,6 +2969,24 @@
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_AntiProblemTeleport.java">com.jaoafa.mymaid4.event.Event_AntiProblemTeleport</a></p>
 </blockquote>
+<h3 id='events-wt-event_antitntcart'>Event_AntiTNTCart</h3>
+<p>TNTカートを設置できないようにします。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onVehicleCreateEvent</td>
+<td>VehicleCreateEvent</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_AntiTNTCart.java">com.jaoafa.mymaid4.event.Event_AntiTNTCart</a></p>
+</blockquote>
 <h3 id='events-wt-event_antitargetallentitycmd'>Event_AntiTargetAllEntityCmd</h3>
 <p>全てのエンティティをターゲットとするコマンドの使用を禁止します。</p>
 
@@ -3836,6 +3863,24 @@
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_NewPlayerAutoBlMap.java">com.jaoafa.mymaid4.event.Event_NewPlayerAutoBlMap</a></p>
 </blockquote>
+<h3 id='events-wt-event_notfadeice'>Event_NotFadeIce</h3>
+<p>氷を解けなくします。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onBlockFadeEvent</td>
+<td>BlockFadeEvent</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_NotFadeIce.java">com.jaoafa.mymaid4.event.Event_NotFadeIce</a></p>
+</blockquote>
 <h3 id='events-wt-event_notifykick'>Event_NotifyKick</h3>
 <p>キックされた際にAdminとModeratorに理由を通知します。</p>
 
@@ -3853,6 +3898,24 @@
 
 <blockquote>
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_NotifyKick.java">com.jaoafa.mymaid4.event.Event_NotifyKick</a></p>
+</blockquote>
+<h3 id='events-wt-event_notifytpdiscord'>Event_NotifyTPDiscord</h3>
+<p>tpコマンドによるテレポート時にDiscord#server-chatでもそれを表示します。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onTeleportCommand</td>
+<td>TeleportCommandEvent</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_NotifyTPDiscord.java">com.jaoafa.mymaid4.event.Event_NotifyTPDiscord</a></p>
 </blockquote>
 <h3 id='events-wt-event_onlinetimedb'>Event_OnlineTimeDB</h3>
 <p>ログイン時間を計測し、データベースに記録します。</p>
