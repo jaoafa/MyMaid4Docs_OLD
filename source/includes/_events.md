@@ -25,6 +25,15 @@ wireコマンドで出現させたコウモリのキルを無効化します。
 | onPlayerTeleportEvent | PlayerTeleportEvent |
 > ソースコード: [com.jaoafa.mymaid4.event.Event_AntiProblemTeleport](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_AntiProblemTeleport.java)
 
+### Event_AntiTNTCart
+
+TNTカートを設置できないようにします。
+
+| メソッド名 | イベント |
+| - | - |
+| onVehicleCreateEvent | VehicleCreateEvent |
+> ソースコード: [com.jaoafa.mymaid4.event.Event_AntiTNTCart](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_AntiTNTCart.java)
+
 ### Event_AntiTargetAllEntityCmd
 
 全てのエンティティをターゲットとするコマンドの使用を禁止します。
@@ -406,6 +415,15 @@ CoreProtectのパーミッションノードを管理します。
 | OnEvent_FirstLogin | PlayerJoinEvent |
 > ソースコード: [com.jaoafa.mymaid4.event.Event_NewPlayerAutoBlMap](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_NewPlayerAutoBlMap.java)
 
+### Event_NotFadeIce
+
+氷を解けなくします。
+
+| メソッド名 | イベント |
+| - | - |
+| onBlockFadeEvent | BlockFadeEvent |
+> ソースコード: [com.jaoafa.mymaid4.event.Event_NotFadeIce](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_NotFadeIce.java)
+
 ### Event_NotifyKick
 
 キックされた際にAdminとModeratorに理由を通知します。
@@ -414,6 +432,15 @@ CoreProtectのパーミッションノードを管理します。
 | - | - |
 | onKick | PlayerKickEvent |
 > ソースコード: [com.jaoafa.mymaid4.event.Event_NotifyKick](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_NotifyKick.java)
+
+### Event_NotifyTPDiscord
+
+tpコマンドによるテレポート時にDiscord#server-chatでもそれを表示します。
+
+| メソッド名 | イベント |
+| - | - |
+| onTeleportCommand | TeleportCommandEvent |
+> ソースコード: [com.jaoafa.mymaid4.event.Event_NotifyTPDiscord](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_NotifyTPDiscord.java)
 
 ### Event_OnlineTimeDB
 
