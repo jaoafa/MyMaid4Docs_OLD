@@ -1,3 +1,12 @@
+### Event_AntiEndPortal
+
+エンドポータルの作成を制限します。
+
+| メソッド名 | イベント |
+| - | - |
+| onInteract | PlayerInteractEvent |
+> ソースコード: [com.jaoafa.mymaid4.event.Event_AntiEndPortal](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_AntiEndPortal.java)
+
 ### Event_AntiKillWireUnit
 
 wireコマンドで出現させたコウモリのキルを無効化します。
