@@ -477,6 +477,9 @@
             <a href="#events" class="toc-h1 toc-link" data-title="Events">Events</a>
               <ul class="toc-list-h2">
                   <li>
+                    <a href="#events-wt-event_antiendportal" class="toc-h2 toc-link" data-title="Event_AntiEndPortal">Event_AntiEndPortal</a>
+                  </li>
+                  <li>
                     <a href="#events-wt-event_antikillwireunit" class="toc-h2 toc-link" data-title="Event_AntiKillWireUnit">Event_AntiKillWireUnit</a>
                   </li>
                   <li>
@@ -672,7 +675,7 @@
 
 <p>Minecraft サーバ内での MyMaid4 のコマンドヘルプは <code>/mymaidhelp</code> から利用できます。</p>
 <ul>
-<li>Version: 2021.05.28_03.51_1d36815</li>
+<li>Version: 2021.05.29_01.04_613569e</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -2820,7 +2823,7 @@
 <p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_wire.java">com.jaoafa.mymaid4.command.Cmd_wire</a></p>
 </blockquote>
 
-<p>指定した2点間にリードを張ったり、撤去したりします。</p>
+<p>指定した地点間にリードを張ったり、撤去したりします。</p>
 
 <ul>
 <li>エイリアスがあります: <code>leadunit</code></li>
@@ -2858,7 +2861,7 @@
 このコマンドはプレイヤーからの実行のみに制限されています。
 </aside>
 
-<p>WorldEditで選択した2点間にリードを張ります。1座標目がリードを付けられている側、2座標目がリードを持っている側。</p>
+<p>WorldEditで選択した地点間にリードを張ります。3地点以上を選択した場合、1-2,2-3,3-4地点間のようにリードが張られますが、選択した地点は全て同じ高さである必要があります。</p>
 <h2 id='commands-wt'>wt</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/wt &lt;worldName&gt;
 /wt &lt;worldName&gt; &lt;player&gt;
 </code></pre></div>
@@ -2915,6 +2918,24 @@
 </tbody></table>
 <h1 id='events'>Events</h1>
 <p>MyMaid4 で実装されている機能（イベント）の一覧です。</p>
+<h3 id='events-wt-event_antiendportal'>Event_AntiEndPortal</h3>
+<p>エンドポータルの作成を制限します。</p>
+
+<table><thead>
+<tr>
+<th>メソッド名</th>
+<th>イベント</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>onInteract</td>
+<td>PlayerInteractEvent</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/event/Event_AntiEndPortal.java">com.jaoafa.mymaid4.event.Event_AntiEndPortal</a></p>
+</blockquote>
 <h3 id='events-wt-event_antikillwireunit'>Event_AntiKillWireUnit</h3>
 <p>wireコマンドで出現させたコウモリのキルを無効化します。</p>
 
