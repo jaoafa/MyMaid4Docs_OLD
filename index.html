@@ -675,7 +675,7 @@
 
 <p>Minecraft サーバ内での MyMaid4 のコマンドヘルプは <code>/mymaidhelp</code> から利用できます。</p>
 <ul>
-<li>Version: 2021.05.30_12.58_4a5e260</li>
+<li>Version: 2021.06.01_03.02_3d01838</li>
 </ul>
 <h1 id='commands'>Commands</h1>
 <p>MyMaid4 で実装されているコマンドの一覧です。</p>
@@ -2818,9 +2818,11 @@
 </tbody></table>
 <h2 id='commands-wire'>wire</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/wire set &lt;pos1&gt; &lt;pos2&gt;
 /wire setwe
+/wire del &lt;pos1&gt; &lt;pos2&gt;
+/wire delwe
 </code></pre></div>
 <blockquote>
-<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_wire.java">com.jaoafa.mymaid4.command.Cmd_wire</a></p>
+<p>ソースコード: <a href="https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Wire.java">com.jaoafa.mymaid4.command.Cmd_Wire</a></p>
 </blockquote>
 
 <p>指定した地点間にリードを張ったり、撤去したりします。</p>
@@ -2862,6 +2864,40 @@
 </aside>
 
 <p>WorldEditで選択した地点間にリードを張ります。3地点以上を選択した場合、1-2,2-3,3-4地点間のようにリードが張られますが、選択した地点は全て同じ高さである必要があります。</p>
+<h3 id='commands-wire-wire-del-lt-pos1-gt-lt-pos2-gt'><code>/wire del &lt;pos1&gt; &lt;pos2&gt;</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>指定した2点間のリードを撤去します。</p>
+
+<table><thead>
+<tr>
+<th>引数名</th>
+<th>種類</th>
+<th>必須か</th>
+<th>説明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>pos1</code></td>
+<td>ArgumentTriplet</td>
+<td>はい</td>
+<td>1つ目のx・y・z座標。どちら側でも良いです。</td>
+</tr>
+<tr>
+<td><code>pos2</code></td>
+<td>ArgumentTriplet</td>
+<td>はい</td>
+<td>2つ目のx・y・z座標。どちら側でも良いです。</td>
+</tr>
+</tbody></table>
+<h3 id='commands-wire-wire-delwe'><code>/wire delwe</code></h3>
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+<p>WorldEditで選択した地点間のリードを撤去します。3地点以上を選択した場合、1-2,2-3,3-4地点間のようにリードが撤去されますが、選択した地点は全て同じ高さである必要があります。</p>
 <h2 id='commands-wt'>wt</h2><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>/wt &lt;worldName&gt;
 /wt &lt;worldName&gt; &lt;player&gt;
 </code></pre></div>
