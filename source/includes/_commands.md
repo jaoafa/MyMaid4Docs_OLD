@@ -1581,9 +1581,11 @@ TpDenyからプレイヤーを解除し、以降のテレポートを許可し�
 ```plaintext
 /wire set <pos1> <pos2>
 /wire setwe
+/wire del <pos1> <pos2>
+/wire delwe
 ```
 
-> ソースコード: [com.jaoafa.mymaid4.command.Cmd_wire](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_wire.java)
+> ソースコード: [com.jaoafa.mymaid4.command.Cmd_Wire](https://github.com/jaoafa/MyMaid4/blob/master/src/main/java/com/jaoafa/mymaid4/command/Cmd_Wire.java)
 
 指定した地点間にリードを張ったり、撤去したりします。
 
@@ -1609,6 +1611,27 @@ TpDenyからプレイヤーを解除し、以降のテレポートを許可し�
 </aside>
 
 WorldEditで選択した地点間にリードを張ります。3地点以上を選択した場合、1-2,2-3,3-4地点間のようにリードが張られますが、選択した地点は全て同じ高さである必要があります。
+
+### `/wire del <pos1> <pos2>`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+指定した2点間のリードを撤去します。
+
+| 引数名 | 種類 | 必須か | 説明 |
+| - | - | - | - |
+| `pos1` | ArgumentTriplet | はい | 1つ目のx・y・z座標。どちら側でも良いです。 |
+| `pos2` | ArgumentTriplet | はい | 2つ目のx・y・z座標。どちら側でも良いです。 |
+
+### `/wire delwe`
+
+<aside class="notice">
+このコマンドはプレイヤーからの実行のみに制限されています。
+</aside>
+
+WorldEditで選択した地点間のリードを撤去します。3地点以上を選択した場合、1-2,2-3,3-4地点間のようにリードが撤去されますが、選択した地点は全て同じ高さである必要があります。
 
 ## wt
 
