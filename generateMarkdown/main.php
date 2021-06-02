@@ -15,7 +15,7 @@ if (!file_exists("source/includes")) {
     exit(1);
 }
 
-file_put_contents("source/includes/_version.md", "- Version: $version");
+file_put_contents("source/includes/_version.md", "- Version: `$version`");
 
 // Commands ---------------------------------- //
 
